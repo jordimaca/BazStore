@@ -81,5 +81,10 @@ form{
     grid-template-columns: auto;
 }
 body{
-    background-image: url("")
+    body{
+    background-image: url("https://images.pexels.com/photos/8408535/pexels-photo-8408535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #eee;
+}
 }
