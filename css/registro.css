@@ -10,10 +10,17 @@
 body{
     background-color: #eee;
     text-align: center;
+    border: 1px solid black;
+    margin:0 auto;
+    width: 25%;
+    height: auto;
+    margin:20px auto;
+    word-wrap: break-word;
 }
 
 header{
-    background-color: #d98c19;
+    /* background-color: #000;
+    color: goldenrod; */
 
 }
 h1 {
@@ -23,7 +30,7 @@ h1 {
     font-size: 48px;
     line-height: 58px;
     margin: 0 20px;
-    text-align: left;
+    /* text-align: left; */
 }
 section h2{
     font-weight: bold;
@@ -43,20 +50,26 @@ button {
     border-radius: 50px;
     color: white;
     border-color: #D98C19;
+    margin:15px;
 }
 form {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
+    gap: 20px;
 }
 input{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 27px;
-    border-style: none none solid none;
+    border-style: none;
+    /* border-style: none none solid none; */
     background-color: #eee;
+}
+input:hover{
+    border-style: none none solid none;
 }
 select{
     color: white;
@@ -66,3 +79,9 @@ select{
 option:hover{
     background-color: #D98C19;
 }
+/* main{
+    border: 1px solid black;
+    margin:0 auto;
+    width: 25%;
+    height: auto;
+} */
