@@ -1,0 +1,85 @@
+
+@import "reset.css";
+header,main{
+    text-align: center;
+    margin: 0 auto;
+
+}
+h1{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+}
+h3{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    border:1px solid black;
+    width: 316px;
+    height: 550px; 
+    justify-content: space-around;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.69);
+    border-radius: 50px;
+
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
+}
+h2{
+    
+/*     width: 165px;
+    height: 35px; */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 26px;
+    line-height: 31px;
+}
+#email,#contraseña{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+}
+button{
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #D98C19;
+    border-radius: 50px;
+    color: white;
+    border-color: #D98C19;
+}
+a{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #fff;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    color: black;
+    border:2px solid black;
+    text-decoration: none;
+}
+nav{
+    display:grid;
+    grid-template-columns: auto;
+}
+input{
+    border-style: none none solid none;
+}
+form{
+    display: grid;
+    grid-template-columns: auto;
+}
+body{
+    background-image: url("")
+}

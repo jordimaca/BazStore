@@ -1,0 +1,68 @@
+/* Agregar reset */
+@import "reset.css";
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+ */
+ /* agregar tipo de fuente */
+body{
+    background-color: #eee;
+    text-align: center;
+}
+
+header{
+    background-color: #d98c19;
+
+}
+h1 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 58px;
+    margin: 0 20px;
+    text-align: left;
+}
+section h2{
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 18px;
+    margin: 10px;
+}
+
+
+button {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background: #D98C19;
+    border-radius: 50px;
+    color: white;
+    border-color: #D98C19;
+}
+form {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+}
+input{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    border-style: none none solid none;
+    background-color: #eee;
+}
+select{
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+}
+option:hover{
+    background-color: #D98C19;
+}
