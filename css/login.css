@@ -23,7 +23,7 @@ h3{
 main{
     display: flex;
     flex-direction: column;
-    border:1px solid black;
+    border:1px hidden black;
     width: 316px;
     height: 550px; 
     justify-content: space-around;
@@ -57,9 +57,11 @@ button{
     border-radius: 50px;
     color: white;
     border-color: #D98C19;
+    width: 196px;
+    height: 37px;
 }
 a{
-    font-weight: 500;
+    font-weight: 500px;
     font-size: 16px;
     line-height: 19px;
     background-color: #fff;
@@ -75,16 +77,26 @@ nav{
 }
 input{
     border-style: none none solid none;
+    outline: none;
+    background-color:rgba(255, 255, 255, 0.69);
 }
 form{
     display: grid;
     grid-template-columns: auto;
 }
+<<<<<<< HEAD
 body{
     body{
+=======
+/* body{
+>>>>>>> cambios 24/3/23
     background-image: url("https://images.pexels.com/photos/8408535/pexels-photo-8408535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #eee;
+<<<<<<< HEAD
 }
 }
+=======
+} */
+>>>>>>> cambios 24/3/23

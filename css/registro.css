@@ -7,10 +7,10 @@
 }
  */
  /* agregar tipo de fuente */
-body{
+div{
     background-color: #eee;
     text-align: center;
-    border: 1px solid black;
+    border: 5px outset ;
     margin:0 auto;
     width: 25%;
     height: auto;
@@ -51,6 +51,8 @@ button {
     color: white;
     border-color: #D98C19;
     margin:15px;
+    width: 196px;
+    height: 37px;
 }
 form {
     display: grid;
@@ -66,19 +68,18 @@ input{
     line-height: 27px;
     border-style: none;
     /* border-style: none none solid none; */
-    background-color: #eee;
+    background-color: #fff;
+    outline: none;
 }
 input:hover{
     border-style: none none solid none;
 }
-select{
+/* select{
     color: white;
     background-color: black;
     border-radius: 50px;
-}
-option:hover{
-    background-color: #D98C19;
-}
+} */
+
 /* main{
     border: 1px solid black;
     margin:0 auto;

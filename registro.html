@@ -8,33 +8,37 @@
     <link rel="stylesheet" href="css/registro.css">
 </head>
 <body>
-    <header> <!-- Ocultar el header cuando la pantalla sea para tablets y celulares. -->
-        <h1>BazStore</h1>
-        <!-- Colocar el boton de devolverse en celular -->
-    </header>
-    <main>
-        <section class="tipo-cuenta">
-            <h2>Registrar nueva cuenta como</h2>
-            <select>
+    <div>
+        <header>
+            <!-- Ocultar el header cuando la pantalla sea para tablets y celulares. -->
+            <h1>BazStore</h1>
+            <!-- Colocar el boton de devolverse en celular -->
+        </header>
+        <main>
+            <section class="tipo-cuenta">
+                <h2>Registrar nueva cuenta</h2>
+                <!-- <select>
                 <option value="">Usuario</option>
                 <option value="">Vendedor</option>
-            </select>
-    <!-- seleccion multiple de Usuario y Vendedor -->
-        </section>
-    <br>
-    <form>
-        <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
-        <br>
-        <input type="text" id="cuenta" placeholder="Nombre de cuenta" required>
-        <br>
-        <input type="email" id="email" placeholder="E-mail" required>
-        <br>
-        <input type="password" id="pass" placeholder="Contraseña" required minlength="8" maxlength="16">
-        <br>
-        <input type="password" id="pass2" placeholder="Confirmar contraseña" required minlength="8" maxlength="16">
-        <br>
-        <button type="submit">Acceder</button>
-    </form>
-    </main>
+            </select> -->
+                <!-- seleccion multiple de Usuario y Vendedor -->
+            </section>
+            <br>
+            <form>
+                <input type="text" id="nombre" placeholder="Nombre y Apellido" required>
+                <br>
+                <input type="text" id="cuenta" placeholder="Nombre de cuenta" required>
+                <br>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <br>
+                <input type="password" id="pass" placeholder="Contraseña" required minlength="8" maxlength="16">
+                <br>
+                <input type="password" id="pass2" placeholder="Confirmar contraseña" required minlength="8"
+                    maxlength="16">
+                <br>
+                <button type="submit">Acceder</button>
+            </form>
+        </main>
+    </div>
 </body>
 </html>
