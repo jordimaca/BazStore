@@ -1,12 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>BazStore | Inicio</title>
+    <title>BazStore | Inicio</title>
+    <link rel="stylesheet" href="css/inicio.css">
 </head>
+
 <body>
-    
+    <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <input type="search" id="search-bar">
+                    <label for="search-bar" id="search-icon"><img src="images/search-icon.svg" alt=""></label>
+                    <input type="checkbox" id="menu-bar"><!-- Agregar icono de lupa para desplegar el buscador -->
+                    <!-- <label for="menu-bar"><img src="images/menu.png" alt="Menu icon" height="50px" width="50px"></label> -->
+                </form>
+            </div>
+            <nav class="categorias">
+                <a href="#">Hombre</a>
+                <a href="#">Mujer</a>
+                <a href="#">Niños</a>
+                <a href="#">Niños</a>
+                <a class="acerca" href="#">Acerca de BazStore</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="slider-contenedor">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="images/slider1.jpg" alt="" />
+                    <img id="slide-2" src="images/slider2.jpeg" alt="" />
+                    <img id="slide-3" src="images/slider3.jpg" alt="" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                </div>
+            </div>
+        </section>
+        <section class="infos">
+            <article class="info1">
+                <img src="images/box-icon.png" alt="">
+                <h2>Compra sin moverte</h2>
+                <p>Recuerda que tambien puedes comprar desde casa. Encuentra lo que necesitas, coordina el pago y la entrega con el vendedor. Es fácil y rápido ¡Todos podemos hacerlo!</p>
+            </article>
+            <article class="info2">
+                <img src="images/rd-icon.png" alt="">
+                <h2>Hecho por y para Dominicanos</h2>
+                <p></p>
+            </article>
+            <article class="info3">
+                <img src="images/0hand-icon.png" alt="">
+                <h2>Vende gratis</h2>
+                <p>Miles de personas quieren lo que ofreces. Publica y verás qué pronto llegan las compras ¡Tú no pagas nada!</p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <h2>Todos los derechos reservados &copy; BazStore 2023</h2>
+    </footer>
 </body>
+
 </html>
