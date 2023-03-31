@@ -2,6 +2,7 @@
 
 body{
     box-sizing: border-box;
+    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
 }
 .topline{
     background-color: #000;
@@ -55,7 +56,6 @@ body{
 .categorias{
     display: flex;
     justify-content: center;
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -81,13 +81,13 @@ body{
 
 .slider-wrapper {
     position: relative;
-    max-width: 48rem;
+    max-width: 65rem;
     margin: 0 auto;
 }
 
 .slider {
     display: flex;
-  /*   aspect-ratio: 16 / 9; */
+    aspect-ratio: 16 / 9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -95,7 +95,7 @@ body{
     border-radius: 0.5rem;
     -ms-overflow-style: none;
     /* Hide scrollbar IE and Edge */
-   /*  scrollbar-width: none; */
+    scrollbar-width: none;
     /* Hide scrollbar Firefox */
 }
 
@@ -106,7 +106,7 @@ body{
 
 .slider img {
     flex: 1 0 100%;
-    /* scroll-snap-destination: start; */
+    scroll-snap-align: start;
     object-fit: cover;
 }
 
@@ -126,7 +126,7 @@ body{
     border-radius: 50%;
     background-color: #fff;
     opacity: 0.75;
-    transition:ease 250ms;
+    transition: opacity ease 250ms;
 }
 
 .slider-nav a:hover {
@@ -134,8 +134,27 @@ body{
 }
 /* Slider FIN */
 
+/* Info */
+.info-contenedor{
+    display: flex;
+    justify-content: space-around;
+}
+.info-contenedor img{
+    width: 10rem;
+}
+.info-contenedor article{
+    text-align: center;
+    width: 500px;
+    margin: 20px;
+}
+.info-contenedor h2{
+    font-weight: bold;
+    font-size: 20px;
+}
+/* Info FIN */ 
+
 /* Footer */
-Footer{
+footer{
     background-color: black;
     color: white;
     text-align: center;
