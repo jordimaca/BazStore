@@ -18,11 +18,11 @@ div{
     word-wrap: break-word;
 }
 
-header{
-    /* background-color: #000;
-    color: goldenrod; */
+/* header{
+    background-color: #000;
+    color: goldenrod;
 
-}
+} */
 h1 {
     font-family: 'Inter';
     font-style: normal;
@@ -53,6 +53,10 @@ button {
     margin:15px;
     width: 196px;
     height: 37px;
+    cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
 }
 form {
     display: grid;

@@ -59,6 +59,10 @@ button{
     border-color: #D98C19;
     width: 196px;
     height: 37px;
+    cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
 }
 a{
     font-weight: 500px;
@@ -70,6 +74,8 @@ a{
     color: black;
     border:2px solid black;
     text-decoration: none;
+    width: 196px;
+    height: 25px;
 }
 nav{
     display:grid;
@@ -84,19 +90,9 @@ form{
     display: grid;
     grid-template-columns: auto;
 }
-<<<<<<< HEAD
-body{
-    body{
-=======
 /* body{
->>>>>>> cambios 24/3/23
     background-image: url("https://images.pexels.com/photos/8408535/pexels-photo-8408535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     background-repeat: no-repeat;
     background-position: center;
     background-color: #eee;
-<<<<<<< HEAD
-}
-}
-=======
 } */
->>>>>>> cambios 24/3/23
