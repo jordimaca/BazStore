@@ -16,11 +16,11 @@
     /* background-color: #eee; */
     text-align: center;
     /* border: 5px outset ; */
-    border:1px solid black;
+    border:1px solid #9f9e9e;
 /*     margin:0 auto; */
-    padding: 25px;
+    padding: 20px;
     /* width: 25% */;
-    height: auto;
+    height: 500px;
     margin:10px auto;
     word-wrap: break-word;
     grid-area: 1/2;
@@ -46,20 +46,20 @@ section h2{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 18px;
     margin: 10px;
 }
 
 
 button {
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
     color: white;
     border-color: #D98C19;
-    margin:15px;
-    width: 196px;
+    /* margin:15px;
+    width: 196px; */
     height: 37px;
     cursor: pointer;
 }
@@ -70,18 +70,23 @@ form {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-    gap: 15px;
+    gap: 10px;
 }
 input{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 27px;
+    border:1px solid #9f9e9e;
+    
     /* border-style: none; */
     /* border-style: none none solid none; */
     background-color: #fff;
     outline: none;
+}
+::placeholder{
+    color: rgba(0, 0, 0, 0.4);
 }
 .smartphone {
     grid-area: 1/1;
@@ -89,7 +94,7 @@ input{
     width: 220px;
     /* height: 370px; */
     height: 420px;
-    margin:60px auto;
+    margin:20px auto;
     border: 16px black solid;
     border-top-width: 60px;
     border-bottom-width: 60px;
