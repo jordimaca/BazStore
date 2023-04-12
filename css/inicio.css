@@ -21,6 +21,27 @@ body{
     margin: 12px;
 }
 
+.user{
+    position: absolute;
+    display: flex;
+}
+
+.user p{
+    font-weight: bolder;
+    padding: 3px;
+}
+
+.user a{
+    text-decoration: none;
+    color: #000;
+    font-size: 15px;
+    padding: 3px;
+}
+
+.user a:hover{
+    font-weight: bold;
+}
+
 /*Buscador*/
 .search {
   width: 100%;
@@ -66,16 +87,12 @@ body{
     justify-content: center;
     font-weight: bold;
     text-transform: uppercase;
-    /* Desplegable */
-    transition: all 0.5s;
-    /* transform: translateX(-100%); */
     
 }
 .categorias a{
     text-decoration: none;
     color: black;
     padding: 10px 30px;
-    /* padding: 0.7% 2.2%; */
     font-size: 13px;
 }
 
@@ -85,12 +102,6 @@ body{
     transition: 0.8s;
 }
 /* Menu FIN */
-
-/* Menu cel */
-.menu-cel{
-    
-}
-/* Menu cel FIN */
 
 /* Slider*/
 .slider-contenedor {
@@ -183,10 +194,7 @@ footer{
 /* Footer FIN */
 
 @media screen and (min-width:1024px) {
-
-    /*Menu desplegable*/
     .categorias{
-
+        
     }
-    /*Menu desplegable FIN*/
 }
