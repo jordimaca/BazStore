@@ -57,6 +57,7 @@ body{
 }
 .searchButton img{
     margin-top: 4px;
+    cursor: pointer;
 }
 /*Buscador FIN*/
 
@@ -185,7 +186,7 @@ footer{
 
     /*Menu desplegable*/
     .categorias{
-        
+
     }
     /*Menu desplegable FIN*/
 }
