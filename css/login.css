@@ -15,8 +15,9 @@ header,main{
 }
 header{
 
-    grid-column-start: 1;
-    grid-column-end: 3;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-area: 1/2;
 }
 aside {
     grid-area: 2/1;
@@ -83,7 +84,7 @@ button:hover {
   opacity: 0.8;
 }
 a{
-    font-weight: 500px;
+    /* font-weight: 500px; */
     font-size: 16px;
     line-height: 19px;
     background-color: #fff;
@@ -92,12 +93,14 @@ a{
     color: black;
     border:2px solid black;
     text-decoration: none;
-    width: 196px;
-    height: 25px;
+    width: 40px;
+    height: 20px;
+    position: relative;
 }
 nav{
     display:grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
+    gap:10px;
 }
 input{
     border-style: none none solid none;
@@ -107,6 +110,7 @@ input{
 form{
     display: grid;
     grid-template-columns: auto;
+    gap:15px;
 }
 .smartphone {
     position: relative;
@@ -155,3 +159,17 @@ form{
     background: white;
 }
 
+.redes{
+    display: none;
+    position: absolute;
+    bottom: 50px;
+    z-index: 1;
+    border-radius: 50px;
+    color: black;
+    border:2px solid black;
+    width: 60px;
+    height: 20px;
+}
+a:hover .redes{
+    display:block;
+}
