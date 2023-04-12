@@ -1,11 +1,13 @@
 @import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
+
+
 
 body {
+    font-family: 'Ubuntu';
     box-sizing: border-box;
-    max-width: 1200px;
-    margin: 0 auto;
+   
 }
-
 .topline {
     background-color: #000;
     height: 7px;
@@ -58,11 +60,85 @@ body {
 
 /* Menu FIN */
 
-/* Footer */
-Footer {
-    background-color: black;
-    color: white;
+.container-title {
+    padding: 30px;
+    background-color: #eee;
+    margin-bottom: 50px;
+    color: #222;
+}
+
+.card-list-products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.card {
+    display: flex;
+    cursor: pointer;
+    flex-wrap: wrap;
+    margin: 0 10px;
+}
+
+.card:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.card-img {
+    background: transparent;
+    margin-bottom: 15px;
+}
+
+.card-img img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.info-card {
+    /* display: flex; */
+    justify-content: space-between;
+}
+
+.text-product {
+    color: #252525;
+    font-weight: 300;
+    line-height: 1.4;
+    float: left;
+    width: 80%;
+    height: 80px;
+}
+
+.price{
+    float: right;
+    width: 19%;
     text-align: center;
 }
 
-/* Footer FIN */
+.text-product h3 {
+    color: inherit;
+    font-weight: inherit;
+    font-size: 15px;
+}
+
+.text-product h3:hover {
+    color: #1bbeb4;
+}
+
+.text-product p {
+    color: #666;
+    font-size: 13px;
+}
+
+.text-product p:hover {
+    color: #1bbeb4;
+}
+
+footer {
+    padding: 30px;
+    background-color: #eee;
+    margin-top: 50px;
+    color: #222;
+}
