@@ -1,9 +1,27 @@
 
 @import "reset.css";
+
+body {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+    justify-content: space-evenly;
+    gap: 5px;
+}
+
 header,main{
     text-align: center;
     margin: 0 auto;
+}
+header{
 
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+aside {
+    grid-area: 2/1;
+    /*     grid-column-start: 1;
+    grid-column-end: 2; */
 }
 h1{
     font-family: 'Inter';
@@ -21,21 +39,21 @@ h3{
 }
 
 main{
+    grid-area: 2/2;
+   /*  grid-column-start: 2;
+    grid-column-end: 3; */
     display: flex;
     flex-direction: column;
-    border:1px hidden black;
+    border:1px solid #9f9e9e;
     width: 316px;
     height: 550px; 
     justify-content: space-around;
     align-items: center;
-    background: rgba(255, 255, 255, 0.69);
-    border-radius: 50px;
-
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-    
+    /* background: rgba(255, 255, 255, 0.69);
+    border-radius: 50px; */
+   /*  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 h2{
-    
 /*     width: 165px;
     height: 35px; */
     font-family: 'Inter';
@@ -52,7 +70,7 @@ h2{
     line-height: 27px;
 }
 button{
-    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
     color: white;
@@ -69,7 +87,7 @@ a{
     font-size: 16px;
     line-height: 19px;
     background-color: #fff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     border-radius: 50px;
     color: black;
     border:2px solid black;
@@ -84,15 +102,56 @@ nav{
 input{
     border-style: none none solid none;
     outline: none;
-    background-color:rgba(255, 255, 255, 0.69);
+    /* background-color:rgba(255, 255, 255, 0.69); */
 }
 form{
     display: grid;
     grid-template-columns: auto;
 }
-/* body{
-    background-image: url("https://images.pexels.com/photos/8408535/pexels-photo-8408535.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: #eee;
-} */
+.smartphone {
+    position: relative;
+    width: 220px;
+    /* height: 370px; */
+    height: 420px;
+    margin:10px auto;
+    border: 16px black solid;
+    border-top-width: 60px;
+    border-bottom-width: 60px;
+    border-radius: 36px;
+}
+/* linea orizontal de ariba del celular */
+.smartphone:before {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 10px;
+}
+/* el circulo de abajo del celular */
+.smartphone:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 50%;
+    bottom: -65px;
+    transform: translate(-50%, -50%);
+    background: #333;
+    border-radius: 50%;
+}
+/* contenido del celular */
+.smartphone .content {
+    /* width: 360px;
+    height: 640px; */
+    width: 220px;
+    /* height: 370px; */
+    height: 420px;
+    background: white;
+}
+
