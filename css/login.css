@@ -15,8 +15,10 @@ header,main{
 }
 header{
 
-    grid-column-start: 1;
-    grid-column-end: 3;
+    /* grid-column-start: 1;
+    grid-column-end: 3; */
+    grid-area: 1/2;
+    margin:10px auto auto auto;
 }
 aside {
     grid-area: 2/1;
@@ -83,7 +85,7 @@ button:hover {
   opacity: 0.8;
 }
 a{
-    font-weight: 500px;
+    /* font-weight: 500px; */
     font-size: 16px;
     line-height: 19px;
     background-color: #fff;
@@ -92,21 +94,31 @@ a{
     color: black;
     border:2px solid black;
     text-decoration: none;
-    width: 196px;
-    height: 25px;
+    /* width: 40px;
+    height: 20px; */
+    position: relative;
+    /* overflow: auto; */
+    padding: 10px 20px;
+    
+    
 }
 nav{
     display:grid;
-    grid-template-columns: auto;
+    grid-template-columns: auto auto auto;
+    gap:10px;
 }
 input{
-    border-style: none none solid none;
+    border:1px solid #9f9e9e;
     outline: none;
     /* background-color:rgba(255, 255, 255, 0.69); */
+}
+::placeholder {
+    color: rgba(0, 0, 0, 0.4);
 }
 form{
     display: grid;
     grid-template-columns: auto;
+    gap:15px;
 }
 .smartphone {
     position: relative;
@@ -155,3 +167,18 @@ form{
     background: white;
 }
 
+.redes{
+    display: none;
+   /*  position: absolute; */
+ /*    right:-13px;
+    bottom: 50px; */
+    /* z-index: 1; */
+    /* border-radius: 50px; */
+    /* color: black;
+    border:2px solid black; */
+    /* width: 70px;
+    height: 20px; */
+}
+a:hover .redes{
+    display:block;
+}
