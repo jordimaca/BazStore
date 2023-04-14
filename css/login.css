@@ -107,19 +107,19 @@ nav{
     grid-template-columns: auto auto auto;
     gap:10px;
 }
-input{
+/* input{
     border:1px solid #9f9e9e;
     outline: none;
-    /* background-color:rgba(255, 255, 255, 0.69); */
+    background-color:rgba(255, 255, 255, 0.69);
 }
 ::placeholder {
     color: rgba(0, 0, 0, 0.4);
-}
-form{
+} */
+/* form{
     display: grid;
     grid-template-columns: auto;
     gap:15px;
-}
+} */
 .smartphone {
     position: relative;
     width: 220px;
@@ -181,4 +181,41 @@ form{
 }
 a:hover .redes{
     display:block;
+}
+.input-cont{
+    width: 250px;
+    padding: 30px;
+}
+.input{
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 22px;
+    border: none;
+    border-bottom: 1px silver solid;
+}
+.input label{
+    position: absolute;
+    left: 5px;
+    bottom:0px;
+    font-size: 22px;
+    color:silver;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input input:focus ~label,
+.input input:valid ~label{
+    transform: translateY(-25px);
+    font-size: 18px;
+    /* color:orange; */
+}
+.input input:focus,
+.input input:hover,
+.input input:valid{
+    border-color:black;
 }
