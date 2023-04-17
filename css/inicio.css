@@ -1,14 +1,9 @@
 @import "reset.css";
-@import "menu.css";
+@import "menu_inicio.css";
 
 body{
     box-sizing: border-box;
     font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
-}
-.topline{
-    background-color: #000;
-    height: 7px;
-    z-index: 2;
 }
 
 /* PARALAX */

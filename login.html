@@ -11,16 +11,36 @@
 </head>
 <body>
     <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <img src="images/user-icon.svg" alt="">
+                <a href="login.html">Sing in</a>
+                <p>|</p>
+                <a href="registro.html">Registrer</a>
+            </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
+            </div>
+            <nav class="categorias">
+                <a href="#">Hombre</a>
+                <a href="#">Mujer</a>
+                <a href="#">Niños</a>
+                <a href="#">Niñas</a>
+                <a class="acerca" href="#">Acerca de BazStore</a>
+            </nav>
+        </div>
     </header>
     <div class="contenido">
-        <div class="titulo">
-            <h1>BazStore</h1>
-            <h3>Bazar Virtual</h3>
-        </div>
         <main>
             <h2>¡Bienvenido!</h2>
             <!-- agregar formulario email ,contraseña y boton acceder-->
-        
             <form>
                 <div class="input-cont">
                     <div class="input">
@@ -38,8 +58,7 @@
             </form>
             <button type="submit">Acceder</button>
             <h3>Continuar con:</h3>
-        
-            <nav>
+            <nav class="redes-menu">
                 <a href="#" target="_blank"><i class="fa fa-google fa-fw"></i>
                     <div class="redes">Google</div>
                 </a>
@@ -60,9 +79,6 @@
                 </div>
             </div>
         </aside>
-
     </div>
-    
-    
 </body>
 </html>

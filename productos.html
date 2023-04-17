@@ -8,24 +8,33 @@
     <link rel="stylesheet" href="css/productos.css">
 </head>
 <body>
-    <div class="topline"></div>
-    <div class="contenedor">
+    <header>
+        <div class="topline"></div>
+      <div class="menu-contenedor">
+        <div class="user">
+            <img src="images/user-icon.svg" alt="">
+            <a href="login.html">Sing in</a>
+            <p>|</p>
+            <a href="registro.html">Registrer</a>
+        </div>
         <h1>BazStore</h1>
         <div class="buscador">
             <form>
-                <input type="search" id="search-bar">
-                <input type="checkbox" id="menu-bar"> <!-- Agregar icono de lupa para desplegar el buscador -->
-                <!-- <label for="menu-bar"><img src="images/menu.png" alt="Menu icon" height="50px" width="50px"></label> -->
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                    <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                </div>
             </form>
         </div>
         <nav class="categorias">
             <a href="#">Hombre</a>
             <a href="#">Mujer</a>
             <a href="#">Niños</a>
-            <a href="#">Niños</a>
+            <a href="#">Niñas</a>
             <a class="acerca" href="#">Acerca de BazStore</a>
         </nav>
-    </div>
+      </div>
+    </header>
     <div class="container-title">Productos</div>
     <section class="container-related-products">
     
