@@ -1,5 +1,5 @@
-
 @import "reset.css";
+@import "menu.css";
 
 .contenido {
     display: grid;
@@ -7,31 +7,20 @@
     grid-template-rows: auto auto;
     justify-content: space-evenly;
     gap: 5px;
+    padding-top: 30px;
 }
 
-.titulo,main{
+main{
     text-align: center;
     margin: 0 auto;
 }
-.titulo{
 
-    /* grid-column-start: 1;
-    grid-column-end: 3; */
-    grid-area: 1/2;
-    margin:10px auto auto auto;
-}
 aside {
     grid-area: 2/1;
     /*     grid-column-start: 1;
     grid-column-end: 2; */
 }
-h1{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 200;
-    font-size: 48px;
-    line-height: 58px;
-}
+
 h3{
     font-family: 'Inter';
     font-style: normal;
@@ -46,7 +35,7 @@ main{
     grid-column-end: 3; */
     display: flex;
     flex-direction: column;
-    border:1px solid #9f9e9e;
+    border: 1.5px solid #000;
     width: 316px;
     height: 550px; 
     justify-content: space-around;
@@ -84,7 +73,12 @@ button{
 button:hover {
   opacity: 0.8;
 }
-a{
+.redes-menu{
+    display:grid;
+    grid-template-columns: auto auto auto;
+    gap:10px;
+}
+.redes-menu a{
     /* font-weight: 500px; */
     font-size: 16px;
     line-height: 19px;
@@ -105,15 +99,11 @@ a{
 .fa-apple{
     padding: 10px 13px;
 }
-a:hover{
+.redes-menu a:hover{
     padding-right: 50px;
     transition: 1s;
 }
-nav{
-    display:grid;
-    grid-template-columns: auto auto auto;
-    gap:10px;
-}
+
 /* input{
     border:1px solid #9f9e9e;
     outline: none;
