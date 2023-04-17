@@ -1,7 +1,7 @@
 
 @import "reset.css";
 
-body {
+.contenido {
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -9,11 +9,11 @@ body {
     gap: 5px;
 }
 
-header,main{
+.titulo,main{
     text-align: center;
     margin: 0 auto;
 }
-header{
+.titulo{
 
     /* grid-column-start: 1;
     grid-column-end: 3; */
