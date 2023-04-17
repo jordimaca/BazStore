@@ -9,27 +9,33 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-    <div class="topline"></div>
-    <div class="contenedor">
-        <h1>BazStore</h1>
-        <div class="buscador">
-            <form>
-                <input type="search" id="search-bar">
-                <input type="checkbox" id="menu-bar"> <!-- Agregar icono de lupa para desplegar el buscador -->
-                <!-- <label for="menu-bar"><img src="images/menu.png" alt="Menu icon" height="50px" width="50px"></label> -->
-            </form>
+    <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <img src="images/user-icon.svg" alt="">
+                <a href="login.html">Sing in</a>
+                <p>|</p>
+                <a href="registro.html">Registrer</a>
+            </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
+            </div>
+            <nav class="categorias">
+                <a href="#">Hombre</a>
+                <a href="#">Mujer</a>
+                <a href="#">Niños</a>
+                <a href="#">Niñas</a>
+                <a class="acerca" href="#">Acerca de BazStore</a>
+            </nav>
         </div>
-        <nav class="categorias">
-            <a href="#">Hombre</a>
-            <a href="#">Mujer</a>
-            <a href="#">Niños</a>
-            <a href="#">Niños</a>
-            <a class="acerca" href="#">Acerca de BazStore</a>         
-        </nav>
-    </div>
-   
-    <div class="container-title">Zapatos</div>
-
+    </header>
     <main>
         <div class="container-img">
             <img src="https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"

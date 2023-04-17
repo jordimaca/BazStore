@@ -1,83 +1,20 @@
 @import "reset.css";
+@import "menu.css";
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;500;700&display=swap');
-
-
 
 body{
     font-family: 'Ubuntu';
     box-sizing: border-box;
 }
-.topline{
-    background-color: #000;
-    height: 7px;
-    width: 100%;
-}
-
-/* Menu */
-.contenedor{
-    border-bottom: 1px solid grey;
-    width: 100%;
-    height: 100px;
-    position: static;
-}
-
-.contenedor h1{
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    text-align: center;
-    width: 100%;
-    margin-top: 10px;
-}
-
-.buscador{
-    display: flex;
-    justify-content: right;
-    margin-right: 100px;
-}
-.categorias{
-    display: flex;
-    justify-content: center;
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.categorias a{
-    text-decoration: none;
-    color: black;
-    padding: 10px;
-    font-size: 13px;
-    margin: 0 13px;
-}
-
-.categorias a:hover{
-    background: #dddddd;
-    border-radius: 3px;
-    transition: 0.8s;
-}
-/* Menu FIN */
-
-/* Footer */
-Footer{
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-/* Footer FIN */
 
 img {
     max-width: 100%;
 }
 
-.container-title {
-    padding: 30px;
-    background-color: #eee;
-    margin-bottom: 50px;
-    color: #222;
-}
-
 main {
     display: flex;
     gap: 30px;
+    padding-top: 20px;
     margin-bottom: 80px;
     margin: 0 20px 20px 20px;
 }

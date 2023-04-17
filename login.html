@@ -11,52 +11,74 @@
 </head>
 <body>
     <header>
-        <h1>BazStore</h1>
-        <h3>Bazar Virtual</h3>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <img src="images/user-icon.svg" alt="">
+                <a href="login.html">Sing in</a>
+                <p>|</p>
+                <a href="registro.html">Registrer</a>
+            </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
+            </div>
+            <nav class="categorias">
+                <a href="#">Hombre</a>
+                <a href="#">Mujer</a>
+                <a href="#">Niños</a>
+                <a href="#">Niñas</a>
+                <a class="acerca" href="#">Acerca de BazStore</a>
+            </nav>
+        </div>
     </header>
-    <main>
-        <h2>¡Bienvenido!</h2>
-        <!-- agregar formulario email ,contraseña y boton acceder-->
+    <div class="contenido">
+        <main>
+            <h2>¡Bienvenido!</h2>
+            <!-- agregar formulario email ,contraseña y boton acceder-->
+            <form>
+                <div class="input-cont">
+                    <div class="input">
+                        <input type="email" name="" id="email" required>
+                        <label for="email">E-mail</label>
+                    </div>
+                </div>
+                <div class="input-cont">
+                    <div class="input">
+                        <input type="password" name="" id="contraseña" required>
+                        <label for="password">Contraseña</label>
+                    </div>
         
-        <form>
-            <div class="input-cont">
-                <div class="input">
-                    <input type="email" name="" id="email" required>
-                    <label for="email">E-mail</label>
                 </div>
-            </div>
-            <div class="input-cont">
-                <div class="input">
-                    <input type="password" name="" id="contraseña" required>
-                    <label for="password">Contraseña</label>
-                </div>
-            
-            </div>
-        </form>
-        <button type="submit">Acceder</button>
-        <h3>Continuar con:</h3>
-       
-        <nav>
-            <a href="#" target="_blank"><i class="fa fa-google fa-fw"></i>
-                <div class="redes">Google</div>
-            </a>
-            <a href="#" target="_blank"><i class="fa fa-apple"></i>
-                <div class="redes">Apple</div>
-            </a>
-            <a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i>
-                <div class="redes">Facebook</div>
-            </a>
-        </nav>
-        <!-- boton registrarse -->
-        <button onclick="document.location='registro.html'">Registrarse</button>
-    </main>
-    <aside>
+            </form>
+            <button type="submit">Acceder</button>
+            <h3>Continuar con:</h3>
+            <nav class="redes-menu">
+                <a href="#" target="_blank"><i class="fa fa-google fa-fw"></i>
+                    <div class="redes">Google</div>
+                </a>
+                <a href="#" target="_blank"><i class="fa fa-apple"></i>
+                    <div class="redes">Apple</div>
+                </a>
+                <a href="#" target="_blank"><i class="fa fa-facebook fa-fw"></i>
+                    <div class="redes">Facebook</div>
+                </a>
+            </nav>
+            <!-- boton registrarse -->
+            <button onclick="document.location='registro.html'">Registrarse</button>
+        </main>
+        <aside>
             <div class="smartphone">
                 <div class="content">
                     <!-- <iframe src="/w3css/tryw3css_templates_band.htm" style="width:100%;border:none;height:100%" /> -->
                 </div>
             </div>
-    </aside>
-    
+        </aside>
+    </div>
 </body>
 </html>
