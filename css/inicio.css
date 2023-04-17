@@ -1,4 +1,5 @@
 @import "reset.css";
+@import "menu.css";
 
 body{
     box-sizing: border-box;
@@ -7,194 +8,81 @@ body{
 .topline{
     background-color: #000;
     height: 7px;
+    z-index: 2;
 }
 
-/* Menu */
-.menu-contenedor{
-    border-bottom: 1px solid grey;
+/* PARALAX */
+.paralax{
+  position: absolute;
+  top: 151px;
 }
 
-.menu-contenedor h1{
-    font-family: 'Playfair Display', serif;
-    font-size: 50px;
-    text-align: center;
-    margin: 12px;
+.pimg1 {
+   background: url("/images/slider1.jpg");
+   min-height: 400px;
 }
 
-.user{
-    position: absolute;
-    display: flex;
+.pimg2 {
+   background: url("/images/slider2.jpeg");
+   min-height: 400px;
 }
 
-.user p{
-    font-weight: bolder;
-    padding: 3px;
+.pimg3 {
+   background: url("/images/slider3.jpg");
+   min-height: 400px;
 }
 
-.user a{
-    text-decoration: none;
-    color: #000;
-    font-size: 15px;
-    padding: 3px;
+.pimg1, .pimg2, .pimg3 {
+   position: relative;
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   /* fixed = parallax, scroll = normal */
+   background-attachment: fixed;
 }
 
-.user a:hover{
-    font-weight: bold;
+.ptext1 {
+   position: absolute;
+   top: 50%;
+   width: 40%;
+   color: #000000;
+   text-align: center;
+   font-size: 16px;
+   letter-spacing: 2px;
+   /* text-transform: uppercase; */
+}
+.ptext1 .border{
+  background: #000000;
+   color: #ffffff;
+   padding: 20px;
+   border-right: 7px solid #fff;
 }
 
-/*Buscador*/
-.search {
-  width: 100%;
-  position: relative;
-  display: flex;
-  justify-content: center;
+.ptext2 {
+   position: absolute;
+   top: 50%;
+   right: 0;
+   width: 40%;
+   color: #000000;
+   text-align: center;
+   font-size: 16px;
+   letter-spacing: 2px;
+   /* text-transform: uppercase; */
 }
-
-.searchTerm {
-  width: 50%;
-  border: 3px groove #6b6b6b;
-  border-right: none;
-  padding: 5px;
-  height: 20px;
-  border-radius: 50px 0 0 50px;
-  outline: none;
-  color: #000;
+.ptext2 .border {
+   background: #000000;
+   color: #ffffff;
+   padding: 20px;
+   border-left: 7px solid #fff;
 }
-
-.searchTerm:focus{
-  color: #000;
-}
-
-.searchButton {
-  width: 40px;
-  height: 36px;
-  border: 1px solid #000;
-  background: #000;
-  text-align: center;
-  color: #fff;
-  border-radius: 0 50px 50px 0;
-  cursor: pointer;
-  font-size: 20px;
-}
-.searchButton img{
-    margin-top: 4px;
-    cursor: pointer;
-}
-/*Buscador FIN*/
-
-.categorias{
-    display: flex;
-    justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-    
-}
-.categorias a{
-    text-decoration: none;
-    color: black;
-    padding: 10px 30px;
-    font-size: 13px;
-}
-
-.categorias a:hover{
-    background: #dddddd;
-    border-radius: 3px;
-    transition: 0.8s;
-}
-/* Menu FIN */
-
-/* Slider*/
-.slider-contenedor {
-    padding: 2rem;
-}
-
-.slider-wrapper {
-    position: relative;
-    max-width: 65rem;
-    margin: 0 auto;
-}
-
-.slider {
-    display: flex;
-    aspect-ratio: 16 / 9;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
-    border-radius: 0.5rem;
-    -ms-overflow-style: none;
-    /* Esconder scrollbar IE y Edge */
-    scrollbar-width: none;
-    /* Esconder scrollbar Firefox */
-}
-
-/* Esconder scrollbar para Chrome, Safari y Opera */
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-.slider img {
-    flex: 1 0 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
-}
-
-.slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-}
-
-.slider-nav a {
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: 50%;
-    background-color: #fff;
-    opacity: 0.75;
-    transition: opacity ease 250ms;
-}
-
-.slider-nav a:hover {
-    opacity: 1;
-}
-/* Slider FIN */
-
-/* Info */
-.info-contenedor{
-    display: flex;
-    justify-content: space-around;
-}
-.info-contenedor img{
-    width: 7rem;
-}
-.info-contenedor article{
-    text-align: center;
-    width: 500px;
-    margin: 20px;
-}
-.info-contenedor h2{
-    font-weight: bold;
-    font-size: 18px;
-}
-.info-contenedor p {
-    font-size: 15px;
-}
-/* Info FIN */ 
-
 /* Footer */
-footer{
-    background-color: black;
-    color: white;
-    text-align: center;
+.footer {
+   letter-spacing: 1px;
+   text-align: center;
+   padding: 50px 80px;
+   color: #000;   
 }
 /* Footer FIN */
+/* PARALAX FIN */
 
-@media screen and (min-width:1024px) {
-    .categorias{
-        
-    }
-}
+/* Responsive */
