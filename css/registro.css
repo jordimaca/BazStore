@@ -7,7 +7,7 @@
 }
  */
  /* agregar tipo de fuente */
- body{
+ .contenido{
      display: grid;
      grid-template-columns: auto auto;
      justify-content: space-evenly;
@@ -20,7 +20,7 @@
 /*     margin:0 auto; */
     padding: 20px;
     /* width: 25% */;
-    height: 500px;
+    /* height: 500px; */
     margin:10px auto;
     word-wrap: break-word;
     grid-area: 1/2;
@@ -53,6 +53,7 @@ section h2{
 
 
 button {
+    
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
@@ -60,7 +61,7 @@ button {
     border-color: #D98C19;
     /* margin:15px;
     width: 196px; */
-    height: 37px;
+    padding: 5px;
     cursor: pointer;
 }
 button:hover {
@@ -153,3 +154,40 @@ input{
     width: 25%;
     height: auto;
 } */
+.input-cont{
+    width: 250px;
+    padding: 30px;
+}
+.input{
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+.input input{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 22px;
+    border: none;
+    border-bottom: 1px silver solid;
+}
+.input label{
+    position: absolute;
+    left: 5px;
+    bottom:0px;
+    font-size: 22px;
+    color:silver;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input input:focus ~label,
+.input input:valid ~label{
+    transform: translateY(-25px);
+    font-size: 18px;
+    /* color:orange; */
+}
+.input input:focus,
+.input input:hover,
+.input input:valid{
+    border-color:black;
+}
