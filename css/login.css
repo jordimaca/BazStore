@@ -98,9 +98,16 @@ a{
     height: 20px; */
     position: relative;
     /* overflow: auto; */
-    padding: 10px 20px;
-    
-    
+}
+.fa-fw{
+    padding: 9px 10px;
+}
+.fa-apple{
+    padding: 10px 13px;
+}
+a:hover{
+    padding-right: 50px;
+    transition: 1s;
 }
 nav{
     display:grid;
