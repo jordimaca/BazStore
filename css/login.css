@@ -14,13 +14,9 @@ main{
     text-align: center;
     margin: 0 auto;
 }
-
 aside {
     grid-area: 2/1;
-    /*     grid-column-start: 1;
-    grid-column-end: 2; */
 }
-
 h3{
     font-family: 'Inter';
     font-style: normal;
@@ -31,8 +27,6 @@ h3{
 
 main{
     grid-area: 2/2;
-   /*  grid-column-start: 2;
-    grid-column-end: 3; */
     display: flex;
     flex-direction: column;
     border: 1.5px solid #000;
@@ -40,13 +34,8 @@ main{
     height: 550px; 
     justify-content: space-around;
     align-items: center;
-    /* background: rgba(255, 255, 255, 0.69);
-    border-radius: 50px; */
-   /*  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
 }
 h2{
-/*     width: 165px;
-    height: 35px; */
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
@@ -61,7 +50,6 @@ h2{
     line-height: 27px;
 }
 button{
-    /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
     color: white;
@@ -79,19 +67,23 @@ button:hover {
     gap:10px;
 }
 .redes-menu a{
+<<<<<<< HEAD
     /* font-weight: 500px; */
     font-size: 22px;
     line-height: 19px;
     background-color: #fff;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
     /* border-radius: 50px; */
+=======
+    font-size: 16px;
+    line-height: 19px;
+    background-color: #fff;
+    border-radius: 50px;
+>>>>>>> 4455dcf9eb5e4c92ee46668b2ac161a401532ec0
     color: black;
     /* border:2px solid black; */
     text-decoration: none;
-    /* width: 40px;
-    height: 20px; */
     position: relative;
-    /* overflow: auto; */
 }
 .redes{ 
     font-size: 14px;
@@ -107,23 +99,9 @@ button:hover {
     transition: 1s;
 } */
 
-/* input{
-    border:1px solid #9f9e9e;
-    outline: none;
-    background-color:rgba(255, 255, 255, 0.69);
-}
-::placeholder {
-    color: rgba(0, 0, 0, 0.4);
-} */
-/* form{
-    display: grid;
-    grid-template-columns: auto;
-    gap:15px;
-} */
 .smartphone {
     position: relative;
     width: 220px;
-    /* height: 370px; */
     height: 420px;
     margin:10px auto;
     border: 16px black solid;
@@ -159,25 +137,13 @@ button:hover {
 }
 /* contenido del celular */
 .smartphone .content {
-    /* width: 360px;
-    height: 640px; */
     width: 220px;
-    /* height: 370px; */
     height: 420px;
     background: white;
 }
 
 .redes{
     display: none;
-   /*  position: absolute; */
- /*    right:-13px;
-    bottom: 50px; */
-    /* z-index: 1; */
-    /* border-radius: 50px; */
-    /* color: black;
-    border:2px solid black; */
-    /* width: 70px;
-    height: 20px; */
 }
 a:hover .redes{
     display:block;
@@ -212,7 +178,6 @@ a:hover .redes{
 .input input:valid ~label{
     transform: translateY(-25px);
     font-size: 18px;
-    /* color:orange; */
 }
 .input input:focus,
 .input input:hover,
