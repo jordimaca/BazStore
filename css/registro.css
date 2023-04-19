@@ -1,22 +1,19 @@
-/* Agregar reset */
+
 @import "reset.css";
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; 
-}
- */
+@import "menu.css";
+
  /* agregar tipo de fuente */
  .contenido{
      display: grid;
      grid-template-columns: auto auto;
      justify-content: space-evenly;
+     padding-top: 30px;
  }
 .caja{
     /* background-color: #eee; */
     text-align: center;
     /* border: 5px outset ; */
-    border:1px solid #9f9e9e;
+    border:1.5px solid #000;
 /*     margin:0 auto; */
     padding: 20px;
     /* width: 25% */;
@@ -26,20 +23,6 @@
     grid-area: 1/2;
 }
 
-/* header{
-    background-color: #000;
-    color: goldenrod;
-
-} */
-h1 {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 200;
-    font-size: 48px;
-    line-height: 58px;
-    margin: 0 20px;
-    /* text-align: left; */
-}
 section h2{
     font-weight: bold;
     text-align: center;
@@ -51,9 +34,7 @@ section h2{
     margin: 10px;
 }
 
-
 button {
-    
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
@@ -67,20 +48,20 @@ button {
 button:hover {
   opacity: 0.8;
 }
-form {
+.register {
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
     gap: 10px;
 }
-input{
+.register-form input{
     font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
     line-height: 27px;
     border:1px solid #9f9e9e;
-    
+
     /* border-style: none; */
     /* border-style: none none solid none; */
     background-color: #fff;
@@ -154,16 +135,16 @@ input{
     width: 25%;
     height: auto;
 } */
-.input-cont{
+.input-form{
     width: 250px;
     padding: 30px;
 }
-.input{
+.register-form{
     width: 100%;
     height: 25px;
     position: relative;
 }
-.input input{
+.register-form input{
     width: 100%;
     height: 100%;
     outline: none;
@@ -171,7 +152,7 @@ input{
     border: none;
     border-bottom: 1px silver solid;
 }
-.input label{
+.register-form label{
     position: absolute;
     left: 5px;
     bottom:0px;
@@ -180,14 +161,14 @@ input{
     pointer-events: none;
     transition: all 0.3s ease;
 }
-.input input:focus ~label,
-.input input:valid ~label{
+.register-form :focus ~label,
+.register-form input:valid ~label{
     transform: translateY(-25px);
     font-size: 18px;
     /* color:orange; */
 }
-.input input:focus,
-.input input:hover,
-.input input:valid{
+.register-form input:focus,
+.inpregister-formut input:hover,
+.register-form input:valid{
     border-color:black;
 }

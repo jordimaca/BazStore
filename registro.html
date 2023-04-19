@@ -10,7 +10,33 @@
 <!-- Colocar el boton de devolverse en celular -->
 <!-- Ocultar el header cuando la pantalla sea para tablets y celulares. -->
 <body>
-    <header></header>
+    <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <img src="images/user-icon.svg" alt="">
+                <a href="login.html">Sing in</a>
+                <p>|</p>
+                <a href="registro.html">Registrer</a>
+            </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
+            </div>
+            <nav class="categorias">
+                <a href="#">Hombre</a>
+                <a href="#">Mujer</a>
+                <a href="#">Niños</a>
+                <a href="#">Niñas</a>
+                <a class="acerca" href="#">Acerca de BazStore</a>
+            </nav>
+      </div>
+    </header>
     <div class="contenido">
         <div class="caja">
         <!-- <div class="titulo">
@@ -26,33 +52,33 @@
                 <!-- seleccion multiple de Usuario y Vendedor -->
             </section>
           
-            <form>
-                <div class="input-cont">
-                    <div class="input">
+            <form class="register">
+                <div class="input-form">
+                    <div class="register-form">
                         <input type="text" id="nombre" placeholder="" required>
                         <label for="nombre">Nombre y Apellido</label>
                     </div>
                 </div>
-                <div class="input-cont">
-                    <div class="input">
+                <div class="input-form">
+                    <div class="register-form">
                         <input type="text" id="cuenta" placeholder="" required>
                         <label for="cuenta">Nombre de cuenta</label>
                     </div>
                 </div>
-                <div class="input-cont">
-                    <div class="input">
+                <div class="input-form">
+                    <div class="register-form">
                         <input type="email" id="email" placeholder="" required>
                         <label for="email">E-mail</label>
                     </div>
                 </div>
-                <div class="input-cont">
-                    <div class="input">
+                <div class="input-form">
+                    <div class="register-form">
                          <input type="password" id="pass" placeholder="" required minlength="8" maxlength="16">
                         <label for="pass">Contraseña</label>
                     </div>
                 </div>
-                <div class="input-cont">
-                    <div class="input">
+                <div class="input-form">
+                    <div class="register-form">
                          <input type="password" id="pass2" placeholder="" required minlength="8" maxlength="16">
                         <label for="pass2">Confirmar contraseña</label>
                     </div>
