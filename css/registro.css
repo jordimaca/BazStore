@@ -34,7 +34,7 @@ section h2{
     margin: 10px;
 }
 
-button {
+.register button {
     /* filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); */
     background: #D98C19;
     border-radius: 50px;
@@ -45,7 +45,7 @@ button {
     padding: 5px;
     cursor: pointer;
 }
-button:hover {
+.register button:hover {
   opacity: 0.8;
 }
 .register {
