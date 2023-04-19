@@ -80,18 +80,21 @@ button:hover {
 }
 .redes-menu a{
     /* font-weight: 500px; */
-    font-size: 16px;
+    font-size: 22px;
     line-height: 19px;
     background-color: #fff;
     /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
-    border-radius: 50px;
+    /* border-radius: 50px; */
     color: black;
-    border:2px solid black;
+    /* border:2px solid black; */
     text-decoration: none;
     /* width: 40px;
     height: 20px; */
     position: relative;
     /* overflow: auto; */
+}
+.redes{ 
+    font-size: 14px;
 }
 .fa-fw{
     padding: 9px 10px;
@@ -99,10 +102,10 @@ button:hover {
 .fa-apple{
     padding: 10px 13px;
 }
-.redes-menu a:hover{
+/* .redes-menu a:hover{
     padding-right: 50px;
     transition: 1s;
-}
+} */
 
 /* input{
     border:1px solid #9f9e9e;
@@ -215,4 +218,12 @@ a:hover .redes{
 .input input:hover,
 .input input:valid{
     border-color:black;
+}
+
+.footer {
+    background-color: #000;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 50px 80px;
+    color:#fff;
 }

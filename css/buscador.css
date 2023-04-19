@@ -280,9 +280,10 @@ main {
     color: #1bbeb4;
 }
 
-footer {
-    padding: 30px;
-    background-color: #eee;
-    margin-top: 50px;
-    color: #222;
+.footer {
+    background-color:#000;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 50px 80px;
+    color: #fff;
 }
