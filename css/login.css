@@ -97,29 +97,50 @@ button{
 button:hover {
   opacity: 0.8;
 }
+
+/* Redes */
 .redes-menu{
     display:grid;
     grid-template-columns: auto auto auto;
     gap:10px;
 }
-.redes-menu a{
-    font-size: 22px;
-    line-height: 19px;
-    background-color: #fff;
-    color: black;
-    text-decoration: none;
-    position: relative;
+.redes-menu .button{
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 1.5px solid #000;
+    transition: all 0.8s ease-out;
 }
-.redes{ 
-    font-size: 14px;
-}
-.fa-fw{
-    padding: 9px 10px;
-}
-.fa-apple{
-    padding: 10px 13px;
+.redes-menu .button:hover{
+    width: 170px;
 }
 
+.redes-menu .button .icon{
+    display: inline-block;
+    border-radius: 50px;
+    transition: all 0.8s ease-out;
+}
+
+.redes-menu .button .icon i{
+    font-size: 25px;
+    line-height: 50px;
+    transition: all 0.8s ease-out;
+}
+
+.redes-menu .button:hover ~ .redes-menu .button .text{
+    display: none;
+}
+.redes-menu .button .text{
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+    word-break: break-all;
+}
+/* Redes FIN */
 
 .smartphone {
     position: relative;
