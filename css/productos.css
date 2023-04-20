@@ -14,6 +14,19 @@ body {
     margin-bottom: 50px;
     color: #222;
 }
+/* 
+.grid {
+    display: flex;
+    
+
+} */
+
+.filtro h2 {
+    font-size: 24px;
+    margin: 5px;
+
+}
+
 
 .card-list-products {
     display: grid;
