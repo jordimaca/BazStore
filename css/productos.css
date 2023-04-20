@@ -12,7 +12,6 @@ body {
     margin-bottom: 50px;
     color: #222;
 }
-<<<<<<< HEAD
 
 .contenedor-filtro {
     display: grid;
@@ -28,22 +27,6 @@ body {
     
 }
 
-=======
-
-.contenedor-filtro {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto auto;
-}
-
-.filtro {
-    grid-area: 1/1/4/1;
-    padding-left: 10%;
-    background-color: #eee;
-    text-align: center;
-}
-
->>>>>>> e827e533368e47c618c3786cfc74a4df64caed8c
 .filtro ul li a {
     text-decoration: none;
     color: #666;
@@ -57,7 +40,6 @@ body {
     margin: 10px;
     
 }
-<<<<<<< HEAD
 
 h4 {
     font-size: 18px ; 
@@ -76,14 +58,6 @@ h4 {
     color: #666;
     font-weight: 500;
     line-height: 0;
-=======
-
-h4 {
-    font-size: 18px ; 
-    font-weight: bolder;
-    margin: 7%;
-    
->>>>>>> e827e533368e47c618c3786cfc74a4df64caed8c
 }
 
 .boton:focus {
