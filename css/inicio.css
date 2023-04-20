@@ -1,5 +1,5 @@
 @import "reset.css";
-@import "menu_inicio.css";
+@import "menu.css";
 
 body{
     box-sizing: border-box;
@@ -7,6 +7,12 @@ body{
 }
 
 /* PARALAX */
+header{
+   position: fixed;
+   top: 0;
+   z-index: 2;
+}
+
 .paralax{
   position: absolute;
   top: 151px;
