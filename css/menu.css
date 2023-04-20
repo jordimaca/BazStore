@@ -1,6 +1,7 @@
 header{
   background-color: #fff;
   width: 100%;
+  font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
 }
 
 .topline{
@@ -9,7 +10,7 @@ header{
 }
 
 .menu-contenedor{
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid #000;
 }
 
 .menu-contenedor h1{
@@ -42,6 +43,9 @@ header{
 }
 
 /*Buscador*/
+.buscador{
+    padding-bottom: 5px;
+}
 .search {
   width: 100%;
   position: relative;
