@@ -9,47 +9,7 @@
     gap: 5px;
     padding-top: 30px;
 }
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-/* .dropdown .dropbtn {
-    #eso seria para cambiar las propiedades del boton
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-} */
-.dropdown-contenido {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown-contenido a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-contenido a:hover {
-    background-color: #ddd;
-}
-.dropdown:hover .dropdown-contenido {
-    display: block;
-}
-main{
-    text-align: center;
-    margin: 0 auto;
-}
+
 aside {
     grid-area: 2/1;
 }
@@ -62,6 +22,9 @@ h3{
 }
 
 main{
+    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+    text-align: center;
+    margin: 0 auto;
     grid-area: 2/2;
     display: flex;
     flex-direction: column;
@@ -85,18 +48,29 @@ h2{
     font-size: 22px;
     line-height: 27px;
 }
-button{
-    background: #D98C19;
-    border-radius: 50px;
-    color: white;
-    border-color: #D98C19;
-    width: 196px;
-    height: 37px;
+
+/* Boton-up */
+.btn-up {
+    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+    letter-spacing: 1px;
+    background-color: #000;
+    border: 2px solid #000;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 3em;
+    color: #fff;
+    -webkit-transition: 0.25s;
+    transition: 0.3s;
     cursor: pointer;
 }
-button:hover {
-  opacity: 0.8;
+.btn-up:hover,
+.btn-up:focus {
+  border-color: #000;
+  color: #000;
+  box-shadow: inset 0 -3.25em 0 0 #fff;
 }
+/* Boton-up FIN */
 
 /* Redes */
 .redes-menu{

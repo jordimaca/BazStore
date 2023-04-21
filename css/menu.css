@@ -21,12 +21,42 @@ header{
     letter-spacing: 1px;
 }
 
-.user{
-    position: absolute;
-    display: flex;
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
 
-.user p{
+.dropdown-contenido {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.dropdown-contenido a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+.dropdown:hover .dropdown-contenido {
+    display: block;
+}
+.btn-left {
+    background: #fff;
+    line-height: 1;
+    border: none;
+    color: #000;
+    transition: 0.3s;
+}
+
+.btn-left:hover,
+.btn-left:focus {
+    box-shadow: inset 6.5em 0 0 0 #000;
+    color: #fff;
+}
+/* .user p{
     font-weight: bolder;
     padding: 3px;
 }
@@ -40,7 +70,7 @@ header{
 
 .user a:hover{
     font-weight: bold;
-}
+} */
 
 /*Buscador*/
 .buscador{
@@ -88,20 +118,22 @@ header{
 .categorias{
     display: flex;
     justify-content: center;
-    font-weight: bold;
-    text-transform: uppercase;
-}
-.categorias a{
-    text-decoration: none;
-    color: black;
-    padding: 10px 30px;
-    font-size: 13px;
-    letter-spacing: 1px;
-    z-index: 0;
 }
 
-.categorias a:hover{
-    background: #dddddd;
-    border-radius: 3px;
-    transition: 0.8s;
+.btn-menu {
+    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    line-height: 1;
+    padding: 0.5em 1.5em;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.btn-menu:hover,
+.btn-menu:focus {
+  color: #fff;
+  box-shadow: inset 0 -3.25em 0 0 #000;
 }
