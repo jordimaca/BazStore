@@ -130,16 +130,18 @@ button:hover {
     line-height: 50px;
     transition: all 0.8s ease-out;
 }
-
-.redes-menu .button:hover ~ .redes-menu .button .text{
+.redes-menu .button .text{
     display: none;
 }
-.redes-menu .button .text{
+.redes-menu .button:hover .text{
+    display:inline-block;
+    word-break: break-all;
     color: #000;
     font-weight: bold;
     font-size: 14px;
-    word-break: break-all;
+    
 }
+
 /* Redes FIN */
 
 .smartphone {
