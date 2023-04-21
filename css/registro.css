@@ -5,9 +5,8 @@
  /* agregar tipo de fuente */
  .contenido{
      display: grid;
-     grid-template-columns: auto auto;
+     grid-template-columns: auto;
      justify-content: space-evenly;
-     padding-top: 30px;
  }
 .caja{
     text-align: center;
@@ -15,7 +14,7 @@
     padding: 20px;
     margin:10px auto;
     word-wrap: break-word;
-    grid-area: 1/2;
+    grid-area: 1/1;
 }
 
 section h2{
@@ -58,52 +57,7 @@ section h2{
 ::placeholder{
     color: rgba(0, 0, 0, 0.4);
 }
-.smartphone {
-    grid-area: 1/1;
-    position: relative;
-    width: 220px;
-    height: 420px;
-    margin:20px auto;
-    border: 16px black solid;
-    border-top-width: 60px;
-    border-bottom-width: 60px;
-    border-radius: 36px;
-}
 
-/* linea orizontal de ariba del celular */
-.smartphone:before {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 5px;
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background: #333;
-    border-radius: 10px;
-}
-
-/* el circulo de abajo del celular */
-.smartphone:after {
-    content: '';
-    display: block;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    left: 50%;
-    bottom: -65px;
-    transform: translate(-50%, -50%);
-    background: #333;
-    border-radius: 50%;
-}
-
-/* contenido del celular */
-.smartphone .content {
-    width: 220px;
-    height: 420px;
-    background: white;
-}
 .input-form{
     width: 250px;
     padding: 30px;
