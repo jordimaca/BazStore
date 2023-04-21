@@ -4,20 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>BazStore | Perfil</title>
+    <title>BazStore | Perfil</title>
+    <link rel="stylesheet" href="css/perfil.css">
+    <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
+
 </head>
 <body>
-    <header></header>
+    <header>
+        <div class="topline"></div>
+      <div class="menu-contenedor">
+        <div class="user">
+            <img src="images/user-icon.svg" alt="">
+            <a href="login.html">Sing in</a>
+            <p>|</p>
+            <a href="registro.html">Registrer</a>
+        </div>
+        <h1>BazStore</h1>
+        <div class="buscador">
+            <form>
+                <div class="search">
+                    <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                    <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                </div>
+            </form>
+        </div>
+        <nav class="categorias">
+            <a href="inicio.html">Inicio</a>
+            <a href="productos.html">Hombre</a>
+            <a href="productos.html">Mujer</a>
+            <a href="productos.html">Niños</a>
+            <a href="productos.html">Niñas</a>
+            <a href="#">Acerca de BazStore</a>
+        </nav>
+      </div>
+    </header>
     <main>
-        <p>Administrar mi cuenta</p>
-        <p>Ubicacion</p>
-        <p>Politica y privacidad</p>
-        <p>Quienes somos</p>
+        <img src="images/user.svg">
+        <h1>Nombre de vendedor</h1>
+        <div class="lista">
+            
+            <a href="#" class="text">93% comentarios positivos</a>
+            
+            <p class="text">12k articulos vendidos</p>
+            
+            <p class="text">1.1k seguidores</p>
+            
+        </div>
+        <div class="link-contenedor">
+            <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i>compartir</a></i>
+            <a href="#"><i class="fa-sharp fa-regular fa-comment"></i>contactar</a></i>
+            <a href="#"><i class="fa-regular fa-heart"></i>Guardar vendendor</a></i>
+       </div>
 
     </main>
-    <footer>
-        <p>Cerrar sesion</p>
-    </footer>
     
+    
+    <!-- <footer>
+        <p>footer</p>
+    </footer>
+     -->
 </body>
 </html>
