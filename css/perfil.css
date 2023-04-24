@@ -1,0 +1,54 @@
+@import "reset.css";
+@import "menu.css";
+
+main {
+    background-color: #eee;
+}
+
+main img {
+    width: 8%;
+    padding-left: 10px;
+    margin-top: 15px;
+}
+
+main h1 {
+    font-size: 22px;
+    display: inline-block;
+    position: relative;
+    bottom: 35px;
+}
+
+.lista {
+    display: inline-block;
+    
+}
+
+.text{
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    /* float: left; */
+    padding: 10px;
+    display: inline-block;
+
+    
+}
+
+.link-contenedor {
+    margin: auto 40px;
+    display: inline-block;
+
+}
+
+.link-contenedor a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px; 
+    padding: 10px;
+    display: inline-block;
+    bottom: 20px;  
+} 
+
+.link-contenedor i {
+    padding: 10px;
+}
