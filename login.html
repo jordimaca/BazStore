@@ -16,14 +16,13 @@
             <div class="user">
                 <img src="images/user-icon.svg" alt="">
                 <div class="dropdown">
-                    <button class="dropbtn">Acceder a su cuenta
+                    <button class="btn-cuenta">Acceder a su cuenta
                     <i class="fa fa-caret-down"></i>
                     </button>
                     <div class="dropdown-contenido">
-                        <a href="login.html">Iniciar Sesion</a>
-                        <a href="registro.html">Registrarse</a>
+                        <a class="btn-left" href="login.html">Iniciar Sesion</a>
+                        <a class="btn-left" href="registro.html">Registrarse</a>
                     </div>
-
                 </div>
             </div>
             <h1>BazStore</h1>
@@ -36,12 +35,12 @@
                 </form>
             </div>
             <nav class="categorias">
-                <a href="inicio.html">Inicio</a>
-                <a href="productos.html">Hombre</a>
-                <a href="productos.html">Mujer</a>
-                <a href="productos.html">Niños</a>
-                <a href="productos.html">Niñas</a>
-                <a class="acerca" href="#">Acerca de BazStore</a>
+                <button class="btn-menu" onclick="document.location='inicio.html'">Inicio</button>
+                <button class="btn-menu" onclick="document.location='productos.html'">Hombre</button>
+                <button class="btn-menu" onclick="document.location='productos.html'">Mujer</button>
+                <button class="btn-menu" onclick="document.location='productos.html'">Niños</button>
+                <button class="btn-menu" onclick="document.location='productos.html'">Niñas</button>
+                <button class="btn-menu" onclick="document.location='productos.html'">Acerca de BazStore</button>
             </nav>
         </div>
     </header>
@@ -64,7 +63,7 @@
         
                 </div>
             </form>
-            <button type="submit">Acceder</button>
+            <button class="btn-up" type="submit">Acceder</button>
             <h3>Continuar con:</h3>
             <nav class="redes-menu">
                 <div class="button">
@@ -81,7 +80,7 @@
                  </div>
             </nav>
             <!-- boton registrarse -->
-            <button onclick="document.location='registro.html'">Registrarse</button>
+            <button class="btn-up" onclick="document.location='registro.html'">Registrarse</button>
         </main>
         
     </div>
