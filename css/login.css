@@ -16,45 +16,6 @@ aside {
 }
 =======
 
-/* dropdown #incluirlo en el menu */
-.dropdown {
-    float: left;
-    overflow: hidden;
-}
-/* .dropdown .dropbtn {
-    #eso seria para cambiar las propiedades del boton
-    font-size: 16px;
-    border: none;
-    outline: none;
-    color: white;
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-} */
-.dropdown-contenido {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-}
-.dropdown-contenido a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-.dropdown-contenido a:hover {
-    background-color: #ddd;
-}
-.dropdown:hover .dropdown-contenido {
-    display: block;
-}
-/* dropdown fin */
 main{
     text-align: center;
     margin: 0 auto;
@@ -100,6 +61,7 @@ h2{
     font-size: 22px;
     line-height: 27px;
 }
+<<<<<<< HEAD
 
 /* Boton-up */
 .btn-up {
@@ -121,6 +83,19 @@ h2{
   border-color: #000;
   color: #000;
   box-shadow: inset 0 -3.25em 0 0 #fff;
+=======
+main button{
+    background: #D98C19;
+    border-radius: 50px;
+    color: white;
+    border-color: #D98C19;
+    width: 196px;
+    height: 37px;
+    cursor: pointer;
+}
+main button:hover {
+  opacity: 0.8;
+>>>>>>> ac0ea092644bd0960745c2fdbcd0afcbce46395e
 }
 /* Boton-up FIN */
 

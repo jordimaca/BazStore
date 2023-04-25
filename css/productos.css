@@ -82,43 +82,6 @@ h4 {
     padding-left: 5%;
 }
 
-.boton {
-    position: relative;
-}
-
-.boton input {
-    background-color: #f7f7f7;
-    border: none;
-    padding: 5px;
-    width: 60px;
-    height: 100%;
-    color: #666;
-    font-weight: 500;
-    line-height: 0;
-}
-
-.boton:focus {
-    outline: none;
-}
-
-
-
-.container-related-products1{
-    grid-area: 1/2;
-    padding-left: 5%;
-    
-} 
-
-.container-related-products2 {
-    grid-area: 2/2;
-    padding-left: 5%;
-}
-
-.container-related-products3 {
-    grid-area: 3/2;
-    padding-left: 5%;
-}
-
 .card-list-products {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
