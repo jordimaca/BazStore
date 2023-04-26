@@ -5,8 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BazStore | Login</title>
+    <link rel="stylesheet" href="css/nosotros.css">
 </head>
 <body>
-    
+    <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <img src="images/user-icon.svg" alt="">
+                <div class="dropdown">
+                    <div class="dropdown">
+                    <button class="btn-cuenta">Acceder a su cuenta<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-left" href="login.html">Iniciar Sesion</a>
+                            <a class="btn-left" href="registro.html">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
+            </div>
+                <nav class="categorias">
+                    <button class="btn-menu" onclick="document.location='inicio.html'">Inicio</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Hombre</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Mujer</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Niños</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Niñas</button>
+                    <button class="btn-menu" onclick="document.location='nosotros.html'">Acerca de BazStore</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <main>
+        <article class="#1">
+            <div class="text">
+                <h2>¿Quienes somos?</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero temporibus earum distinctio dolore nobis explicabo itaque aut neque facere? Expedita voluptatem et excepturi natus cum quisquam nobis saepe numquam eligendi.</p>
+            </div>
+            <div class="image">
+                <img src="images/infotep.jpg" alt="">
+            </div>
+        </article>
+        <article class="#2">
+            <div class="image">
+                <img src="images/infotep.jpg" alt="">
+            </div>
+            <div class="text">
+                <h2>¿Que es BazStore?</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est reiciendis corrupti a nobis fugit earum minus, doloremque debitis recusandae, qui reprehenderit similique nam dignissimos, architecto repellendus neque aperiam suscipit omnis!</p>
+            </div>
+        </article>
+        <article class="#3">
+            <div class="text">
+                <h2>Mision</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio temporibus nihil quia, nostrum porro dolores illum tempore perspiciatis a saepe officiis ut quas possimus iusto ipsum! Fugiat, maiores ad?</p>
+            </div>
+            <div class="image">
+                <img src="images/infotep.jpg" alt="">
+            </div>
+        </article>
+    </main>
 </body>
 </html>

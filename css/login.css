@@ -1,10 +1,6 @@
 @import "reset.css";
 @import "menu.css";
 
-.contenido {
-    justify-content: space-evenly;
-    padding-top: 30px;
-}
 
 main{
     text-align: center;
@@ -49,16 +45,14 @@ h2{
 
 /* Boton-up */
 .btn-up {
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
     letter-spacing: 1px;
     background-color: #000;
     border: 2px solid #000;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
-    padding: 1em 3em;
+    padding: 1rem 2rem;
     color: #fff;
-    -webkit-transition: 0.25s;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -67,10 +61,6 @@ h2{
   border-color: #000;
   color: #000;
   box-shadow: inset 0 -3.25em 0 0 #fff;
-}
-
-main button:hover {
-  opacity: 0.8;
 }
 /* Boton-up FIN */
 
@@ -117,7 +107,6 @@ main button:hover {
     font-size: 14px;
     
 }
-
 /* Redes FIN */
 
 .input-cont{
