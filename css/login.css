@@ -1,27 +1,14 @@
 @import "reset.css";
 @import "menu.css";
 
-<<<<<<< HEAD
 .contenido {
-    display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
     justify-content: space-evenly;
-    gap: 5px;
     padding-top: 30px;
 }
 
-aside {
-    grid-area: 2/1;
-}
-=======
 
-main{
-    text-align: center;
-    margin: 0 auto;
-}
-
->>>>>>> 0f87306410db2ea06233ad12637430623c73e921
 h3{
     font-family: 'Inter';
     font-style: normal;
@@ -31,13 +18,9 @@ h3{
 }
 
 main{
-<<<<<<< HEAD
     font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
     text-align: center;
     margin: 0 auto;
-    grid-area: 2/2;
-=======
->>>>>>> 0f87306410db2ea06233ad12637430623c73e921
     display: flex;
     flex-direction: column;
     border: 1.5px solid #000;
@@ -61,7 +44,6 @@ h2{
     font-size: 22px;
     line-height: 27px;
 }
-<<<<<<< HEAD
 
 /* Boton-up */
 .btn-up {
@@ -83,8 +65,8 @@ h2{
   border-color: #000;
   color: #000;
   box-shadow: inset 0 -3.25em 0 0 #fff;
-=======
-main button{
+}
+/* main button{
     background: #D98C19;
     border-radius: 50px;
     color: white;
@@ -95,8 +77,8 @@ main button{
 }
 main button:hover {
   opacity: 0.8;
->>>>>>> ac0ea092644bd0960745c2fdbcd0afcbce46395e
-}
+} */
+
 /* Boton-up FIN */
 
 /* Redes */
