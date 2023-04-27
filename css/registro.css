@@ -27,17 +27,7 @@ section h2{
     line-height: 18px;
     margin: 10px;
 }
-.register button {  
-    background: #D98C19;
-    border-radius: 50px;
-    color: white;
-    border-color: #D98C19;
-    padding: 5px;
-    cursor: pointer;
-}
-.register button:hover {
-  opacity: 0.8;
-}
+
 .register {
     display: grid;
     grid-template-columns: auto;
@@ -94,3 +84,24 @@ section h2{
 .register-form input:valid{
     border-color:black;
 }
+
+/* Boton-up */
+.btn-up {
+    letter-spacing: 1px;
+    background-color: #000;
+    border: 2px solid #000;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1rem 3rem;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn-up:hover,
+.btn-up:focus {
+  border-color: #000;
+  color: #000;
+  box-shadow: inset 0 -3.25em 0 0 #fff;
+}
+/* Boton-up FIN */

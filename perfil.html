@@ -16,34 +16,33 @@
             <div class="user">
                 <img src="images/user-icon.svg" alt="">
                 <div class="dropdown">
-                    <button class="dropbtn">Acceder a su cuenta
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-contenido">
-                        <a href="login.html">Iniciar Sesion</a>
-                        <a href="registro.html">Registrarse</a>
+                    <div class="dropdown">
+                    <button class="btn-cuenta">Acceder a su cuenta<i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-left" href="login.html">Iniciar Sesion</a>
+                            <a class="btn-left" href="registro.html">Registrarse</a>
+                        </div>
                     </div>
-
                 </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
+                    </div>
+                </form>
             </div>
-        <h1>BazStore</h1>
-        <div class="buscador">
-            <form>
-                <div class="search">
-                    <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                    <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><img src="images/search-icon.png" alt="" width="20px"></label></button>
-                </div>
-            </form>
+                <nav class="categorias">
+                    <button class="btn-menu" onclick="document.location='inicio.html'">Inicio</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Hombre</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Mujer</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Niños</button>
+                    <button class="btn-menu" onclick="document.location='productos.html'">Niñas</button>
+                    <button class="btn-menu" onclick="document.location='nosotros.html'">Acerca de BazStore</button>
+                </nav>
+            </div>
         </div>
-        <nav class="categorias">
-            <a href="inicio.html">Inicio</a>
-            <a href="productos.html">Hombre</a>
-            <a href="productos.html">Mujer</a>
-            <a href="productos.html">Niños</a>
-            <a href="productos.html">Niñas</a>
-            <a href="#">Acerca de BazStore</a>
-        </nav>
-      </div>
     </header>
     <main>
         <img src="images/user.svg">

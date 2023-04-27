@@ -56,16 +56,14 @@ h2{
 
 /* Boton-up */
 .btn-up {
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
     letter-spacing: 1px;
     background-color: #000;
     border: 2px solid #000;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
-    padding: 1em 3em;
+    padding: 1rem 2rem;
     color: #fff;
-    -webkit-transition: 0.25s;
     transition: 0.3s;
     cursor: pointer;
 }
@@ -136,7 +134,6 @@ main button:hover {
     font-size: 14px;
     
 }
-
 /* Redes FIN */
 
 .input-cont{
