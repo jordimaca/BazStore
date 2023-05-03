@@ -1,7 +1,16 @@
+@font-face {
+    font-family: BazLogo;
+    src: url(/fonts/couture/couture-bld.otf);
+}
+@font-face {
+    font-family: BazFont;
+    src: url(/fonts/Inter/Inter-Medium.ttf);
+}
+
 header{
   background-color: #fff;
   width: 100%;
-  font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+  font-family: BazFont;
 }
 
 .topline{
@@ -14,16 +23,17 @@ header{
 }
 
 .menu-contenedor h1{
-    font-family: "couture";
-    font-size: 50px;
+    font-family: BazLogo, Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+    font-size: 40px;
     text-align: center;
     margin-bottom: 12px;
-    letter-spacing: 1px;
+    letter-spacing: 3px;
 }
 
 /* Sesion */
 .dropdown {
     overflow: hidden;
+    display: inline-block;
 }
 
 .dropdown-contenido {
@@ -48,6 +58,7 @@ header{
     cursor: pointer;
     background-color: #000;
     color: #fff;
+    font-family: BazFont;
 }
 .btn-left {
     background: #fff;
@@ -79,11 +90,10 @@ header{
 
 .searchTerm {
   width: 50%;
-  border: 3px groove #6b6b6b;
+  border: 3px solid #000;
   border-right: none;
   padding: 5px;
   height: 20px;
-  border-radius: 50px 0 0 50px;
   outline: none;
   color: #000;
 }
@@ -95,17 +105,18 @@ header{
 .searchButton {
   width: 40px;
   height: 36px;
-  border: 1px solid #000;
-  background: #000;
+  border: 3px solid #000;
+  border-left: none;
+  background: #fff;
   text-align: center;
   color: #fff;
-  border-radius: 0 50px 50px 0;
   cursor: pointer;
   font-size: 20px;
 }
-.searchButton img{
-    margin-top: 4px;
+.searchButton i{
+    /* argin-left: 3px; */
     cursor: pointer;
+    color: #000;
 }
 /*Buscador FIN*/
 
@@ -115,8 +126,8 @@ header{
 }
 
 .btn-menu {
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
-    letter-spacing: 1px;
+    font-family: BazFont;
+    letter-spacing: 1.5px;
     font-size: 15px;
     background-color: #fff;
     color: #000;

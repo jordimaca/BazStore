@@ -1,53 +1,35 @@
 @import "reset.css";
 @import "menu.css";
 
-<<<<<<< HEAD
-.contenido {
-    grid-template-columns: auto auto;
-    grid-template-rows: auto auto;
-    justify-content: space-evenly;
-    padding-top: 30px;
-}
-
-
-=======
-
 main{
+    font-family: BazFont;
     text-align: center;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000;
+    width: 316px;
+    height: 550px; 
+    justify-content: space-around;
+    align-items: center;
+    margin:50px auto;
 }
 
->>>>>>> cbdc1f483a6ab87deadfffb4d0b29fd24e56dc1a
 h3{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 15px;
     line-height: 18px;
 }
 
-main{
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
-    text-align: center;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    border: 1.5px solid #000;
-    width: 316px;
-    height: 550px; 
-    justify-content: space-around;
-    align-items: center;
-    margin:10px auto;
-}
 h2{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
     line-height: 31px;
 }
 #email,#contraseña{
-    font-family: 'Inter';
+    font-family: BazFont;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;
@@ -73,22 +55,6 @@ h2{
   color: #000;
   box-shadow: inset 0 -3.25em 0 0 #fff;
 }
-<<<<<<< HEAD
-/* main button{
-    background: #D98C19;
-    border-radius: 50px;
-    color: white;
-    border-color: #D98C19;
-    width: 196px;
-    height: 37px;
-    cursor: pointer;
-}
-main button:hover {
-  opacity: 0.8;
-} */
-
-=======
->>>>>>> cbdc1f483a6ab87deadfffb4d0b29fd24e56dc1a
 /* Boton-up FIN */
 
 /* Redes */

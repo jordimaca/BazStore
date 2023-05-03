@@ -6,20 +6,53 @@ main{
     letter-spacing: 1px;
 }
 
+/* Articulos */
 article{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+}
+.article2,
+.article3{
+    border-top: 5px dashed #000;
 }
 
+/* Texto */
 .text {
-    width: 50%;
+    width: 30%;
     text-align: center;
+    padding: 0 10%;
 }
 .text h2{
+    /* font-size: 1rem; */
+    font-family: BazLogo;
     font-weight: bold;
+    color: #fff;
+    background-color: #000;
+    padding: 5px 10px;
 }
+.text p{
+    padding-top: 5px;
+    font-family: Helvetica, sans-serif;
+    font-weight: 200;
+}
+/* Texto FIN */
 
+/* Imagenes */
 .image{
+    display: flex;
     width: 50%;
 }
+.image img{
+    width: 100%;
+}
+.img1,
+.img3{
+    justify-content: right;
+    border-left: 5px dashed #000;
+}
+.img2{
+    justify-content: left;
+    border-right: 5px dashed #000;
+}
+/* Imagenes FIN */
+/* Articulos FIN */
