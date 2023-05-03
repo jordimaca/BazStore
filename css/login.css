@@ -2,20 +2,7 @@
 @import "menu.css";
 
 main{
-    text-align: center;
-    margin: 0 auto;
-}
-
-h3{
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 18px;
-}
-
-main{
-    font-family: Helvetica, "Open-Sans" ,"sans-serif-light", sans-serif;
+    font-family: BazFont;
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -27,15 +14,22 @@ main{
     align-items: center;
     margin:50px auto;
 }
+
+h3{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+}
+
 h2{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
     line-height: 31px;
 }
 #email,#contraseña{
-    font-family: 'Inter';
+    font-family: BazFont;
     font-style: normal;
     font-weight: 500;
     font-size: 22px;

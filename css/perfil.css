@@ -2,6 +2,11 @@
 @import "menu.css";
 /* @import "productos.css"; */
 
+
+body{
+    font-family: BazFont;
+}
+
 main {
     background-color: #eee;
 }

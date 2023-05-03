@@ -2,8 +2,11 @@
 @import "reset.css";
 @import "menu.css";
 
- /* agregar tipo de fuente */
- .contenido{
+body{
+    font-family: BazFont;
+}
+
+.contenido{
      display: grid;
      grid-template-columns: auto;
      justify-content: space-evenly;
@@ -20,7 +23,6 @@
 section h2{
     font-weight: bold;
     text-align: center;
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 18px;
@@ -35,7 +37,6 @@ section h2{
     gap: 10px;
 }
 .register-form input{
-    font-family: 'Inter';
     font-style: normal;
     font-weight: 500;
     font-size: 15px;
