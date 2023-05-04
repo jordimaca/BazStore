@@ -35,8 +35,18 @@
             </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='inicio.html'">INICIO</button>
-                    <button class="btn-menu" onclick="document.location='productos.html'">HOMBRE</button>
-                    <button class="btn-menu" onclick="document.location='productos.html'">MUJER</button>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='productos.html'">HOMBRE</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
+                     <div class="dropdown">
+                         <button class="btn-menu" onclick="document.location='productos.html'">MUJER</button>
+                         <div class="dropdown-contenido">
+                             <a class="btn-content" href="#">contenido</a>
+                         </div>
+                     </div>
                     <button class="btn-menu" onclick="document.location='productos.html'">NIÑOS</button>
                     <button class="btn-menu" onclick="document.location='productos.html'">NIÑAS</button>
                     <button class="btn-menu" onclick="document.location='nosotros.html'">Acerca de BazStore</button>

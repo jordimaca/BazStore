@@ -73,6 +73,14 @@ header{
     box-shadow: inset 10em 0 0 0 #000;
     color: #fff;
 }
+.btn-content {
+    background: #fff;
+    line-height: 1;
+    border: none;
+    color: #000;
+    transition: 0.5s;
+}
+
 .user img{
     float: left;
 }
