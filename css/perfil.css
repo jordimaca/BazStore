@@ -24,25 +24,38 @@ main h1 {
     bottom: 35px;
 }
 
-.lista {
-    display: inline-block;
-    
+
+.sub-lista {
+    padding: 15px;
+    display: block;
+    position: relative;
+    bottom: 43px;
+    left: 110px;
 }
 
-.text{
+.sub-lista a {
     color: black;
     text-decoration: none;
     font-size: 18px;
-    padding-right: 10px;
-    display: inline-block;
+    padding-right: 20px;
+
 }
+ 
+.sub-lista a:hover {
+    text-decoration: underline;
+}
+
+.sub-lista i {
+    padding: 10px;
+}
+
 
 .link-contenedor {
-    margin: auto 40px;
-    /* display: inline-block; */
-    
+    display: block;
+    bottom: 180px;
+    left: 1060px;
+    position: relative;
 }
-
 .link-contenedor a {
     color: black;
     text-decoration: none;
@@ -57,9 +70,18 @@ main h1 {
     padding: 10px;
 }
 
+.link-contenedor a:hover {
+    text-decoration: underline;
+}
+
 /* hacer el boton de buscar */
 
-.buscar {
+.buscar{
+    display: inline-block;
+    position: relative;
+    margin: 5px 20px;
+    left:1100px;
+
 }
 
 h2{
