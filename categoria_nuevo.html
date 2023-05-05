@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="css/categoria_hombre.css">
+    <link rel="stylesheet" href="css/categorias.css">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -58,14 +58,14 @@
             </div>
         </div>
     </header>
-    <div class="container-title">Productos</div>
+    <div class="espacio"></div>
     <div class="contenedor-filtro">
         <div class="filtro">
-        <h2>Tenis</h2>
+        <br><br>
         <ul>
             <h4>Categorias</h4>
-            <li><a href="#">Ropa de dormir</a></li>
-            <li><a href="#">Ropa deportiva</a></li>
+            <li><a href="#">Camisas</a></li>
+            <li><a href="#">Jeans</a></li>
             <li><a href="#">Ropa de bebe</a></li>
             <li><a href="#">Blusas</a></li>
             <li><a href="#">Vestidos</a></li>
@@ -76,20 +76,34 @@
 
         <br>
         <h4>Ubicacion</h4>
-        <ul>
-            <li><a href="#">Santo Domingo</a></li>
-            <li><a href="#">Distrito Nacional</a></li>
-            <li><a href="#">Santiago</a></li>
-            <li><a href="#">Puerto Plata</a></li>
-            <li><a href="#">Santiago Rodriguez</a></li>
-        </ul>
+        <select name="ubicacion" id="ubicacion">
+            <option value="sd" selected>Santo Domingo</option>
+            <option value="stgo">Santiago</option>
+            <option value="ppta">Puerto Plata</option>
+            <option value="sfco">San Francisco</option>
+            <option value="bna">Barahona</option>
+        </select>
+        
+        <br>
+        <br>
+        <h4>Tallas</h4>
+        <select name="talla" id="talla">
+            <option value="xxl" selected>XXL</option>
+            <option value="xl">XL</option>
+            <option value="l">L</option>
+            <option value="m">M</option>
+            <option value="s">S</option>
+            <option value="xs">XS</option>
+            <option value="6">6-9M (74CM)</option>
+            <option value="9">9-12M (80CM)</option>
+            <option value="12">12-18M (86CM)</option>
+            <option value="18">18-24M (92CM)</option>
+            <option value="2">2-3Y (98CM)</option>
+        </select>
+
+        <br>
         <br>
         <h4>precio</h4>
-        <ul>
-            <li><a href="#">Hasta $350</a></li>
-            <li><a href="#">$350 a $1,000</a></li>
-            <li><a href="#">Mas de $1,000</a></li>  
-        </ul>
         <div class="boton">
             <input type="number" placeholder="Min" value="" min="" class="boton"/>
             -
@@ -97,21 +111,13 @@
         </div>
         <!-- colocar boton de enviar formulario -->
         <br>
+
         <h4>Codiciones</h4>
         <ul>
             <li><a href="#">Nuevo</a></li>
             <li><a href="#">Usado</a></li>
         </ul>
         <br>
-        <h4>Otras personas buscaron</h4>
-        <ul>
-            <li><a href="#">Reloj</a></li>
-            <li><a href="#">Perfumes</a></li>
-            <li><a href="#">Joyeria</a></li>
-            <li><a href="#">Cuadros</a></li>
-            <li><a href="#">Calzados</a></li>
-        </ul>
-
 
         
 
@@ -147,7 +153,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="producto.html"><img src="/images/zapato.jpg"
+                   <a href="producto.html"><img src="/images/categorias/categoria_accesorios/reloj1.jpg"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">

@@ -6,11 +6,8 @@ body {
     font-family: BazFont;
 }
 
-.container-title {
-    padding: 30px;
-    background-color: #eee;
-    margin-bottom: 50px;
-    color: #222;
+.espacio{
+    margin: 50px;
 }
 
 .contenedor-filtro {
@@ -45,7 +42,17 @@ h4 {
     font-size: 18px ; 
     font-weight: bolder;
     margin: 7%;
-    
+}
+
+#talla,
+#ubicacion {
+    font-family: BazFont;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    background-color: #eee;
+    border: 1px solid #666;
+    padding: 1.5px;
 }
 
 
