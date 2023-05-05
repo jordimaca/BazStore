@@ -74,6 +74,13 @@ header{
     box-shadow: inset 10em 0 0 0 #000;
     color: #fff;
 }
+.btn-content {
+    line-height: 1;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}
+
 .user img{
     float: left;
 }
@@ -138,12 +145,17 @@ header{
     transition: 0.5s;
     cursor: pointer;
 }
-.btn-menu:hover,
-.btn-menu:focus {
+.btn-menu:hover:not(.active),
+.btn-menu:focus:not(.active) {
   color: #fff;
   box-shadow: inset 0 -3.25em 0 0 #000;
 }
 
+
+.active {
+    background-color: #000;
+    color: #fff;
+}
 @media screen and (min-width:1024px){
     
 }

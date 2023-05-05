@@ -15,13 +15,11 @@
             <div class="user">
                 <img src="images/user-icon.svg" alt="">
                 <div class="dropdown">
-                    <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
                             <a class="btn-left" href="login.html">Iniciar Sesion</a>
                             <a class="btn-left" href="registro.html">Registrarse</a>
                         </div>
-                    </div>
                 </div>
             <h1>BazStore</h1>
             <div class="buscador">
@@ -34,9 +32,25 @@
             </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='inicio.html'">INICIO</button>
-                    <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
-                    <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
-                    <button class="btn-menu" onclick="document.location='categoria_accesorios.html'">ACCESERIOS</button>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu"
+                            onclick="document.location='categoria_accesorios.html'">ACCESERIOS</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
                     <button class="btn-menu" onclick="document.location='categoria_nuevo.html'">NUEVO</button>
                 </nav>
             </div>
