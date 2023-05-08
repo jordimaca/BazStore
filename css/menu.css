@@ -151,11 +151,23 @@ header{
   box-shadow: inset 0 -3.25em 0 0 #000;
 }
 
-
 .active {
     background-color: #000;
     color: #fff;
 }
+
+/* Footer */
+.footer{
+    padding: 20px;
+    border-top: 1.5px solid #000;
+    background-color: #eee;
+    margin-top: 50px;
+    text-align: center;
+    font-size: 13px;
+    color: #000;
+}
+
+
 @media screen and (min-width:1024px){
     
 }
@@ -165,5 +177,8 @@ header{
 }
 
 @media screen and (max-width:468px){
-    
+    .btn-menu{
+        font-size: 11px;
+        padding: 0.8em 1.1em;
+    }
 }

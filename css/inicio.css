@@ -77,13 +77,32 @@ header{
    border-left: 7px solid #fff;
 }
 /* Footer */
-.footer {
+.footer-incio {
    letter-spacing: 1px;
    text-align: center;
    padding: 50px 80px;
-   color: #000;   
+   color: #000;
+}
+.footer-incio p{
+   width: 100%;
 }
 /* Footer FIN */
 /* PARALAX FIN */
 
 /* Responsive */
+@media screen and (min-width:1024px){
+    
+}
+
+@media screen and (max-width:768px){
+    
+}
+
+@media screen and (max-width:468px){
+   .ptext1,
+   .ptext2 {
+      top: 40%;
+      width: 50%;
+      font-size: 13px;
+   }
+}
