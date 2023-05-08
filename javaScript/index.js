@@ -50,3 +50,29 @@ toggleAdditionalInformation.addEventListener('click', () => {
 toggleReviews.addEventListener('click', () => {
 	contentReviews.classList.toggle('hidden');
 });
+
+
+
+
+
+function filterProducts(minPrice, maxPrice) {
+    var products = Array.from(document.querySelectorAll(".card"));
+    products.forEach(x => x.style.opacity = '1')
+    products.filter(x => {
+        var priceElement = x.querySelector(".price");
+        var price = parseFloat(priceElement.innerText.replace('$', ''));
+        return price < minPrice || price > maxPrice;
+    }).forEach(element => {
+        element.style.opacity = '0.3'
+    });
+}
+
+var minInput = document.getElementById("min");
+var maxInput = document.getElementById("max");
+
+function filterByInputs() {
+    filterProducts(parseFloat(minInput.value), parseFloat(maxInput.value));
+}
+
+minInput.addEventListener("keyup", filterByInputs);
+maxInput.addEventListener("keyup", filterByInputs);
