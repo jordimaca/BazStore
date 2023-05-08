@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="css/categoria_hombre.css">
+    <link rel="stylesheet" href="css/categorias.css">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -34,46 +34,78 @@
             </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='inicio.html'">INICIO</button>
-                    <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
-                    <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
-                    <button class="btn-menu" onclick="document.location='categoria_accesorios.html'">ACCESERIOS</button>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu active" onclick="document.location='#'">MUJER</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu"
+                            onclick="document.location='categoria_accesorios.html'">ACCESORIOS</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="#">contenido</a>
+                        </div>
+                    </div>
                     <button class="btn-menu" onclick="document.location='categoria_nuevo.html'">NUEVO</button>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="container-title">Productos</div>
+    <div class="espacio"></div>
     <div class="contenedor-filtro">
         <div class="filtro">
-        <h2>Tenis</h2>
+        <br><br>
         <ul>
             <h4>Categorias</h4>
-            <li><a href="#">Ropa de dormir</a></li>
-            <li><a href="#">Ropa deportiva</a></li>
-            <li><a href="#">Ropa de bebe</a></li>
-            <li><a href="#">Blusas</a></li>
             <li><a href="#">Vestidos</a></li>
-            <li><a href="#">Calzados</a></li>
-            <li><a href="#">Abrigos</a></li>
+            <li><a href="#">Blusas</a></li>
+            <li><a href="#">Tacones</a></li>
+            <li><a href="#">Pantalones</a></li>
+            <li><a href="#">Bolsos</a></li>
+            <li><a href="#">Collares</a></li>
+            <li><a href="#">Zapatillas</a></li>
             
         </ul>
 
         <br>
         <h4>Ubicacion</h4>
-        <ul>
-            <li><a href="#">Santo Domingo</a></li>
-            <li><a href="#">Distrito Nacional</a></li>
-            <li><a href="#">Santiago</a></li>
-            <li><a href="#">Puerto Plata</a></li>
-            <li><a href="#">Santiago Rodriguez</a></li>
-        </ul>
+        <select name="ubicacion" id="ubicacion">
+            <option value="rd" selected>Todo el pais</option>
+            <option value="sd">Santo Domingo</option>
+            <option value="stgo">Santiago</option>
+            <option value="ppta">Puerto Plata</option>
+            <option value="sfco">San Francisco</option>
+            <option value="bna">Barahona</option>
+        </select>
+        
+        <br>
+        <br>
+        <h4>Tallas</h4>
+        <select name="talla" id="talla">
+            <option value="todas_tallas" selected>Todas las tallas</option>
+            <option value="xxl">XXL</option>
+            <option value="xl">XL</option>
+            <option value="l">L</option>
+            <option value="m">M</option>
+            <option value="s">S</option>
+            <option value="xs">XS</option>
+            <option value="6">6-9M (74CM)</option>
+            <option value="9">9-12M (80CM)</option>
+            <option value="12">12-18M (86CM)</option>
+            <option value="18">18-24M (92CM)</option>
+            <option value="2">2-3Y (98CM)</option>
+        </select>
+
+        <br>
         <br>
         <h4>precio</h4>
-        <ul>
-            <li><a href="#">Hasta $350</a></li>
-            <li><a href="#">$350 a $1,000</a></li>
-            <li><a href="#">Mas de $1,000</a></li>  
-        </ul>
         <div class="boton">
             <input type="number" placeholder="Min" value="" min="" class="boton"/>
             -
@@ -81,21 +113,13 @@
         </div>
         <!-- colocar boton de enviar formulario -->
         <br>
+
         <h4>Codiciones</h4>
         <ul>
             <li><a href="#">Nuevo</a></li>
             <li><a href="#">Usado</a></li>
         </ul>
         <br>
-        <h4>Otras personas buscaron</h4>
-        <ul>
-            <li><a href="#">Reloj</a></li>
-            <li><a href="#">Perfumes</a></li>
-            <li><a href="#">Joyeria</a></li>
-            <li><a href="#">Cuadros</a></li>
-            <li><a href="#">Calzados</a></li>
-        </ul>
-
 
         
 
@@ -105,7 +129,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                   <a href="#"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                   <a href="#"><img src="images/categorias/categoria_mujer/blusa1.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -118,7 +142,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="#"><img src="images/categorias/categoria_mujer/tacones1.webp"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
@@ -131,7 +155,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="producto.html"><img src="/images/zapato.jpg"
+                   <a href="producto.html"><img src="images/categorias/categoria_mujer/tacones2.jpg"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -149,7 +173,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                    <a href="#"><img src="images/categorias/categoria_mujer/tacones3.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -162,7 +186,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                    <a href="#"><img src="images/categorias/categoria_mujer/vestido1.webp"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -176,7 +200,7 @@
             
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/photo-1617606002779-51d866bdd1d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="#"><img src="images/categorias/categoria_accesorios/cartera2.jpg"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -194,7 +218,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                    <a href="#"><img src="images/categorias/categoria_mujer/tacones4.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -207,7 +231,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="#"><img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                   <a href="#"><img src="images/categorias/categoria_accesorios/cartera3.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -220,7 +244,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="#"><img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="#"><img src="images/categorias/categoria_accesorios/collarm2.jpg"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
@@ -238,8 +262,8 @@
     
 
 
-    <footer>
-        <p>Footer</p>
+    <footer class="footer">
+        <p>Todos los derechos reservado a &copy;BazStore 2023</p>
     </footer>
 
 </body>
