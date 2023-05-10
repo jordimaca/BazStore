@@ -9,6 +9,7 @@ body{
 
 main {
     background-color: #eee;
+    display: flex;
 }
 
 main img {
@@ -17,53 +18,69 @@ main img {
     margin-top: 15px;
 }
 
-main h1 {
+main h2 {
     font-size: 22px;
     display: inline-block;
-    position: relative;
-    bottom: 35px;
 }
 
 
 .sub-lista {
-    padding: 15px;
-    display: block;
-    position: relative;
-    bottom: 43px;
-    left: 110px;
-}
-
-.sub-lista a {
-    color: black;
-    text-decoration: none;
-    font-size: 18px;
-    padding-right: 20px;
 
 }
- 
-.sub-lista a:hover {
-    text-decoration: underline;
+
+/* Buscardor */
+.buscador-perfil {
+
 }
 
-.sub-lista i {
-    padding: 10px;
+.search-perfil {
+    display: flex;
+    justify-content: end;
+    margin-right: 10px;
 }
+
+.searchTerm-perfil {
+    width: 20%;
+    border: 3px solid #000;
+    border-right: none;
+    padding: 5px;
+    height: 20px;
+    outline: none;
+    color: #000;
+}
+
+.searchTerm-perfil:focus {
+    color: #000;
+}
+
+.searchButton-perfil {
+    width: 40px;
+    height: 36px;
+    border: 3px solid #000;
+    border-left: none;
+    background: #fff;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.searchButton-perfil i {
+    /* argin-left: 3px; */
+    cursor: pointer;
+    color: #000;
+}
+/* Buscador FIN */
 
 
 .link-contenedor {
-    display: block;
-    bottom: 180px;
-    left: 1060px;
-    position: relative;
+    /* display: block; */
 }
 .link-contenedor a {
     color: black;
     text-decoration: none;
     font-size: 18px; 
     padding: 10px;
-    /* display: inline-block; */
-    bottom: 20px;  
-    
 } 
 
 .link-contenedor i {
@@ -76,18 +93,22 @@ main h1 {
 
 /* hacer el boton de buscar */
 
-.buscar{
+/* .buscar{
     display: inline-block;
     position: relative;
     margin: 5px 20px;
     left:1100px;
 
-}
+} */
 
-h2{
+/* h2{
     font-size: 22px;
     padding: 30px;
-}
+} */
+
+
+
+/* ASIDE */
 
 .container-related-products1 {
     grid-area: 1/2;
@@ -176,3 +197,24 @@ h2{
 
 
 
+/* Perfil Iniciado */
+.btn-left-cerrar {
+    background: #fff;
+    line-height: 1;
+    border: none;
+    color: #b00;
+    transition: 0.5s;
+}
+
+.btn-left-cerrar:hover,
+.btn-left-cerrar:focus {
+    box-shadow: inset 10em 0 0 0 #b00;
+    color: #fff;
+}
+
+.btn-content-cerrar {
+    line-height: 1;
+    border: none;
+    background-color: #000;
+    color: #fff;
+}

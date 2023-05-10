@@ -45,7 +45,8 @@ h4 {
 }
 
 #talla,
-#ubicacion {
+#ubicacion,
+#condicion {
     font-family: BazFont;
     text-align: center;
     font-size: 14px;
@@ -66,7 +67,11 @@ h4 {
     font-weight: 500;
     line-height: 0;
 }
-
+.boton::-webkit-inner-spin-button,
+.boton::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
 .boton:focus {
     outline: none;
 }
