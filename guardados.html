@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BazStore | Perfil</title>
-    <link rel="stylesheet" href="css/perfil.css">
+    <link rel="stylesheet" href="css/guardados.css">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="topline"></div>
@@ -16,41 +18,26 @@
                 <img src="images/user-icon.svg" alt="">
                 <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-left" href="login.html">Iniciar Sesion</a>
-                            <a class="btn-left" href="registro.html">Registrarse</a>
-                        </div>
-                </div>
-            <h1>BazStore</h1>
-            <div class="buscador">
-                <form>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
+                    <div class="dropdown-contenido">
+                        <a class="btn-left" href="login.html">Iniciar Sesion</a>
+                        <a class="btn-left" href="registro.html">Registrarse</a>
                     </div>
-                </form>
-            </div>
+                </div>
+                <h1>BazStore</h1>
+                <div class="buscador">
+                    <form>
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                            <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i
+                                        class="fa-solid fa-magnifying-glass"></i></label></button>
+                        </div>
+                    </form>
+                </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='inicio.html'">INICIO</button>
-                    <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-content" href="#">contenido</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-content" href="#">contenido</a>
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn-menu"
-                            onclick="document.location='categoria_accesorios.html'">ACCESORIOS</button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-content" href="#">contenido</a>
-                        </div>
-                    </div>
+                    <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
+                    <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
+                    <button class="btn-menu" onclick="document.location='categoria_accesorios.html'">ACCESERIOS</button>
                     <button class="btn-menu" onclick="document.location='categoria_nuevo.html'">NUEVO</button>
                 </nav>
             </div>
@@ -59,7 +46,7 @@
     <main>
         <img src="images/user.svg">
         <h1>Nombre de vendedor</h1>
-        
+
         <div class="sub-lista">
             <a href="perfil.html" class="sub">Articulos publicados</a>
             <a href="guardados.html"><i class="fa-solid fa-heart"></i>Articulos Guardados</a></div>
@@ -80,7 +67,7 @@
         </div>
     </main>
     <aside>
-        <h2>Articulos publicados</h2>
+        <h2>Articulos guardados</h2>
 
         <section class="container-related-products2">
 
@@ -88,7 +75,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                                src="images/categorias/categoria_accesorios/cartera1.jpg"
                                 alt="producto-1" /></a>
                     </div>
                     <div class="info-card">
@@ -102,7 +89,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                                src="images/categorias/categoria_hombre/sudadera2.jpg"
                                 alt="producto-2" /></a>
                     </div>
                     <div class="info-card">
@@ -117,7 +104,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1617606002779-51d866bdd1d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                src="images/categorias/categoria_accesorios/reloj2.jpg"
                                 alt="producto-4" /></a>
                     </div>
                     <div class="info-card">
@@ -132,7 +119,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                                src="images/categorias/categoria_hombre/zapatos1.jpg"
                                 alt="producto-2" /></a>
                     </div>
                     <div class="info-card">
@@ -151,7 +138,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                                src="images/categorias/categoria_mujer/tacones2.jpg"
                                 alt="producto-1" /></a>
                     </div>
                     <div class="info-card">
@@ -165,7 +152,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                                src="images/categorias/categoria_mujer/blusa1.webp"
                                 alt="producto-2" /></a>
                     </div>
                     <div class="info-card">
@@ -179,7 +166,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                                src="images/categorias/categoria_mujer/tacones3.jpg"
                                 alt="producto-3" /></a>
                     </div>
                     <div class="info-card">
@@ -193,7 +180,7 @@
                 <div class="card">
                     <div class="card-img">
                         <a href="#"><img
-                                src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                                src="images/categorias/categoria_accesorios/collarm2.jpg"
                                 alt="producto-2" /></a>
                     </div>
                     <div class="info-card">
@@ -211,11 +198,12 @@
 
     </aside>
 
-    
-    
+
+
     <!-- <footer>
         <p>footer</p>
     </footer>
      -->
 </body>
+
 </html>
