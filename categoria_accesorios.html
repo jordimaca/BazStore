@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="images/user-icon.svg" alt="">
+                <a href="perfil.html"><img src="images/user-icon.svg" alt=""></a>
                 <div class="dropdown">
                     <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
@@ -113,11 +113,11 @@
         <br>
 
         <h4>Codiciones</h4>
-        <ul>
-            <li><a href="#">Nuevo</a></li>
-            <li><a href="#">Usado</a></li>
-        </ul>
-        <br>
+        <select name="condicion" id="condicion">
+            <option value="todas_condicion" selected>Nuevo y Usado</option>
+            <option value="xxl">Nuevo</option>
+            <option value="xl">Usado</option>
+        </select>
 
         
 

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,12 +13,12 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="images/user-icon.svg" alt="">
+                <a href="#"><img src="images/user-icon.svg" alt=""></a>
                 <div class="dropdown">
-                    <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
+                    <button class="btn-cuenta">@Nombre_Usuario <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
-                            <a class="btn-left" href="login.html">Iniciar Sesion</a>
-                            <a class="btn-left" href="registro.html">Registrarse</a>
+                            <a class="btn-left" href="#">Ver Perfil</a>
+                            <a class="btn-left-cerrar" href="login.html">Cerrar Sesion</a>
                         </div>
                 </div>
             <h1>BazStore</h1>
@@ -57,6 +57,10 @@
         </div>
     </header>
     <main>
+<<<<<<< HEAD
+        <div class="usuario">
+            <img src="images/user.svg"><h2>Nombre de vendedor</h2>
+=======
         <img src="images/user.svg">
         <h1>Nombre de vendedor</h1>
         
@@ -64,24 +68,21 @@
             <a href="perfil.html" class="sub">Articulos publicados</a>
             <a href="guardados.html"><i class="fa-solid fa-heart"></i>Articulos Guardados</a></div>
 
+>>>>>>> main
         </div>
-        <div class="link-contenedor">
+        <div class="btn-superiores">
             <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i>compartir</a></i>
             <a href="#"><i class="fa-solid fa-comment"></i>contactar</a></i>
         </div>
-        <div class="buscar">
-            <form method="get" id="buscar">
-                <fieldset>
-                    <input type="text" id="caja" value="" placeholder="Buscar todos los articulos" />
-                    <!--  <input class="button" type="submit" value="" /> -->
-                    <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                </fieldset>
-            </form>
+            <button class="btn-articulos">ARTICULOS   PUBLICADOS</button>
+            <button class="btn-favoritos">LISTA  DE  FAVORITOS</button>
+        <div class="search-perfil">
+            <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos de este perfil...">
+            <button type="submit" class="searchButton-perfil"><label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label></button>
         </div>
     </main>
+    
     <aside>
-        <h2>Articulos publicados</h2>
-
         <section class="container-related-products2">
 
             <div class="card-list-products">
