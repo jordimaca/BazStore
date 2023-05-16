@@ -6,14 +6,15 @@ body {
     font-family: BazFont;
 }
 
-.espacio{
+/* .espacio{
     margin: 50px;
-}
+} */
 
 .contenedor-filtro {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 15rem auto;
     grid-template-rows: auto auto auto;
+    
 }
 
 .filtro {
@@ -98,6 +99,7 @@ h4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 25px;
+   
 }
 
 .card {
@@ -207,10 +209,15 @@ footer {
 
 @media screen and (max-width:468px){
     .contenedor-filtro {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto auto auto;
+        display: inline-block;
+        
+        
     }
+
+    h4{
+        display: inline-block;
+    }
+    
     .container-related-products1{
         /* grid-area: 1/2; */
         padding-left: 5%;
