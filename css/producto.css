@@ -102,6 +102,17 @@ main {
     line-height: 0;
 }
 
+.btn-add-to-cart a{
+    text-decoration: none;
+    color: #f7f7f7;
+    
+}
+
+.btn-add-to-cart a:hover{
+    color: #1bbeb4;
+
+}
+
 .input-quantity:focus {
     outline: none;
 }
