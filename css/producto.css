@@ -19,7 +19,6 @@ main {
 }
 
 .container-img {
-    background-color: #f7f7f9;
     flex: 1;
 }
 
@@ -296,4 +295,48 @@ main {
     text-align: center;
     padding: 50px 80px;
     color: #fff;
+}
+
+
+@media screen and (min-width:1024px){
+    
+}
+
+@media screen and (max-width:768px){
+    main {
+        display: block;
+    }
+    
+    .card-img{
+        margin-top: 20px;
+    }
+
+    .card-list-products{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    
+    
+   
+}
+
+@media screen and (max-width:468px){
+    .card-list-products{
+        display: block;
+    }
+    
+    .text-product h3 {
+        font-size: 20px;
+    }
+
+    .title-description h4{
+        font-size: 18px;
+    }
+
+    .container-related-products h2{
+        font-size: 20px;
+    }
+
+    
 }

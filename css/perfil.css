@@ -23,6 +23,7 @@ main img {
 main h2 {
     font-size: 22px;
     display: inline-block;
+    margin-bottom: 15px;
 }
 
  /* Botones superiores */
@@ -50,6 +51,10 @@ main h2 {
 
 .usuario {
     grid-area: 2 / 1 / 4 / 3;
+}
+
+.usuario img {
+    width: 12%;
 }
 
  /* Botones Inferiores */
@@ -247,4 +252,61 @@ main h2 {
     border: none;
     background-color: #000;
     color: #fff;
+}
+
+@media screen and (min-width:1024px){
+    
+}
+
+@media screen and (max-width:768px){
+    .btn-superiores {
+    grid-area: 1 / 1/ 2/ 4;
+    text-align: center;
+    font-size: 8px;
+   }
+
+   main h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+   }
+
+   .btn-articulos {
+    font-size: 11px;
+   }
+
+   .btn-favoritos{
+    font-size: 11px;
+   }
+
+   .usuario img {
+    width: 18%;
+   }
+
+
+    
+}
+
+@media screen and (max-width:468px){
+   .btn-superiores {
+    grid-area: 1 / 1/ 2/ 4;
+    text-align: center;
+    font-size: 8px;
+   }
+
+   main h2 {
+    font-size: 18px;
+    margin-bottom: 15px;
+   }
+
+   .btn-articulos {
+    font-size: 11px;
+   }
+
+   .btn-favoritos{
+    font-size: 11px;
+   }
+
+   .usuario img {
+    width: 18%;
+   }
 }
