@@ -84,6 +84,7 @@ h4 {
     grid-area: 1/2;
     padding-left: 5%;
     
+    
 } 
 
 .container-related-products2 {
@@ -212,11 +213,13 @@ footer {
     .contenedor-filtro {
         display: inline-block;
         
+
+        
         
     }
 
     h4{
-        display: inline-block;
+        
     }
     
     .container-related-products1{
