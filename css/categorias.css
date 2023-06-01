@@ -80,6 +80,7 @@ h4 {
 
 
 .container-related-products1{
+    margin-top: 30px;
     grid-area: 1/2;
     padding-left: 5%;
     
@@ -240,3 +241,4 @@ footer {
         gap: 25px;
     }
 }
+
