@@ -211,15 +211,7 @@ footer {
 
 @media screen and (max-width:468px){
     .contenedor-filtro {
-        display: inline-block;
-        
-
-        
-        
-    }
-
-    h4{
-        
+        display: inline-block; 
     }
     
     .container-related-products1{
