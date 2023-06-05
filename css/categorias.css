@@ -42,7 +42,7 @@ body {
 h4 {
     font-size: 18px ; 
     font-weight: bolder;
-    margin: 5% 0 1% 0;
+    margin: 6% 0 1% 0;
 }
 
 #talla,
@@ -55,6 +55,10 @@ h4 {
     background-color: #eee;
     border: 1px solid #666;
     padding: 1.5px;
+}
+
+.btn-filtro:active~.filtro{
+    visibility: hidden;
 }
 
 
@@ -202,7 +206,7 @@ footer {
     }
     
     .card-list-products {
-        display: grid;
+        display: block; /* display grid (antes) */
         grid-template-columns: auto auto;
         gap: 25px;
     }
