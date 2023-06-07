@@ -19,21 +19,21 @@ header{
 }
 
 .pimg1 {
-   background: url("/images/slider1.jpg");
-   min-height: 400px;
+   background-image: url("../images/slider1.jpg");
 }
 
 .pimg2 {
-   background: url("/images/slider2.jpeg");
-   min-height: 400px;
+   background: url("../images/slider2.jpeg");
 }
 
 .pimg3 {
-   background: url("/images/slider3.jpg");
-   min-height: 400px;
+   background: url("../images/slider3.jpg");
+
 }
 
 .pimg1, .pimg2, .pimg3 {
+   min-height: 400px;
+   max-width: 100%;
    position: relative;
    background-position: center;
    background-size: cover;
