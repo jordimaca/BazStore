@@ -74,7 +74,8 @@ section h2{
     transition: all 0.3s ease;
 }
 .register-form :focus ~label,
-.register-form input:valid ~label{
+.register-form input:valid ~label,
+.register-form input:not(:placeholder-shown) ~label{
     transform: translateY(-25px);
     font-size: 18px;
 }
