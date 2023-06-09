@@ -1,10 +1,10 @@
 @font-face {
     font-family: BazLogo;
-    src: url(/fonts/couture/couture-bld.otf);
+    src: url(../fonts/couture/couture-bld.otf);
 }
 @font-face {
     font-family: BazFont;
-    src: url(/fonts/Inter/Inter-Medium.ttf);
+    src: url(../fonts/Inter/Inter-Medium.ttf);
 }
 
 header{
