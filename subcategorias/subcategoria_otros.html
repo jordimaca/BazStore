@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="css/categorias.css">
+    <link rel="stylesheet" href="/css/categorias.css">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -33,49 +33,60 @@
                 </form>
             </div>
                 <nav class="categorias">
-                    <button class="btn-menu" onclick="document.location='inicio.html'">INICIO</button>
+                    <button class="btn-menu" onclick="document.location='../inicio.html'">INICIO</button>
                     <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='categoria_hombre.html'">HOMBRE</button>
+                        <button class="btn-menu" onclick="document.location='../categoria_hombre'">HOMBRE</button>
                         <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/Subcategoria_t-shirts.html">T-Shirt</a>
-                            <a class="btn-content" href="/subcategorias/Subcategoria_camisa.html">Camisas</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_jeansh.html">Jeans</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_zapatosh.html">Zapatos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_deportivoh.html">Deportivo</a>
-    
-                        </div>
-                    </div>
-                    <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='categoria_mujer.html'">MUJER</button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/subcategoria_vestidos.html">Vestidos</a>
-                            <a class="btn-content" href="/subcategorias/Subcategoria_blusas.html">Blusas</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_t-shirts.html">T-Shirt</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_camisa.html">Camisas</a>
                             <a class="btn-content" href="/subcategorias/subcategoria_jeans.html">Jeans</a>
                             <a class="btn-content" href="/subcategorias/subcategoria_zapatos.html">Zapatos</a>
                             <a class="btn-content" href="/subcategorias/subcategoria_deportivo.html">Deportivo</a>
-                           
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="btn-menu"
-                            onclick="document.location='categoria_accesorios.html'">ACCESORIOS</button>
-                        <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/subcategoria_reloj.html">Reloj</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_cadenas.html">Cadenas</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_brazaletes.html">Brazaletes</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_anillos.html">Anillos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_otros.html">Otros</a>
-                           
+                        <button class="btn-menu" onclick="document.location='../categoria_mujer.html'">MUJER</button>
+                       <div class="dropdown-contenido">
+                            <a class="btn-content" href="/subcategorias/subcategoria_vestidos.html">Vestidos</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_blusas.html">Blusas</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_jeans.html">Jeans</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_zapatos.html">Zapatos</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_deportivo.html">Deportivo</a>
                         </div>
                     </div>
-                    <button class="btn-menu active" onclick="document.location='#'">NUEVO</button>
+                    <div class="dropdown">
+                        <button class="btn-menu active"
+                            onclick="document.location='../categoria_accesorios.html'">ACCESORIOS</button>
+                       <div class="dropdown-contenido">
+                            <a class="btn-content" href="/subcategorias/subcategoria_reloj.html">Reloj</a>
+                            <a class="btn-content" href="#">Cadenas</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_brazaletes.html">Brazaletes</a>
+                            <a class="btn-content" href="/subcategorias/subcategoria_anillos.html">Anillos</a>
+                            <a class="btn-content" href="#">Otros</a>
+                        </div>
+                    </div>
+                    <button class="btn-menu" onclick="document.location='../categoria_nuevo.html'">NUEVO</button>
                 </nav>
             </div>
         </div>
     </header>
-    <div class="espacio"></div>
+
+    <!-- <div class="espacio"></div> -->
     <div class="contenedor-filtro">
         <div class="filtro">
+        <!-- <br><br>
+        <ul>
+            <h4>Categorias</h4>
+            <li><a href="#">Camisas</a></li>
+            <li><a href="#">Sudaderas</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Relojes</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li><a href="#">Tenis</a></li>
+            <li><a href="#">Gorras</a></li>
+            
+        </ul> -->
+
         <br>
         <h4>Ubicacion</h4>
         <select name="ubicacion" id="ubicacion">
@@ -86,7 +97,9 @@
             <option value="sfco">San Francisco</option>
             <option value="bna">Barahona</option>
         </select>
-
+        
+        <br>
+        <br>
         <h4>Tallas</h4>
         <select name="talla" id="talla">
             <option value="todas_tallas" selected>Todas las tallas</option>
@@ -103,6 +116,8 @@
             <option value="2">2-3Y (98CM)</option>
         </select>
 
+        <br>
+        <br>
         <h4>precio</h4>
         <div class="boton">
             <input type="number" placeholder="Min" value="" min="" class="boton"/>
@@ -110,6 +125,7 @@
             <input type="number" placeholder="Max" value="" min="" class="boton"/>
         </div>
         <!-- colocar boton de enviar formulario -->
+        <br>
 
         <h4>Codiciones</h4>
         <select name="condicion" id="condicion">
@@ -118,13 +134,15 @@
             <option value="xl">Usado</option>
         </select>
 
+        
+
     </div>
     <section class="container-related-products1">
     
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                   <a href="producto.html"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                   <a href="producto.html"><img src="/images/categorias/categoria_accesorios/cartera1.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -144,17 +162,17 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/forros.jpg"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
                     <div class="text-product">
-                        <a href="producto.html">
-                            <h3>Adidas - Boston Super OG</h3>
-                        </a>
-                        <a href="producto.html">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
+                       <a href="producto.html">
+                           <h3>Adidas - Boston Super OG</h3>
+                       </a>
+                       <a href="producto.html">
+                           <p class="category">Footwear, Sneakers</p>
+                       </a>
                     </div>
                     <div class="price">$105.00</div>
                     <div class="icono">
@@ -164,7 +182,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="producto.html"><img src="images/categorias/categoria_accesorios/reloj1.jpg"
+                   <a href="producto.html"><img src="/images/categorias/categoria_accesorios/cinturon.jpg"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -172,9 +190,9 @@
                         <a href="producto.html">
                             <h3>Common Projects Achilles</h3>
                         </a>
-                       <a href="producto.html">
-                           <p class="category">Footwear, Sneakers</p>
-                       </a>
+                        <a href="producto.html">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
                     </div>
                     <div class="price">$250.00</div>
                     <div class="icono">
@@ -189,7 +207,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/billetera1.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -197,9 +215,9 @@
                        <a href="producto.html">
                            <h3>Nike - Roshe Run</h3>
                        </a>
-                       <a href="producto.html">
-                           <p class="category">Footwear, Sneakers</p>
-                       </a>
+                        <a href="producto.html">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
                     </div>
                     <div class="price">$85.00</div>
                     <div class="icono">
@@ -209,14 +227,14 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/ganchos.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
                     <div class="text-product">
-                        <a href="producto.html">
-                            <h3>Common Projects Achilles</h3>
-                        </a>
+                      <a href="producto.html">
+                          <h3>Common Projects Achilles</h3>
+                      </a>
                         <a href="producto.html">
                             <p class="category">Footwear, Sneakers</p>
                         </a>
@@ -230,7 +248,7 @@
             
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/photo-1617606002779-51d866bdd1d1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/gorra1.jpg"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -239,7 +257,7 @@
                             <h3>Common Projects Achilles</h3>
                         </a>
                         <a href="producto.html">
-                            <p class="category">Footwear, Sneakers</p>  
+                            <p class="category">Footwear, Sneakers</p>
                         </a>
                     </div>
                     <div class="price">$250.00</div>
@@ -255,14 +273,14 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/cartera2.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
                     <div class="text-product">
-                        <a href="producto.html">
-                            <h3>Nike - Roshe Run</h3>
-                        </a>
+                      <a href="producto.html">
+                          <h3>Nike - Roshe Run</h3>
+                      </a>
                         <a href="producto.html">
                             <p class="category">Footwear, Sneakers</p>
                         </a>
@@ -275,7 +293,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="producto.html"><img src="https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1131&q=80"
+                   <a href="producto.html"><img src="/images/categorias/categoria_accesorios/cinturon11.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -283,9 +301,9 @@
                         <a href="producto.html">
                             <h3>Common Projects Achilles</h3>
                         </a>
-                        <a href="producto.html">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
+                       <a href="producto.html">
+                           <p class="category">Footwear, Sneakers</p>
+                       </a>
                     </div>
                     <div class="price">$255.00</div>
                     <div class="icono">
@@ -295,7 +313,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="producto.html"><img src="https://images.unsplash.com/flagged/photo-1556637640-2c80d3201be8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+                    <a href="producto.html"><img src="/images/categorias/categoria_accesorios/billetera2.webp"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
