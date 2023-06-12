@@ -1,8 +1,11 @@
 @import "reset.css";
 @import "menu.css";
 
-main{
+body{
     font-family: BazFont;
+}
+
+main{
     text-align: center;
     margin: 0 auto;
     display: flex;
@@ -138,12 +141,4 @@ h2{
 .input input:hover,
 .input input:valid{
     border-color:black;
-}
-
-.footer {
-    background-color: #000;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 50px 80px;
-    color:#fff;
 }

@@ -289,14 +289,6 @@ main {
     color: #1bbeb4;
 }
 
-.footer {
-    background-color:#000;
-    letter-spacing: 1px;
-    text-align: center;
-    padding: 50px 80px;
-    color: #fff;
-}
-
 
 @media screen and (min-width:1024px){
     
@@ -315,10 +307,6 @@ main {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-
-    
-    
-   
 }
 
 @media screen and (max-width:468px){
@@ -337,6 +325,4 @@ main {
     .container-related-products h2{
         font-size: 20px;
     }
-
-    
 }

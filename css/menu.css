@@ -158,13 +158,12 @@ header{
 
 /* Footer */
 .footer{
-    padding: 20px;
-    border-top: 1.5px solid #000;
-    background-color: #eee;
+    padding: 10px;
+    background-color: #000;
     margin-top: 50px;
     text-align: center;
-    font-size: 13px;
-    color: #000;
+    font-size: 12px;
+    color: #fff;
 }
 
 
