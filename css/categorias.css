@@ -191,35 +191,16 @@ footer {
     
    
     .card-list-products {
-<<<<<<< HEAD
         display: block; /* display grid (antes) */
         grid-template-columns: auto auto;
         gap: 25px;
-=======
-        display: grid;
-        grid-template-columns:repeat(1, 1fr);
-        padding-left: 5%;
-
->>>>>>> main
     }
     
 }
 
 @media screen and (max-width:468px){
     .contenedor-filtro {
-<<<<<<< HEAD
         display: inline-block; 
-=======
-        display: block;
-        
-
-        
-        
-    }
-
-    h4{
-        
->>>>>>> main
     }
     
    

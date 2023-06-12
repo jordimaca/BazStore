@@ -16,6 +16,7 @@ header{
 .paralax{
   position: absolute;
   top: 151px;
+  width: 100%;
 }
 
 .pimg1 {
@@ -80,11 +81,8 @@ header{
 .footer-incio {
    letter-spacing: 1px;
    text-align: center;
-   padding: 50px 80px;
+   padding: 25px 0;
    color: #000;
-}
-.footer-incio p{
-   width: 100%;
 }
 /* Footer FIN */
 /* PARALAX FIN */
