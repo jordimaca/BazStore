@@ -132,7 +132,8 @@ h2{
     transition: all 0.3s ease;
 }
 .input input:focus ~label,
-.input input:valid ~label{
+.input input:valid ~label,
+.input input:not(:placeholder-shown) ~label{
     transform: translateY(-25px);
     font-size: 18px;
 }
