@@ -26,6 +26,11 @@ main h2 {
     position: relative;
     bottom: 35%;
 }
+aside h2{
+    font-size: 22px;
+    margin: 10px;
+    text-align: center;
+}
 
  /* Botones superiores */
 .btn-superiores {
