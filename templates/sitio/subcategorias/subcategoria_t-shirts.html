@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="/css/categorias.css">
+    <link rel="stylesheet" href="../css/categorias.css">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -35,34 +35,33 @@
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='../inicio.html'">INICIO</button>
                     <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='../categoria_hombre.html'">HOMBRE</button>
+                        <button class="btn-menu active" onclick="document.location='../categoria_hombre.html'">HOMBRE</button>
                         <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/subcategoria_t-shirts.html">T-Shirt</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_camisa.html">Camisas</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_jeansh.html">Jeans</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_zapatos.html">Zapatos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_deportivo.html">Deportivo</a>
+                            <a class="btn-content" href="#">T-Shirt</a>
+                            <a class="btn-content" href="subcategoria_camisa.html">Camisas</a>
+                            <a class="btn-content" href="subcategoria_jeansh.html">Jeans</a>
+                            <a class="btn-content" href="subcategoria_zapatosh.html">Zapatos</a>
+                            <a class="btn-content" href="subcategoria_deportivoh.html">Deportivo</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="btn-menu active../" onclick="document.location='../categoria_mujer.html'">MUJER</button>
-                       <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/subcategoria_vestidos.html">Vestidos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_blusas.html">Blusas</a>
-                            <a class="btn-content" href="#">Jeans</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_zapatos.html">Zapatos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_deportivo.html">Deportivo</a>
+                        <button class="btn-menu" onclick="document.location='../categoria_mujer.html'">MUJER</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="subcategoria_vestidos.html">Vestidos</a>
+                            <a class="btn-content" href="subcategoria_blusas.html">Blusas</a>
+                            <a class="btn-content" href="subcategoria_jeans.html">Jeans</a>
+                            <a class="btn-content" href="subcategoria_zapatos.html">Zapatos</a>
+                            <a class="btn-content" href="subcategoria_deportivo.html">Deportivo</a>
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="btn-menu"
-                            onclick="document.location='../categoria_accesorios.html'">ACCESORIOS</button>
-                       <div class="dropdown-contenido">
-                            <a class="btn-content" href="/subcategorias/subcategoria_reloj.html">Reloj</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_cadenas.html">Cadenas</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_brazaletes.html">Brazaletes</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_anillos.html">Anillos</a>
-                            <a class="btn-content" href="/subcategorias/subcategoria_otros.html">Otros</a>
+                        <button class="btn-menu" onclick="document.location='../categoria_accesorios.html'">ACCESORIOS</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="subcategoria_reloj.html">Reloj</a>
+                            <a class="btn-content" href="subcategoria_cadenas.html">Cadenas</a>
+                            <a class="btn-content" href="subcategoria_brazaletes.html">Brazaletes</a>
+                            <a class="btn-content" href="subcategoria_anillos.html">Anillos</a>
+                            <a class="btn-content" href="subcategoria_otros.html">Otros</a>
                         </div>
                     </div>
                     <button class="btn-menu" onclick="document.location='../categoria_nuevo.html'">NUEVO</button>
@@ -74,6 +73,18 @@
     <!-- <div class="espacio"></div> -->
     <div class="contenedor-filtro">
         <div class="filtro">
+        <!-- <br><br>
+        <ul>
+            <h4>Categorias</h4>
+            <li><a href="#">Camisas</a></li>
+            <li><a href="#">Sudaderas</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Relojes</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li><a href="#">Tenis</a></li>
+            <li><a href="#">Gorras</a></li>
+            
+        </ul> -->
 
         <br>
         <h4>Ubicacion</h4>
@@ -121,14 +132,16 @@
             <option value="xxl">Nuevo</option>
             <option value="xl">Usado</option>
         </select>
-    </div>
 
+        
+
+    </div>
     <section class="container-related-products1">
     
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                   <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean1.jpg"
+                   <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth2.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -148,7 +161,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href=../producto.html"><img src="/images/categorias/categoria_mujer/jean2.avif"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth1.avif"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
@@ -168,7 +181,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean3.jpg"
+                   <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth2.webp"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -193,7 +206,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean4.jpg"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth4.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -213,7 +226,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean5.webp"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth3.jpeg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -234,7 +247,7 @@
             
             <div class="card">
                 <div class="card-img">
-                    <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean5.webp"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth6.webp"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -259,7 +272,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean7.jpg"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth7.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -279,7 +292,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean8.webp"
+                   <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth5.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -299,7 +312,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="../producto.html"><img src="/images/categorias/categoria_mujer/jean4.jpg"
+                    <a href="../producto.html"><img src="../images/categorias/categoria_hombre/t-shirth5.jpg"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
