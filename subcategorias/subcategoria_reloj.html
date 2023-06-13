@@ -1,4 +1,4 @@
-../<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -13,7 +13,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <a href="perfil.html"><img src="images/user-icon.svg" alt=""></a>
+                <a href="perfil.html"><img src="../images/user-icon.svg" alt=""></a>
                 <div class="dropdown">
                     <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
@@ -35,7 +35,7 @@
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='../inicio.html'">INICIO</button>
                     <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='../categoria_hombre'">HOMBRE</button>
+                        <button class="btn-menu" onclick="document.location='../categoria_hombre.html'">HOMBRE</button>
                         <div class="dropdown-contenido">
                             <a class="btn-content" href="/subcategorias/subcategoria_t-shirts.html">T-Shirt</a>
                             <a class="btn-content" href="/subcategorias/subcategoria_camisa.html">Camisas</a>
@@ -72,20 +72,8 @@
     </header>
 
     <!-- <div class="espacio"></div> -->
-    <div class="contenedor-filtro">
-        <div class="filtro">
-        <!-- <br><br>
-        <ul>
-            <h4>Categorias</h4>
-            <li><a href="#">Camisas</a></li>
-            <li><a href="#">Sudaderas</a></li>
-            <li><a href="#">Jeans</a></li>
-            <li><a href="#">Relojes</a></li>
-            <li><a href="#">Zapatos</a></li>
-            <li><a href="#">Tenis</a></li>
-            <li><a href="#">Gorras</a></li>
-            
-        </ul> -->
+<div class="contenedor-filtro">
+    <div class="filtro">
 
         <br>
         <h4>Ubicacion</h4>
@@ -97,7 +85,7 @@
             <option value="sfco">San Francisco</option>
             <option value="bna">Barahona</option>
         </select>
-        
+
         <br>
         <br>
         <h4>Tallas</h4>
@@ -120,9 +108,9 @@
         <br>
         <h4>precio</h4>
         <div class="boton">
-            <input type="number" placeholder="Min" value="" min="" class="boton"/>
+            <input type="number" placeholder="Min" value="" min="" class="boton" />
             -
-            <input type="number" placeholder="Max" value="" min="" class="boton"/>
+            <input type="number" placeholder="Max" value="" min="" class="boton" />
         </div>
         <!-- colocar boton de enviar formulario -->
         <br>
@@ -133,10 +121,8 @@
             <option value="xxl">Nuevo</option>
             <option value="xl">Usado</option>
         </select>
-
-        
-
     </div>
+
     <section class="container-related-products1">
     
         <div class="card-list-products">
