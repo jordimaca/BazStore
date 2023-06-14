@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BazStore | Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
     <!-- agregar los meta de descripcion etc -->
 </head>
@@ -14,7 +14,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <a href="perfil.html"><img src="images/user-icon.svg" alt=""></a>
+                <a href="perfil.html"><img src="../../static/images/user-icon.svg" alt=""></a>
                 <div class="dropdown">
                     <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
