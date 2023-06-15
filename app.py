@@ -54,65 +54,65 @@ def producto():
     return render_template('sitio/producto.html')
 
     #Subcategorias
-@app.route('/subcategorias/subcategoria_anillos.html')
+@app.route('/subcategorias/accesorios_anillos.html')
 def anillos():
-    return render_template('sitio/subcategorias/subcategoria_anillos.html')
+    return render_template('sitio/subcategorias/accesorios_anillos.html')
 
-@app.route('/subcategorias/subcategoria_blusas.html')
+@app.route('/subcategorias/mujer_blusas.html')
 def blusas():
-    return render_template('sitio/subcategorias/subcategoria_blusas.html')
+    return render_template('sitio/subcategorias/mujer_blusas.html')
 
-@app.route('/subcategorias/subcategoria_brazaletes.html')
+@app.route('/subcategorias/accesorios_brazaletes.html')
 def brazaletes():
-    return render_template('sitio/subcategorias/subcategoria_brazaletes.html')
+    return render_template('sitio/subcategorias/accesorios_brazaletes.html')
 
-@app.route('/subcategorias/subcategoria_cadenas.html')
+@app.route('/subcategorias/accesorios_cadenas.html')
 def cadenas():
-    return render_template('sitio/subcategorias/subcategoria_cadenas.html')
+    return render_template('sitio/subcategorias/accesorios_cadenas.html')
 
-@app.route('/subcategorias/subcategoria_camisa.html')
+@app.route('/subcategorias/hombre_camisa.html')
 def camisa():
-    return render_template('sitio/subcategorias/subcategoria_camisa.html')
+    return render_template('sitio/subcategorias/hombre_camisa.html')
 
-@app.route('/subcategorias/subcategoria_deportivo.html')
+@app.route('/subcategorias/mujer_deportivo.html')
 def deportivo():
-    return render_template('sitio/subcategorias/subcategoria_deportivo.html')
+    return render_template('sitio/subcategorias/mujer_deportivo.html')
 
-@app.route('/subcategorias/subcategoria_deportivoh.html')
+@app.route('/subcategorias/hombre_deportivo.html')
 def deportivoh():
-    return render_template('sitio/subcategorias/subcategoria_deportivoh.html')
+    return render_template('sitio/subcategorias/hombre_deportivo.html')
 
-@app.route('/subcategorias/subcategoria_jeans.html')
+@app.route('/subcategorias/mujer_jeans.html')
 def jeans():
-    return render_template('sitio/subcategorias/subcategoria_jeans.html')
+    return render_template('sitio/subcategorias/mujer_jeans.html')
 
-@app.route('/subcategorias/subcategoria_jeansh.html')
+@app.route('/subcategorias/hombre_jeans.html')
 def jeansh():
-    return render_template('sitio/subcategorias/subcategoria_jeansh.html')
+    return render_template('sitio/subcategorias/hombre_jeans.html')
 
-@app.route('/subcategorias/subcategoria_otros.html')
+@app.route('/subcategorias/accesorios_otros.html')
 def otros():
-    return render_template('sitio/subcategorias/subcategoria_otros.html')
+    return render_template('sitio/subcategorias/accesorios_otros.html')
 
-@app.route('/subcategorias/subcategoria_reloj.html')
+@app.route('/subcategorias/accesorios_reloj.html')
 def reloj():
-    return render_template('sitio/subcategorias/subcategoria_reloj.html')
+    return render_template('sitio/subcategorias/accesorios_reloj.html')
 
-@app.route('/subcategorias/subcategoria_tshirts.html')
+@app.route('/subcategorias/hombre_tshirts.html')
 def tshirts():
-    return render_template('sitio/subcategorias/subcategoria_tshirts.html')
+    return render_template('sitio/subcategorias/hombre_tshirts.html')
 
-@app.route('/subcategorias/subcategoria_vestidos.html')
+@app.route('/subcategorias/mujer_vestidos.html')
 def vestidos():
-    return render_template('sitio/subcategorias/subcategoria_vestidos.html')
+    return render_template('sitio/subcategorias/mujer_vestidos.html')
 
-@app.route('/subcategorias/subcategoria_zapatos.html')
+@app.route('/subcategorias/mujer_zapatos.html')
 def zapatos():
-    return render_template('sitio/subcategorias/subcategoria_zapatos.html')
+    return render_template('sitio/subcategorias/mujer_zapatos.html')
 
-@app.route('/subcategorias/subcategoria_zapatosh.html')
+@app.route('/subcategorias/hombre_zapatos.html')
 def zapatosh():
-    return render_template('sitio/subcategorias/subcategoria_zapatosh.html')
+    return render_template('sitio/subcategorias/hombre_zapatos.html')
 
 #Crear una ruta para mostrar la imagen 
 @app.route('/images/<imagen>')
