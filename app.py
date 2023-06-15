@@ -24,7 +24,7 @@ def inicio():
  """
 @app.route('/accesorios')
 def accesorios():
-    return render_template('sitio/categoria_accesorios.html')
+    return render_template('sitio/categoria_accesorios')
 @app.route('/hombre')
 def hombre():
     return render_template('sitio/categoria_hombre.html')
@@ -72,7 +72,7 @@ def cadenas():
 
 @app.route('/hombre/camisa')
 def camisa():
-    return render_template('sitio/subcategorias/camisa.html')
+    return render_template('sitio/subcategorias/hombre_camisa.html')
 
 @app.route('/mujer/deportivo')
 def deportivo():
