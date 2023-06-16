@@ -24,7 +24,7 @@ def inicio():
  """
 @app.route('/accesorios')
 def accesorios():
-    return render_template('sitio/categoria_accesorios')
+    return render_template('sitio/categoria_accesorios.html')
 @app.route('/hombre')
 def hombre():
     return render_template('sitio/categoria_hombre.html')
@@ -44,7 +44,7 @@ def registro():
     return render_template('sitio/registro.html')
 @app.route('/perfil')
 def perfil():
-    return render_template('sitio/perfil.html')
+    return render_template('sitio//vendedor')
 @app.route('/vendedor')
 def vendedor():
     return render_template('sitio/vendedor.html')
