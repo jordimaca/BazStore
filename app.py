@@ -52,6 +52,9 @@ def vendedor():
 @app.route('/producto')
 def producto():
     return render_template('sitio/producto.html')
+@app.route('/articulo')
+def articulo():
+    return render_template('sitio/articulo.html')
 
     #Subcategorias
 @app.route('/accesorios/anillos')
