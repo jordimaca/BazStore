@@ -17,11 +17,8 @@ app=Flask(__name__)
 def inicio():
     #Retornar la ubicacion del template que se desea mostrar
     return render_template('sitio/inicio.html')
+#rutas principales
 
-""" @app.route('/inicio.html')
-def inicio():
-    return render_template('sitio/inicio.html')
- """
 @app.route('/accesorios')
 def accesorios():
     return render_template('sitio/categoria_accesorios.html')
@@ -53,7 +50,7 @@ def vendedor():
 def producto():
     return render_template('sitio/producto.html')
 
-    #Subcategorias
+#Subcategorias
 @app.route('/accesorios/anillos')
 def anillos():
     return render_template('sitio/subcategorias/accesorios_anillos.html')
@@ -119,6 +116,7 @@ def zapatosh():
 def imagenes(imagen):
     print(imagen)
     return send_from_directory(os.path.join('templates/sitio/images'),imagen) #solucion rapida dejalo encima y veras la opcion
+
 #Crear una instancia para poder ejecutar nuestra aplicacion
 if __name__ == '__main__':
     #Se utiliza el modo debug para que se vean los cambios
