@@ -11,6 +11,8 @@ from flask import send_from_directory
 #Crear la aplicaciontemplates
 app=Flask(__name__)
 
+
+
 #Colocar la palabra clave slash (/) con la cual se va a acceder a la url, para indicarle que cuando se le solicite buscar en esa ruta (diagonal /) va a mostrar un inicio.
 @app.route('/')
 #Crear una funcion con la palabra reservada def
@@ -41,7 +43,7 @@ def registro():
     return render_template('sitio/registro.html')
 @app.route('/perfil')
 def perfil():
-    return render_template('sitio//vendedor')
+    return render_template('sitio/perfil.html')
 @app.route('/vendedor')
 def vendedor():
     return render_template('sitio/vendedor.html')
@@ -116,6 +118,7 @@ def zapatosh():
 def imagenes(imagen):
     print(imagen)
     return send_from_directory(os.path.join('templates/sitio/images'),imagen) #solucion rapida dejalo encima y veras la opcion
+
 
 #Crear una instancia para poder ejecutar nuestra aplicacion
 if __name__ == '__main__':
