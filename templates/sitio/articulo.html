@@ -15,13 +15,13 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <a href="perfil.html"><img src="../../static/images/user-icon.svg" alt=""></a>
+                <a href="/perfil"><img src="../../static/images/user-icon.svg" alt=""></a>
                 <div class="dropdown">
                     <div class="dropdown">
                         <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
-                            <a class="btn-left" href="login.html">Iniciar Sesion</a>
-                            <a class="btn-left" href="registro.html">Registrarse</a>
+                            <a class="btn-left" href="/login">Iniciar Sesion</a>
+                            <a class="btn-left" href="/registro">Registrarse</a>
                         </div>
                     </div>
                 </div>
@@ -82,19 +82,23 @@
             </div>
                 <h2 class="contenedor-titulo">Nombre del articulo</h2>
             <div class="contenedor-informacion">
-                <h3>$585 DOP</h3>
-                <h3>Tallas</h3>
-                <h3>Ubicacion</h3>
+                <h3><span class="precio">Precio:</span> $585<!-- <span>DOP</span> --></h3>
+                <h3><span class="talla">Tallas:</span> M - L</h3>
+                <h3><span class="ubicacion">Ubicacion:</span> Santo Domingo</h3>
             </div>
             <div class="contenedor-vendedor">
-                <img src="../../static/images/user-circle-icon.svg" alt="imagen-vendedor">
-                <h3>@Nombre_Vendedor</h3>
+                <div class="vendedor">
+                    <img src="../../static/images/user-circle-icon.svg" alt="imagen-vendedor">
+                    <h3>@Nombre_Vendedor</h3>
+                </div>
+                <h3 class="telefono">809-555-0077</h3>
+                <h3 class="whatsapp">Contactar WhatsApp</h3>
             </div>
             <div class="contenedor-descripcion">
-
+                <div class="cuadro"><h3>Descripcion:</h3><p>Descripcion de maximo 65 caracteres</p></div>
             </div>
         </div>
-        
+
     </main>
 </body>
 </html>
