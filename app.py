@@ -47,10 +47,8 @@ def perfil():
 @app.route('/vendedor')
 def vendedor():
     return render_template('sitio/vendedor.html')
+
 #nesecita un arreglo para especificar el producto
-@app.route('/producto')
-def producto():
-    return render_template('sitio/producto.html')
 @app.route('/articulo')
 def articulo():
     return render_template('sitio/articulo.html')
