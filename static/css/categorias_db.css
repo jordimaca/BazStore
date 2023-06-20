@@ -1,0 +1,172 @@
+@import "reset.css";
+@import "menu.css";
+
+body {
+    box-sizing: border-box;
+    font-family: BazFont;
+}
+
+/* .espacio{
+    margin: 50px;
+} */
+
+.contenedor-filtro {
+    display: grid;
+    grid-template-columns: 15rem auto;
+    grid-template-rows: auto auto auto;
+    
+}
+
+.filtro {
+    grid-area: 1/1/4/1;
+    padding: 0 50px;
+    background-color: #eee;
+    text-align: center;
+    
+}
+
+.filtro ul li a {
+    text-decoration: none;
+    color: #666;
+    display: block;
+    margin: 10px 0;
+}
+
+.filtro h2 {
+    font-size: 30px;
+    padding: 10%;
+    margin: 10px;
+    
+}
+
+h4 {
+    font-size: 18px ; 
+    font-weight: bolder;
+    margin: 6% 0 1% 0;
+}
+
+#talla,
+#ubicacion,
+#condicion {
+    font-family: BazFont;
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    background-color: #eee;
+    border: 1px solid #666;
+    padding: 1.5px;
+}
+
+.btn-filtro:active~.filtro{
+    visibility: hidden;
+}
+
+
+.boton input {
+    background-color: #f7f7f7;
+    border: none;
+    padding: 5px;
+    width: 40px;
+    height: 100%;
+    color: #666;
+    font-weight: 500;
+    line-height: 0;
+}
+.boton::-webkit-inner-spin-button,
+.boton::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.boton:focus {
+    outline: none;
+}
+
+.contenedor-articulos{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 30px;
+    margin-left: 25px;
+    gap: 20px;
+}
+
+/* Card */
+.card {
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto auto;
+    cursor: pointer;
+    margin: 0 10px;
+}
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.card-img {
+    grid-area: 1 / 1 / 2 / 3;
+    background: transparent;
+}
+.card-img img {
+    height: 200px;
+    width: 300px;
+    object-fit: cover;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card-title{
+    grid-area: 2 / 1 / 3 / 3;
+}
+.card-title a{
+    color: #252525;
+    font-weight: 300;
+    line-height: 1.4;
+    text-decoration: none;
+    color: #000;
+}
+
+.card-tags{
+    grid-area: 3 / 1 / 4 / 2;
+}
+.card-tags a{
+    color: #666;
+    font-size: 13px;
+}
+.card-tags a:hover{
+    color: #1bbeb4;
+}
+
+.card-price{
+    grid-area: 3 / 2 / 4 / 3;
+}
+/* Card FIN */
+
+footer {
+    padding: 30px;
+    background-color: #eee;
+    margin-top: 50px;
+    color: #222;
+    /* position: absolute;
+    bottom: 0;
+    width: 100%; */
+}
+
+@media screen and (max-width:768px){
+    
+   
+    .card-list-products {
+        display: block; /* display grid (antes) */
+        grid-template-columns: auto auto;
+        gap: 25px;
+    }
+    
+}
+
+@media screen and (max-width:468px){
+    .contenedor-filtro {
+        display: inline-block; 
+    }
+    
+   
+    
+}
+
