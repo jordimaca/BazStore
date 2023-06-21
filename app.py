@@ -47,15 +47,19 @@ def login():
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
             error = 'Pusiste mal la contraseña o el email. intenta nuevamente.'
         else:
+            session['logged_in']= True
             return redirect('/')
     return render_template('sitio/login.html', error=error)
-
 
 @app.route('/registro')
 def registro():
 
     return render_template('sitio/registro.html')
-
+#log out
+@app.route('/logout')
+def logout():
+    session.pop('logged_in',None)
+    return redirect('/login')
 #rutas principales
 
 @app.route('/accesorios')
