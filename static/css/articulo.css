@@ -71,6 +71,10 @@ body {
     grid-area: 1 / 1 / 2 / 3;
     display: flex;
 }
+.contenedor-vendedor .vendedor a{
+    text-decoration: none;
+    color: #000;
+}
 .contenedor-vendedor .vendedor img{
     width: 2.5rem;
     height: 2.5rem;
@@ -80,6 +84,8 @@ body {
 }
 .contenedor-vendedor .whatsapp{
     grid-area: 2 / 2 / 3 / 3;
+    text-decoration: none;
+    color: #000;
 }
 /* Grid Vendedor FIN */
 
