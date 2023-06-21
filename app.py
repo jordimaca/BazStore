@@ -1,17 +1,35 @@
+import os
 #Incluir el Framework Flask
-import os #quick f
 from flask import Flask
 
 #Importar la plantilla HTML. Para guardar datos desde el formulario importamos request y redirect
-from flask import render_template, request, redirect
+
+from flask import render_template, request,redirect, url_for,session
+
+# Importar el enlace a base de datos con MySQL
+from flaskext.mysql import MySQL
+
+# Importar controlador del tiempo
+from datetime import datetime
 
 #Importar para obtener informacion de la imagen 
 from flask import send_from_directory
 
+
+
 #Crear la aplicaciontemplates
 app=Flask(__name__)
 
+# Crear conexión a la base de datos
+mysql=MySQL()
 
+app.config['MYSQL_DATABASE_HOST']='localhost'
+app.config['MYSQL_DATABASE_USER']='root'
+app.config['MYSQL_DATABASE_PASSWORD']=''
+app.config['MYSQL_DATABASE_DB']='bazstore'
+
+# Agregar el valor para inicializar nuestra aplicación
+mysql.init_app(app)
 
 #Colocar la palabra clave slash (/) con la cual se va a acceder a la url, para indicarle que cuando se le solicite buscar en esa ruta (diagonal /) va a mostrar un inicio.
 @app.route('/')
@@ -19,6 +37,25 @@ app=Flask(__name__)
 def inicio():
     #Retornar la ubicacion del template que se desea mostrar
     return render_template('sitio/inicio.html')
+
+#login y registro
+
+@app.route('/login',methods=['GET', 'POST'])
+def login():
+    error = None
+    if request.method == 'POST':
+        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
+            error = 'Pusiste mal la contraseña o el email. intenta nuevamente.'
+        else:
+            return redirect('/')
+    return render_template('sitio/login.html', error=error)
+
+
+@app.route('/registro')
+def registro():
+
+    return render_template('sitio/registro.html')
+
 #rutas principales
 
 @app.route('/accesorios')
@@ -34,23 +71,14 @@ def mujer():
 def nuevo():
     return render_template('sitio/categoria_nuevo.html')
 
-@app.route('/login')
-def login():
-    return render_template('sitio/login.html')
-@app.route('/registro')
-def registro():
-
-    return render_template('sitio/registro.html')
 @app.route('/perfil')
 def perfil():
     return render_template('sitio/perfil.html')
 @app.route('/vendedor')
 def vendedor():
     return render_template('sitio/vendedor.html')
+
 #nesecita un arreglo para especificar el producto
-@app.route('/producto')
-def producto():
-    return render_template('sitio/producto.html')
 @app.route('/articulo')
 def articulo():
     return render_template('sitio/articulo.html')

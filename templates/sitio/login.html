@@ -77,22 +77,27 @@
         <main>
             <h2>Bienvenido</h2>
             <!-- agregar formulario email ,contraseña y boton acceder-->
-            <form>
+            <form action="" method="post">
                 <div class="input-cont">
                     <div class="input">
-                        <input type="email" name="" id="email" placeholder=" " required>
-                        <label for="email">E-mail</label>
+                        <input type="text" name="username" id="username" placeholder=" " value="{{
+          request.form.username }}" required>
+                        <label for="username">Nombre de usuario</label>
                     </div>
                 </div>
                 <div class="input-cont">
                     <div class="input">
-                        <input type="password" name="" id="contraseña" placeholder=" " required>
+                        <input type="password" name="password" id="contraseña" placeholder=" " value="{{
+          request.form.password }}" required>
                         <label for="password">Contraseña</label>
                     </div>
-        
                 </div>
+                <input class="btn-up" type="submit" value="Acceder">
+                {% if error %}
+                <p class="error"><strong>Error:</strong> {{ error }}
+                {% endif %}
             </form>
-            <button class="btn-up" type="submit" onclick="document.location='/'">Acceder</button>
+
             <h3>Continuar con:</h3>
             <nav class="redes-menu">
                 <div class="button">
