@@ -9,6 +9,7 @@ body{
     display: grid;
     grid-template-columns: auto;
     justify-content: space-evenly;
+    
  }
 .caja{
     border: 2px solid #000;

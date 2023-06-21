@@ -12,6 +12,7 @@ main {
     grid-template-rows: auto auto auto;
     grid-template-columns: auto auto auto;
     border-bottom: #000 3px solid;
+    
 }
 
 main img {
