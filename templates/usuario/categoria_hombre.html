@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>productos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css')}}">
+    <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                <a href="/perfil"><img src="../../static/images/user-icon.svg" alt=""></a>
+                <div class="dropdown">
+                    <div class="dropdown">
+                    <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-left" href="/login">Iniciar Sesion</a>
+                            <a class="btn-left" href="/registro">Registrarse</a>
+                        </div>
+                    </div>
+                </div>
+            <h1>BazStore</h1>
+            <div class="buscador">
+                <form>
+                    <div class="search">
+                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
+                    </div>
+                </form>
+            </div>
+               <nav class="categorias">
+                    <button class="btn-menu" onclick="document.location='/'">INICIO</button>
+                    <div class="dropdown">
+                        <button class="btn-menu active" onclick="document.location='#'">HOMBRE</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="/hombre/tshirts">T-Shirt</a>
+                            <a class="btn-content" href="/hombre/camisa">Camisas</a>
+                            <a class="btn-content" href="/hombre/jeans">Jeans</a>
+                            <a class="btn-content" href="/hombre/zapatos">Zapatos</a>
+                            <a class="btn-content" href="/hombre/deportivo">Deportivo</a>
+                
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='/mujer'">MUJER</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="/mujer/vestidos">Vestidos</a>
+                            <a class="btn-content" href="/mujer/blusas">Blusas</a>
+                            <a class="btn-content" href="/mujer/jeans">Jeans</a>
+                            <a class="btn-content" href="/mujer/zapatos">Zapatos</a>
+                            <a class="btn-content" href="/mujer/deportivo">Deportivo</a>
+                
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <button class="btn-menu" onclick="document.location='/accesorios'">ACCESORIOS</button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-content" href="/accesorios/reloj">Reloj</a>
+                            <a class="btn-content" href="/accesorios/cadenas">Cadenas</a>
+                            <a class="btn-content" href="/accesorios/brazaletes">Brazaletes</a>
+                            <a class="btn-content" href="/accesorios/anillos">Anillos</a>
+                            <a class="btn-content" href="/accesorios/otros">Otros</a>
+                
+                        </div>
+                    </div>
+                    <button class="btn-menu" onclick="document.location='/nuevo'">NUEVO</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="espacio"></div> -->
+    <div class="contenedor-filtro">
+        <div class="filtro">
+        <br>
+        <h4>Ubicacion</h4>
+        <select name="ubicacion" id="ubicacion">
+            <option value="rd" selected>Todo el pais</option>
+            <option value="sd">Santo Domingo</option>
+            <option value="stgo">Santiago</option>
+            <option value="ppta">Puerto Plata</option>
+            <option value="sfco">San Francisco</option>
+            <option value="bna">Barahona</option>
+        </select>
+
+        <h4>Tallas</h4>
+        <select name="talla" id="talla">
+            <option value="todas_tallas" selected>Todas las tallas</option>
+            <option value="xxl">XXL</option>
+            <option value="xl">XL</option>
+            <option value="l">L</option>
+            <option value="m">M</option>
+            <option value="s">S</option>
+            <option value="xs">XS</option>
+            <option value="6">6-9M (74CM)</option>
+            <option value="9">9-12M (80CM)</option>
+            <option value="12">12-18M (86CM)</option>
+            <option value="18">18-24M (92CM)</option>
+            <option value="2">2-3Y (98CM)</option>
+        </select>
+
+        <h4>precio</h4>
+        <div class="boton">
+            <input type="number" placeholder="Min" value="" min="" class="boton"/>
+            -
+            <input type="number" placeholder="Max" value="" min="" class="boton"/>
+        </div>
+
+        <h4>Codiciones</h4>
+        <select name="condicion" id="condicion">
+            <option value="todas_condicion" selected>Nuevo y Usado</option>
+            <option value="xxl">Nuevo</option>
+            <option value="xl">Usado</option>
+        </select>
+
+    </div>
+    <section class="container-related-products1">
+    
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                   <a href="/articulo"><img src="images\zapatoh1.jpg"
+                        alt="producto-1" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <a href="/articulo">
+                            <h3>Nike - Roshe Run</h3>
+                        </a>
+                       <a href="/articulo">
+                           <p class="category">Footwear, Sneakers</p>
+                       </a>
+                    </div>
+                    <div class="price">$85.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\sudadera1.jpg"
+                        alt="producto-3" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                       <a href="/articulo">
+                           <h3>Adidas - Boston Super OG</h3>
+                       </a>
+                       <a href="/articulo">
+                           <p class="category">Footwear, Sneakers</p>
+                       </a>
+                    </div>
+                    <div class="price">$105.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                   <a href="/articulo"><img src="images\camisa1.jpg"
+                        alt="producto-4" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <a href="/articulo">
+                            <h3>Common Projects Achilles</h3>
+                        </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$250.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-related-products2">
+
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\jeanh1.jpg"
+                        alt="producto-1" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                       <a href="/articulo">
+                           <h3>Nike - Roshe Run</h3>
+                       </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$85.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\zapatoh2.jpg"
+                        alt="producto-2" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                      <a href="/articulo">
+                          <h3>Common Projects Achilles</h3>
+                      </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$255.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\relojh2.jpg"
+                        alt="producto-4" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <a href="/articulo">
+                            <h3>Common Projects Achilles</h3>
+                        </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$250.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container-related-products3">
+
+        <div class="card-list-products">
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\sudadera2.jpg"
+                        alt="producto-1" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                      <a href="/articulo">
+                          <h3>Nike - Roshe Run</h3>
+                      </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$85.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                   <a href="/articulo"><img src="images\relojh3.jpg"
+                        alt="producto-2" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <a href="/articulo">
+                            <h3>Common Projects Achilles</h3>
+                        </a>
+                       <a href="/articulo">
+                           <p class="category">Footwear, Sneakers</p>
+                       </a>
+                    </div>
+                    <div class="price">$255.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-img">
+                    <a href="/articulo"><img src="images\jeanh2.jpg"
+                        alt="producto-3" /></a>
+                </div>
+                <div class="info-card">
+                    <div class="text-product">
+                        <a href="/articulo">
+                            <h3>Adidas - Boston Super OG</h3>
+                        </a>
+                        <a href="/articulo">
+                            <p class="category">Footwear, Sneakers</p>
+                        </a>
+                    </div>
+                    <div class="price">$105.00</div>
+                    <div class="icono">
+                        <a href="/vendedor"></a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </section>
+    </div>
+    
+
+
+    <footer class="footer">
+        <p>Todos los derechos reservado a &copy;BazStore 2023</p>
+    </footer>
+
+</body>
+</html>

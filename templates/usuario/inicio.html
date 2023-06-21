@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BazStore | Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css')}}">
+    <title>BazStore | Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
-    <!-- agregar los meta de descripcion etc -->
 </head>
 <body>
-    <header>
+  <header>
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
@@ -33,8 +32,8 @@
                     </div>
                 </form>
             </div>
-               <nav class="categorias">
-                    <button class="btn-menu" onclick="document.location='/'">INICIO</button>
+                <nav class="categorias">
+                    <button class="btn-menu active" onclick="document.location='#'">INICIO</button>
                     <div class="dropdown">
                         <button class="btn-menu" onclick="document.location='/hombre'">HOMBRE</button>
                         <div class="dropdown-contenido">
@@ -73,48 +72,30 @@
             </div>
         </div>
     </header>
-    <div class="contenido">
-        <main>
-            <h2>Bienvenido</h2>
-            <!-- agregar formulario email ,contraseña y boton acceder-->
-            <form action="" method="post">
-                <div class="input-cont">
-                    <div class="input">
-                        <input type="text" name="username" id="username" placeholder=" " value="{{
-          request.form.username }}" required>
-                        <label for="username">Nombre de usuario</label>
-                    </div>
-                </div>
-                <div class="input-cont">
-                    <div class="input">
-                        <input type="password" name="password" id="contraseña" placeholder=" " value="{{
-          request.form.password }}" required>
-                        <label for="password">Contraseña</label>
-                    </div>
-                </div>
-                <input class="btn-up" type="submit" value="Acceder">
-                {% if error %}
-                <p class="error"><strong>Error:</strong> {{ error }}
-                {% endif %}
-            </form>
-
-            <h3>Continuar con:</h3>
-            <nav class="redes-menu">
-                <div class="button">
-                    <div class="icon"><i class="fa fa-apple" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Apple</a>
-                 </div>
-                 <div class="button">
-                    <div class="icon"><i class="fa fa-google" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Google</a>
-                 </div>
-                 <div class="button">
-                     <div class="icon"><i class="fa fa-facebook-f" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Facebook</a>
-                 </div>
-            </nav>
-            <!-- boton registrarse -->
-            <button class="btn-up" onclick="document.location='/registro'">Registrarse</button>
-        </main>
+  <div class="paralax">
+  <main>
+    <div class="pimg1">
+      <div class="ptext1">
+        <p class="border">¡Enterate desde casa!</p>
         
-    {% include 'sitio/footer.html' %}
+      </div>
+    </div>
+    <div class="pimg2">
+      <div class="ptext2">
+        <p class="border">¿Que esperas? ¡Publica tus articulos gratis!</p>
+      </div>
+    </div>
+    <div class="pimg3">
+      <div class="ptext1">
+        <p class="border">Representa tu marca como dominicano</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <section class="footer-incio">
+      <p>&copy;Todos los derechos reservados a BazStore&trade; 2023</p>
+    </section>
+  </footer>
+  </div>
+</body>
+</html>
