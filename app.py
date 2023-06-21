@@ -16,9 +16,11 @@ from datetime import datetime
 from flask import send_from_directory
 
 
-
-#Crear la aplicaciontemplates
+#Crear la aplicacion templates
 app=Flask(__name__)
+
+#crear llave secreta
+app.secret_key="dicresoft"
 
 # Crear conexión a la base de datos
 mysql=MySQL()
