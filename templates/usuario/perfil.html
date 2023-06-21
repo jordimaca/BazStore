@@ -17,7 +17,7 @@
                 <div class="dropdown">
                     <button class="btn-cuenta">@Nombre_Usuario <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
-                            <a class="btn-left" href="/perfil">Ver Perfil</a>
+                            <a class="btn-left" href="#">Ver Perfil</a>
                             <a class="btn-left-cerrar" href="/login">Cerrar Sesion</a>
                         </div>
                 </div>
@@ -72,11 +72,11 @@
     </header>
     <main>
         <div class="usuario">
-            <img src="../static/images/user.svg"><h2>Nombre de vendedor</h2>
+            <img src="../static/images/user.svg"><h2>@Nombre_Usuario</h2>
         </div>
         <div class="btn-superiores">
-            <a href="#"><i class="fa-brands fa-whatsapp"></i>Contactar</a>
-            <!-- <a href="#"><i class="fa-brands fa-instagram"></i>Contactar</a> -->
+            <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i>Publicar articulo</a>
+            <a href="#"><i class="fa-solid fa-trash"></i>Borrar articulo</a>
         </div>
         <div class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos de este perfil...">
@@ -85,7 +85,7 @@
     </main>
     
     <aside>
-        <h2>Articulos publicados</h2>
+        <h2>Articulos publicados</h1>
         <section class="container-related-products2">
 
             <div class="card-list-products">
@@ -216,8 +216,4 @@
 
     
     
-    <footer class="footer">
-        <p>Todos los derechos reservado a &copy;BazStore 2023</p>
-    </footer>
-</body>
-</html>
+  {% include 'sitio/footer.html' %}

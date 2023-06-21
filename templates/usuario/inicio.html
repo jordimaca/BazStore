@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BazStore | Registrarse</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/registro.css')}}">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BazStore | Inicio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/inicio.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+  <header>
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
@@ -32,8 +32,8 @@
                     </div>
                 </form>
             </div>
-               <nav class="categorias">
-                    <button class="btn-menu" onclick="document.location='/'">INICIO</button>
+                <nav class="categorias">
+                    <button class="btn-menu active" onclick="document.location='#'">INICIO</button>
                     <div class="dropdown">
                         <button class="btn-menu" onclick="document.location='/hombre'">HOMBRE</button>
                         <div class="dropdown-contenido">
@@ -72,59 +72,30 @@
             </div>
         </div>
     </header>
-    <div class="contenido">
-        <div class="caja">
-        <main>
-            <section class="tipo-cuenta">
-                <h2>Registrar nueva cuenta</h2>
-            </section>
-          
-            <form style="display: grid;gap: 5px;">
-                <div class="register">
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="text" id="nombre" placeholder=" " required>
-                            <label for="nombre">Nombre y Apellido</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="text" id="cuenta" placeholder=" " required>
-                            <label for="cuenta">Nombre de cuenta</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="email" id="email" placeholder=" " required>
-                            <label for="email">E-mail</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="tel" id="tel" placeholder=" " required minlength="10" maxlength="10">
-                            <label for="tel">Numero de telefono</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="password" id="pass" placeholder=" " required minlength="8" maxlength="16">
-                            <label for="pass">Contraseña</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="password" id="pass2" placeholder=" " required minlength="8" maxlength="16">
-                            <label for="pass2">Confirmar contraseña</label>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            <form class="contenedor-botones">
-                <button class="btn-up" type="submit" onclick="document.location='inicio.html'">Acceder</button>
-                <a href="/login">¿Ya tienes cuenta?</a>
-                <!-- <button class="btn-up" onclick="document.location='/login'">¿Ya tienes cuenta?</button> -->
-            </form>
-        </main>
+  <div class="paralax">
+  <main>
+    <div class="pimg1">
+      <div class="ptext1">
+        <p class="border">¡Enterate desde casa!</p>
+        
+      </div>
     </div>
+    <div class="pimg2">
+      <div class="ptext2">
+        <p class="border">¿Que esperas? ¡Publica tus articulos gratis!</p>
+      </div>
     </div>
-  {% include 'sitio/footer.html' %}
+    <div class="pimg3">
+      <div class="ptext1">
+        <p class="border">Representa tu marca como dominicano</p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <section class="footer-incio">
+      <p>&copy;Todos los derechos reservados a BazStore&trade; 2023</p>
+    </section>
+  </footer>
+  </div>
+</body>
+</html>

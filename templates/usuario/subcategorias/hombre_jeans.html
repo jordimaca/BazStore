@@ -35,13 +35,13 @@
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='/'">INICIO</button>
                     <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='/hombre'">HOMBRE</button>
+                        <button class="btn-menu active" onclick="document.location='/hombre'">HOMBRE</button>
                         <div class="dropdown-contenido">
-                            <a class="btn-content" href="/hombre/tshirts">T-Shirt</a>
-                            <a class="btn-content" href="/hombre/camisa">Camisas</a>
-                            <a class="btn-content" href="/hombre/jeans">Jeans</a>
-                            <a class="btn-content" href="/hombre/zapatos">Zapatos</a>
-                            <a class="btn-content" href="/hombre/deportivo">Deportivo</a>
+                            <a class="btn-content" href="hombre/tshirts">T-Shirt</a>
+                            <a class="btn-content" href="hombre/camisa">Camisas</a>
+                            <a class="btn-content" href="#">Jeans</a>
+                            <a class="btn-content" href="hombre/zapatos">Zapatos</a>
+                            <a class="btn-content" href="hombre/deportivo">Deportivo</a>
                         </div>
                     </div>
                     <div class="dropdown">
@@ -55,12 +55,12 @@
                         </div>
                     </div>
                     <div class="dropdown">
-                        <button class="btn-menu active"
+                        <button class="btn-menu"
                             onclick="document.location='/accesorios'">ACCESORIOS</button>
                        <div class="dropdown-contenido">
                             <a class="btn-content" href="/accesorios/reloj">Reloj</a>
                             <a class="btn-content" href="/accesorios/cadenas">Cadenas</a>
-                            <a class="btn-content" href="#">Brazaletes</a>
+                            <a class="btn-content" href="/accesorios/brazaletes">Brazaletes</a>
                             <a class="btn-content" href="/accesorios/anillos">Anillos</a>
                             <a class="btn-content" href="/accesorios/otros">Otros</a>
                         </div>
@@ -73,13 +73,76 @@
 
     <!-- <div class="espacio"></div> -->
     <div class="contenedor-filtro">
-       {% include 'sitio/filtro.html' %}
+        <div class="filtro">
+        <!-- <br><br>
+        <ul>
+            <h4>Categorias</h4>
+            <li><a href="#">Camisas</a></li>
+            <li><a href="#">Sudaderas</a></li>
+            <li><a href="#">Jeans</a></li>
+            <li><a href="#">Relojes</a></li>
+            <li><a href="#">Zapatos</a></li>
+            <li><a href="#">Tenis</a></li>
+            <li><a href="#">Gorras</a></li>
+            
+        </ul> -->
+
+        <br>
+        <h4>Ubicacion</h4>
+        <select name="ubicacion" id="ubicacion">
+            <option value="rd" selected>Todo el pais</option>
+            <option value="sd">Santo Domingo</option>
+            <option value="stgo">Santiago</option>
+            <option value="ppta">Puerto Plata</option>
+            <option value="sfco">San Francisco</option>
+            <option value="bna">Barahona</option>
+        </select>
+        
+        <br>
+        <br>
+        <h4>Tallas</h4>
+        <select name="talla" id="talla">
+            <option value="todas_tallas" selected>Todas las tallas</option>
+            <option value="xxl">XXL</option>
+            <option value="xl">XL</option>
+            <option value="l">L</option>
+            <option value="m">M</option>
+            <option value="s">S</option>
+            <option value="xs">XS</option>
+            <option value="6">6-9M (74CM)</option>
+            <option value="9">9-12M (80CM)</option>
+            <option value="12">12-18M (86CM)</option>
+            <option value="18">18-24M (92CM)</option>
+            <option value="2">2-3Y (98CM)</option>
+        </select>
+
+        <br>
+        <br>
+        <h4>precio</h4>
+        <div class="boton">
+            <input type="number" placeholder="Min" value="" min="" class="boton"/>
+            -
+            <input type="number" placeholder="Max" value="" min="" class="boton"/>
+        </div>
+        <!-- colocar boton de enviar formulario -->
+        <br>
+
+        <h4>Codiciones</h4>
+        <select name="condicion" id="condicion">
+            <option value="todas_condicion" selected>Nuevo y Usado</option>
+            <option value="xxl">Nuevo</option>
+            <option value="xl">Usado</option>
+        </select>
+
+        
+
+    </div>
     <section class="container-related-products1">
     
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                   <a href="/articulo"><img src="../images/b1.jpg"
+                   <a href="/articulo"><img src="../images/jeanh1.jpg"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -99,7 +162,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b2.webp"
+                    <a href="/articulo"><img src="../images/jeanh2.jpg"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
@@ -119,7 +182,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="/articulo"><img src="../images/b3.webp"
+                   <a href="/articulo"><img src="../images/jeanh3.webp"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -144,7 +207,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b4.jpg"
+                    <a href="/articulo"><img src="../images/jeanh5.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -164,7 +227,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b5.jpg"
+                    <a href="/articulo"><img src="../images/jeanh6.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -185,7 +248,7 @@
             
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b7.jpg"
+                    <a href="/articulo"><img src="../images/jeanh7.png"
                         alt="producto-4" /></a>
                 </div>
                 <div class="info-card">
@@ -210,7 +273,7 @@
         <div class="card-list-products">
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b8.jpg"
+                    <a href="/articulo"><img src="../images/jeanh8.webp"
                         alt="producto-1" /></a>
                 </div>
                 <div class="info-card">
@@ -230,7 +293,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                   <a href="/articulo"><img src="../images/b9.jpg"
+                   <a href="/articulo"><img src="../images/jeanh2.jpg"
                         alt="producto-2" /></a>
                 </div>
                 <div class="info-card">
@@ -250,7 +313,7 @@
             </div>
             <div class="card">
                 <div class="card-img">
-                    <a href="/articulo"><img src="../images/b4.jpg"
+                    <a href="/articulo"><img src="../images/jeanh1.webp"
                         alt="producto-3" /></a>
                 </div>
                 <div class="info-card">
@@ -275,4 +338,9 @@
     
 
 
-   {% include 'sitio/footer.html' %}
+    <footer class="footer">
+        <p>Todos los derechos reservado a &copy;BazStore 2023</p>
+    </footer>
+
+</body>
+</html>
