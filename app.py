@@ -73,15 +73,15 @@ def nuevo():
 
 @app.route('/perfil')
 def perfil():
-    return render_template('sitio/perfil.html')
+    return render_template('usuario/perfil.html')
 @app.route('/vendedor')
 def vendedor():
-    return render_template('sitio/vendedor.html')
+    return render_template('usuario/vendedor.html')
 
 #nesecita un arreglo para especificar el producto
 @app.route('/articulo')
 def articulo():
-    return render_template('sitio/articulo.html')
+    return render_template('usuario/articulo.html')
 
 #Subcategorias
 @app.route('/accesorios/anillos')
