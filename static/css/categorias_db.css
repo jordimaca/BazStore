@@ -6,10 +6,6 @@ body {
     font-family: BazFont;
 }
 
-/* .espacio{
-    margin: 50px;
-} */
-
 .contenedor-filtro {
     display: grid;
     grid-template-columns: 15rem auto;
@@ -96,6 +92,7 @@ h4 {
     grid-template-rows: auto auto;
     cursor: pointer;
     margin: 0 10px;
+    
 }
 .card:hover{
     transform: scale(1.05);
