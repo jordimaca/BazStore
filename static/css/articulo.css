@@ -39,15 +39,15 @@ body {
     grid-area: 3 / 2 / 4 / 3;
 }
 .contenedor-informacion h3{
-    border: 2px solid #000;
+    border: 1px solid #c0c0c0;
     font-size: 13px;
     margin: 8px;
     padding: 5px 0;
     letter-spacing: 1px;
 }
 .contenedor-informacion span{
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #e4e4e4;
     font-size: 13px;
 }
 .contenedor-informacion .precio{
@@ -64,7 +64,9 @@ body {
 /* Grid Vendedor */
 .contenedor-vendedor{
     grid-area: 2 / 2 / 3 / 3;
-    background-color: #eee;
+    border: 1px solid #c0c0c0;
+    background-color: #e4e4e4;
+
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
@@ -72,6 +74,10 @@ body {
 .contenedor-vendedor .vendedor{
     grid-area: 1 / 1 / 2 / 3;
     display: flex;
+}
+.contenedor-vendedor .vendedor a{
+    text-decoration: none;
+    color: #000;
 }
 .contenedor-vendedor .vendedor img{
     width: 2.5rem;
@@ -82,6 +88,8 @@ body {
 }
 .contenedor-vendedor .whatsapp{
     grid-area: 2 / 2 / 3 / 3;
+    text-decoration: none;
+    color: #000;
 }
 /* Grid Vendedor FIN */
 
@@ -90,13 +98,13 @@ body {
     grid-area: 4 / 2 / 5 / 3;
 }
 .contenedor-descripcion .cuadro {
-    border: 2px solid #000;
+    border: 1px solid #c0c0c0;
     width: 25rem;
     height: 10rem;
 }
 .contenedor-descripcion .cuadro h3{
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #e4e4e4;
     font-size: 17px;
     text-align: center;
     padding: 3px 0;
