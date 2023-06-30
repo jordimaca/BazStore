@@ -44,10 +44,10 @@ def inicio():
 
 @app.route('/login',methods=['GET', 'POST'])
 def login():
-    error = None
+    error = ""
     if request.method == 'POST':
         if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Pusiste mal la contraseña o el email. intenta nuevamente.'
+            error = 'Contraseña o el email incorrectos. Intente nuevamente.'
         else:
             session['logged_in']= True
             return redirect('/')
