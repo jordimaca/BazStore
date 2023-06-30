@@ -6,10 +6,6 @@ body {
     font-family: BazFont;
 }
 
-/* .espacio{
-    margin: 50px;
-} */
-
 .contenedor-filtro {
     display: grid;
     grid-template-columns: 15rem auto;
@@ -182,9 +178,6 @@ footer {
     background-color: #eee;
     margin-top: 50px;
     color: #222;
-    /* position: absolute;
-    bottom: 0;
-    width: 100%; */
 }
 
 @media screen and (max-width:768px){

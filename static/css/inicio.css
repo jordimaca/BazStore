@@ -51,6 +51,7 @@ header{
    text-align: center;
    font-size: 16px;
    letter-spacing: 2px;
+   
    /* text-transform: uppercase; */
 }
 .ptext1 .border{
@@ -58,6 +59,7 @@ header{
    color: #ffffff;
    padding: 20px;
    border-right: 7px solid #fff;
+   
 }
 
 .ptext2 {
@@ -69,6 +71,7 @@ header{
    text-align: center;
    font-size: 16px;
    letter-spacing: 2px;
+   
    /* text-transform: uppercase; */
 }
 .ptext2 .border {
@@ -81,8 +84,11 @@ header{
 .footer-incio {
    letter-spacing: 1px;
    text-align: center;
-   padding: 25px 0;
-   color: #000;
+   font-size: 12px;
+   padding: 15px 0;
+   color: #fff;
+   background-color: #000;
+   
 }
 /* Footer FIN */
 /* PARALAX FIN */

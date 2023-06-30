@@ -7,6 +7,10 @@
     src: url(../fonts/Inter/Inter-Medium.ttf);
 }
 
+body{
+    user-select: none;
+}
+
 header{
   background-color: #fff;
   width: 100%;
@@ -28,7 +32,7 @@ header{
     text-align: center;
     margin-bottom: 12px;
     letter-spacing: 3px;
-    user-select: none;
+    
 }
 
 /* Sesion */
@@ -50,6 +54,7 @@ header{
     text-decoration: none;
     display: block;
     text-align: left;
+    
 }
 .dropdown:hover
 .dropdown-contenido {
@@ -104,6 +109,7 @@ header{
   height: 20px;
   outline: none;
   color: #000;
+  
 }
 
 .searchTerm:focus{
@@ -144,6 +150,7 @@ header{
     padding: 0.5rem 1.5rem;
     transition: 0.5s;
     cursor: pointer;
+    
 }
 .btn-menu:hover:not(.active),
 .btn-menu:focus:not(.active) {
@@ -164,6 +171,7 @@ header{
     text-align: center;
     font-size: 12px;
     color: #fff;
+    
 }
 
 
