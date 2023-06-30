@@ -79,50 +79,45 @@
                 <h2>Registrar nueva cuenta</h2>
             </section>
           
-            <form style="display: grid;gap: 5px;">
+            <form style="display: grid;gap: 5px;" action="" method="post">
+                <div class="msg">{{ msg }}</div>
                 <div class="register">
                     <div class="input-form">
                         <div class="register-form">
-                            <input type="text" id="nombre" placeholder=" " required>
-                            <label for="nombre">Nombre y Apellido</label>
+                            <input type="text" id="username" name="username" placeholder=" " required>
+                            <label for="username">Nombre de cuenta</label>
                         </div>
                     </div>
                     <div class="input-form">
                         <div class="register-form">
-                            <input type="text" id="cuenta" placeholder=" " required>
-                            <label for="cuenta">Nombre de cuenta</label>
-                        </div>
-                    </div>
-                    <div class="input-form">
-                        <div class="register-form">
-                            <input type="email" id="email" placeholder=" " required>
+                            <input type="email" id="email" name="email" placeholder=" " required>
                             <label for="email">E-mail</label>
                         </div>
                     </div>
                     <div class="input-form">
                         <div class="register-form">
-                            <input type="tel" id="tel" placeholder=" " required minlength="10" maxlength="10">
+                            <input type="tel" id="tel" name="telefono"  placeholder=" " required minlength="10" maxlength="10">
                             <label for="tel">Numero de telefono</label>
                         </div>
                     </div>
                     <div class="input-form">
                         <div class="register-form">
-                            <input type="password" id="pass" placeholder=" " required minlength="8" maxlength="16">
+                            <input type="password" id="pass" name="password" placeholder=" " required minlength="8" maxlength="16">
                             <label for="pass">Contraseña</label>
                         </div>
                     </div>
                     <div class="input-form">
                         <div class="register-form">
-                            <input type="password" id="pass2" placeholder=" " required minlength="8" maxlength="16">
+                            <input type="password" id="pass2" name="password2" placeholder=" " required minlength="8" maxlength="16">
                             <label for="pass2">Confirmar contraseña</label>
                         </div>
                     </div>
+                    <input class="btn-up" type="submit" value="Acceder">
                 </div>
             </form>
             <form class="contenedor-botones">
-                <button class="btn-up" type="submit" onclick="document.location='inicio.html'">Acceder</button>
+                <!-- <button class="btn-up" type="submit" onclick="document.location='inicio.html'">Acceder</button> -->
                 <a href="/login">¿Ya tienes cuenta?</a>
-                <!-- <button class="btn-up" onclick="document.location='/login'">¿Ya tienes cuenta?</button> -->
             </form>
         </main>
     </div>
