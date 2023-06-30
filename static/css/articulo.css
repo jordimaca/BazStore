@@ -32,6 +32,7 @@ body {
     font-size: 18px;
     word-break: break-word;
     user-select: text;
+    letter-spacing: 1px;
 }
 
 
