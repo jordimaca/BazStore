@@ -8,10 +8,10 @@ body {
 .contenedor-articulo{
     display: grid;
     grid-template-rows: auto auto auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     justify-content: center;
     row-gap: 15px;
-    margin: 20px;
+    margin: 20px 30% auto;
     column-gap: 35px;
 }
 
@@ -39,7 +39,8 @@ body {
     grid-area: 3 / 2 / 4 / 3;
 }
 .contenedor-informacion h3{
-    border: 1px solid #c0c0c0;
+    border: 2px solid #e4e4e4;
+    border-radius: 2px;
     font-size: 13px;
     margin: 8px;
     padding: 5px 0;
@@ -51,54 +52,77 @@ body {
     font-size: 13px;
 }
 .contenedor-informacion .precio{
-    padding: 5px 13px;
+    padding: 5px 16px;
 }
 .contenedor-informacion .talla{
-    padding: 5px 15px;
+    padding: 5px 18px;
 }
 .contenedor-informacion .ubicacion {
-    padding: 5px 2px;
+    padding: 5px 3px;
 }
 
 
 /* Grid Vendedor */
 .contenedor-vendedor{
     grid-area: 2 / 2 / 3 / 3;
-    border: 1px solid #c0c0c0;
     background-color: #e4e4e4;
-
+    border-radius: 2px;
     display: grid;
     grid-template-rows: auto auto;
-    grid-template-columns: auto auto;
+    grid-template-columns: 55% 45%;
+    gap: 0;
 }
 .contenedor-vendedor .vendedor{
-    grid-area: 1 / 1 / 2 / 3;
+    grid-area: 1 / 1 / 3 / 2;
     display: flex;
+    justify-content: center;
 }
 .contenedor-vendedor .vendedor a{
     text-decoration: none;
     color: #000;
+    width: 10rem;
+    height: 1.5rem;
 }
 .contenedor-vendedor .vendedor img{
-    width: 2.5rem;
-    height: 2.5rem;
+    width: 3rem;
+    height: 3rem;
 }
 .contenedor-vendedor .telefono{
-    grid-area: 2 / 1 / 3 / 2;
+    grid-area: 2 / 2 / 3 / 3;
+    user-select: text;
+    display: flex;
+    justify-content: center;
+    margin: 2% auto;
 }
 .contenedor-vendedor .whatsapp{
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: center;
+    width: 10rem;
+    height: 1.5rem;
     text-decoration: none;
-    color: #000;
+    margin: 2% auto;
+}
+.contenedor-vendedor .whatsapp-btn{
+    color: #fff;
+    background-color: #25d336;
+    border: 1px solid #25d336;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.contenedor-vendedor .whatsapp-btn:hover {
+    color: #25d336;
+    background-color: #fff;
 }
 /* Grid Vendedor FIN */
 
 
 .contenedor-descripcion{
     grid-area: 4 / 2 / 5 / 3;
+    border: 2px solid #e4e4e4;
+    border-radius: 2px;
 }
 .contenedor-descripcion .cuadro {
-    border: 1px solid #c0c0c0;
     width: 25rem;
     height: 10rem;
 }
@@ -116,11 +140,12 @@ body {
 }
 
 .titulo-relacionados{
-    background-color: #eee;
+    background-color: #e4e4e4;
     text-align: center;
     padding: 10px 0;
     font-size: 17px;
     letter-spacing: 1px;
+    margin-top: 20px;
 }
 .contenedor-relacionados{
     display: grid;
