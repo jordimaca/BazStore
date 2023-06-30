@@ -38,14 +38,14 @@ body {
     grid-area: 3 / 2 / 4 / 3;
 }
 .contenedor-informacion h3{
-    border: 2px solid #000;
+    border: 1px solid #c0c0c0;
     font-size: 13px;
     margin: 8px;
     padding: 5px 0;
 }
 .contenedor-informacion span{
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #e4e4e4;
     font-size: 13px;
 }
 .contenedor-informacion .precio{
@@ -62,7 +62,9 @@ body {
 /* Grid Vendedor */
 .contenedor-vendedor{
     grid-area: 2 / 2 / 3 / 3;
-    background-color: #eee;
+    border: 1px solid #c0c0c0;
+    background-color: #e4e4e4;
+
     display: grid;
     grid-template-rows: auto auto;
     grid-template-columns: auto auto;
@@ -94,13 +96,13 @@ body {
     grid-area: 4 / 2 / 5 / 3;
 }
 .contenedor-descripcion .cuadro {
-    border: 2px solid #000;
+    border: 1px solid #c0c0c0;
     width: 25rem;
     height: 10rem;
 }
 .contenedor-descripcion .cuadro h3{
-    color: #fff;
-    background-color: #000;
+    color: #000;
+    background-color: #e4e4e4;
     font-size: 17px;
     text-align: center;
     padding: 3px 0;
