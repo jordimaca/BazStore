@@ -191,27 +191,6 @@ aside h2{
 
 
 
-/* Perfil Iniciado */
-.btn-left-cerrar {
-    background: #fff;
-    line-height: 1;
-    border: none;
-    color: #b00;
-    transition: 0.5s;
-}
-
-.btn-left-cerrar:hover,
-.btn-left-cerrar:focus {
-    box-shadow: inset 10em 0 0 0 #b00;
-    color: #fff;
-}
-
-.btn-content-cerrar {
-    line-height: 1;
-    border: none;
-    background-color: #000;
-    color: #fff;
-}
 
 @media screen and (min-width:1024px){
     
