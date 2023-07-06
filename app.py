@@ -15,7 +15,7 @@ from datetime import datetime
 #Importar para obtener informacion de la imagen 
 from flask import send_from_directory
 
-
+import re
 #Crear la aplicacion templates
 app=Flask(__name__)
 
@@ -23,7 +23,7 @@ app=Flask(__name__)
 app.secret_key="dicresoft"
 
 # Crear conexión a la base de datos
-mysql=MySQL()
+mysql=MySQL(app)
 
 app.config['MYSQL_DATABASE_HOST']='localhost'
 app.config['MYSQL_DATABASE_USER']='root'
@@ -42,25 +42,59 @@ def inicio():
 
 #login y registro
 
-@app.route('/login',methods=['GET', 'POST'])
+@app.route('/login/', methods=['GET', 'POST'])
 def login():
-    error = ""
-    if request.method == 'POST':
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Contraseña o el email incorrectos. Intente nuevamente.'
-        else:
-            session['logged_in']= True
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form:
+        username = request.form['username']
+        password = request.form['password']
+        cursor = mysql.connect().cursor()
+        cursor.execute('SELECT * FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+        account = cursor.fetchone()
+        if account:
+            session['loggedin'] = True
+            session['usuario']= username
+            session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
-    return render_template('sitio/login.html', error=error)
+        else:
+            msg = 'contraseña/usuario incorrectos !'
+   
+    return render_template('sitio/login.html', msg=msg)
+
 
 @app.route('/registro')
 def registro():
+    msg = ''
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'telefono' in request.form and 'password2'=='password':
+        username = request.form['username']
+        password = request.form['password']
+        email = request.form['email']
+        celular = request.form['telefono']
+        imagen='/static/images/user-circle-icon.svg'
+        cursor = mysql.connect().cursor()
+        cursor.execute('SELECT * FROM usuario WHERE nombre = % s', (username, ))
+        account = cursor.fetchone()
+        if account:
+            msg = 'La cuenta ya existe.'
+        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
+            msg = 'El email es invalido.'
+        elif not re.match(r'[A-Za-z0-9]+', username):
+            msg = 'Su nombre de usuario debe contener solo caracteres y/o numeros.'
+        elif not username or not password or not email:
+            msg = 'Por favor, llene el formulario.'
+        else:
+            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s, % s, % s)', (username,email,celular ,password,imagen ,))
+            mysql.connect().commit()
+    elif request.method == 'POST':
+        msg = 'Por favor, llene el formulario de forma correcta.'
+    return render_template('sitio/registro.html', msg = msg)
 
-    return render_template('sitio/registro.html')
+    """ return render_template('sitio/registro.html') """
 #log out
 @app.route('/logout')
 def logout():
-    session.pop('logged_in',None)
+    session.pop('loggedin',None)
+    session.pop('usuario',None)
     return redirect('/login')
 #rutas principales
 
