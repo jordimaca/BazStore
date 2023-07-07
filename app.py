@@ -33,6 +33,9 @@ app.config['MYSQL_DATABASE_DB']='bazstore'
 # Agregar el valor para inicializar nuestra aplicación
 mysql.init_app(app)
 
+IMG_FOLDER = os.path.join('static', 'images')
+
+app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 #Colocar la palabra clave slash (/) con la cual se va a acceder a la url, para indicarle que cuando se le solicite buscar en esa ruta (diagonal /) va a mostrar un inicio.
 @app.route('/')
 #Crear una funcion con la palabra reservada def
@@ -62,34 +65,28 @@ def login():
     return render_template('sitio/login.html', msg=msg)
 
 
-@app.route('/registro')
+@app.route('/registro' ,methods =['GET', 'POST'])
 def registro():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'telefono' in request.form and 'password2'=='password':
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'telefono' in request.form :
         username = request.form['username']
-        password = request.form['password']
         email = request.form['email']
         celular = request.form['telefono']
-        imagen='/static/images/user-circle-icon.svg'
+        password = request.form['password']
+        imagen=os.path.join(app.config['UPLOAD_FOLDER'],'user-circle-icon.svg')
         cursor = mysql.connect().cursor()
         cursor.execute('SELECT * FROM usuario WHERE nombre = % s', (username, ))
         account = cursor.fetchone()
         if account:
             msg = 'La cuenta ya existe.'
-        elif not re.match(r'[^@]+@[^@]+\.[^@]+', email):
-            msg = 'El email es invalido.'
-        elif not re.match(r'[A-Za-z0-9]+', username):
-            msg = 'Su nombre de usuario debe contener solo caracteres y/o numeros.'
-        elif not username or not password or not email:
-            msg = 'Por favor, llene el formulario.'
         else:
-            cursor.execute('INSERT INTO accounts VALUES (NULL, % s, % s, % s, % s, % s)', (username,email,celular ,password,imagen ,))
+            cursor.execute('INSERT INTO usuario VALUES (NULL, % s, % s, % s, % s, % s)', (username, email, celular, password, imagen, ))
             mysql.connect().commit()
+            return redirect('/login')
     elif request.method == 'POST':
         msg = 'Por favor, llene el formulario de forma correcta.'
     return render_template('sitio/registro.html', msg = msg)
 
-    """ return render_template('sitio/registro.html') """
 #log out
 @app.route('/logout')
 def logout():
