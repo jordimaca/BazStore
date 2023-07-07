@@ -200,14 +200,11 @@ header{
 }
 
 @media screen and (max-width:768px){
-    .btn-menu{
-        font-size: 11px;
+    .buscador {
+        padding-bottom: 10px;
     }
-}
-
-@media screen and (max-width:468px){
     .btn-menu{
-        font-size: 11px;
-        padding: 0.8em 1.1rem;
+        font-size: 12px;
+        padding: 1em 1.1rem;
     }
 }

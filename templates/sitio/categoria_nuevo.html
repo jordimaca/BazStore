@@ -74,50 +74,7 @@
     </header>
     <div class="espacio"></div>
     <div class="contenedor-filtro">
-        <div class="filtro">
-        <br>
-        <h4>Ubicacion</h4>
-        <select name="ubicacion" id="ubicacion">
-            <option value="rd" selected>Todo el pais</option>
-            <option value="sd">Santo Domingo</option>
-            <option value="stgo">Santiago</option>
-            <option value="ppta">Puerto Plata</option>
-            <option value="sfco">San Francisco</option>
-            <option value="bna">Barahona</option>
-        </select>
-
-        <h4>Tallas</h4>
-        <select name="talla" id="talla">
-            <option value="todas_tallas" selected>Todas las tallas</option>
-            <option value="xxl">XXL</option>
-            <option value="xl">XL</option>
-            <option value="l">L</option>
-            <option value="m">M</option>
-            <option value="s">S</option>
-            <option value="xs">XS</option>
-            <option value="6">6-9M (74CM)</option>
-            <option value="9">9-12M (80CM)</option>
-            <option value="12">12-18M (86CM)</option>
-            <option value="18">18-24M (92CM)</option>
-            <option value="2">2-3Y (98CM)</option>
-        </select>
-
-        <h4>precio</h4>
-        <div class="boton">
-            <input type="number" placeholder="Min" value="" min="" class="boton"/>
-            -
-            <input type="number" placeholder="Max" value="" min="" class="boton"/>
-        </div>
-        <!-- colocar boton de enviar formulario -->
-
-        <h4>Codiciones</h4>
-        <select name="condicion" id="condicion">
-            <option value="todas_condicion" selected>Nuevo y Usado</option>
-            <option value="xxl">Nuevo</option>
-            <option value="xl">Usado</option>
-        </select>
-
-    </div>
+        {% include 'sitio/filtro.html' %}
     <section class="container-related-products1">
     
         <div class="card-list-products">
