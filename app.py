@@ -74,14 +74,19 @@ def registro():
         celular = request.form['telefono']
         password = request.form['password']
         imagen=os.path.join(app.config['UPLOAD_FOLDER'],'user-circle-icon.svg')
-        cursor = mysql.connect().cursor()
-        cursor.execute('SELECT * FROM usuario WHERE nombre = % s', (username, ))
+        #Abrir la conexion a la base de datos
+        conexion=mysql.connect()
+        #Se crea un cursor
+        cursor = conexion.cursor()
+        cursor.execute('SELECT * FROM usuario WHERE nombre = % s;', (username, ))
         account = cursor.fetchone()
         if account:
             msg = 'La cuenta ya existe.'
         else:
-            cursor.execute('INSERT INTO usuario VALUES (NULL, % s, % s, % s, % s, % s)', (username, email, celular, password, imagen, ))
-            mysql.connect().commit()
+            sql ='INSERT INTO usuario VALUES (NULL, % s, % s, % s, % s, % s);'
+            datos=(username, email, celular, password, imagen)
+            cursor.execute(sql, datos)
+            conexion.commit()
             return redirect('/login')
     elif request.method == 'POST':
         msg = 'Por favor, llene el formulario de forma correcta.'
