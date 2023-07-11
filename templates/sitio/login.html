@@ -17,7 +17,7 @@
                 <img src="../../static/images/user-icon.svg" alt="">
                 <div class="dropdown">
                     <div class="dropdown">
-                    <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
+                    <button class="btn-cuenta">Acceder a su cuenta<i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
                             <a class="btn-left" href="/login">Iniciar Sesion</a>
                             <a class="btn-left" href="/registro">Registrarse</a>
@@ -73,46 +73,47 @@
             </div>
         </div>
     </header>
-    <div class="contenido">
-        <main>
-            <h2>Bienvenido</h2>
-            <!-- agregar formulario email ,contraseña y boton acceder-->
-            <form action="" method="post">
-                <div class="msg">{{msg}}</div>
-                <div class="input-cont">
-                    <div class="input">
-                        <input type="text" name="username" id="username" placeholder=" " value="{{
-          request.form.username }}" required>
-                        <label for="username">Nombre de usuario</label>
-                    </div>
-                </div>
-                <div class="input-cont">
-                    <div class="input">
-                        <input type="password" name="password" id="contraseña" placeholder=" " value="{{
-          request.form.password }}" required>
-                        <label for="password">Contraseña</label>
-                    </div>
-                </div>
-                <input class="btn-up" type="submit" value="Acceder">
-            </form>
 
-            <h3>Continuar con:</h3>
-            <nav class="redes-menu">
-                <div class="button">
-                    <div class="icon"><i class="fa fa-apple" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Apple</a>
-                 </div>
-                 <div class="button">
-                    <div class="icon"><i class="fa fa-google" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Google</a>
-                 </div>
-                 <div class="button">
-                     <div class="icon"><i class="fa fa-facebook-f" style="color: #000000;"></i></div>
-                    <a href="/" class="text">Facebook</a>
-                 </div>
-            </nav>
-            <!-- boton registrarse -->
-            <button class="btn-up" onclick="document.location='/registro'">Registrarse</button>
+    <main>
+        <div class="contenedor contenedor-login">
+                <h2>Bienvenido</h2>
+                <form action="" method="post">
+                    <div class="msg">{{msg}}</div>
+                    <div class="input-cont">
+                        <div class="input">
+                            <input type="text" name="username" id="username" placeholder=" " value="{{
+            request.form.username }}" required>
+                            <label for="username">Nombre de usuario</label>
+                        </div>
+                    </div>
+                    <div class="input-cont">
+                        <div class="input">
+                            <input type="password" name="password" id="contraseña" placeholder=" " value="{{
+            request.form.password }}" required>
+                            <label for="password">Contraseña</label>
+                        </div>
+                    </div>
+                    <input class="btn-up" type="submit" value="Acceder">
+                </form>
+
+                <h3>Continuar con:</h3>
+                <nav class="redes-menu">
+                    <div class="button">
+                        <div class="icon"><i class="fa fa-apple" style="color: #000000;"></i></div>
+                        <a href="/" class="text">Apple</a>
+                    </div>
+                    <div class="button">
+                        <div class="icon"><i class="fa fa-google" style="color: #000000;"></i></div>
+                        <a href="/" class="text">Google</a>
+                    </div>
+                    <div class="button">
+                        <div class="icon"><i class="fa fa-facebook-f" style="color: #000000;"></i></div>
+                        <a href="/" class="text">Facebook</a>
+                    </div>
+                </nav>
+                <!-- boton registrarse -->
+                <button class="btn-up" onclick="document.location='/registro'">Registrarse</button>
+            </div>
         </main>
         
     {% include 'sitio/footer.html' %}
