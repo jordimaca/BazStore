@@ -5,18 +5,21 @@ body{
     font-family: BazFont;
 }
 
-main{
+.contenedor{
     text-align: center;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     border: 2px solid #000;
-    width: 316px;
-    height: 550px; 
     justify-content: space-around;
     align-items: center;
     margin:50px auto;
-    
+}
+
+/* LOGIN */
+.contenedor-login{
+    width: 316px;
+    height: 550px; 
 }
 
 h3{
@@ -106,6 +109,7 @@ h2{
 }
 /* Redes FIN */
 
+/* Input Login */
 .input-cont{
     width: 250px;
     padding: 30px;
@@ -143,3 +147,104 @@ h2{
 .input input:valid{
     border-color:black;
 }
+/* Input Login FIN */
+/* LOGIN FIN */
+
+/* REGISTER */
+.contenedor-register {
+    width: 316px;
+    height: 625px;
+}
+
+.register {
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    gap: 10px;
+}
+
+.register-form input {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 27px;
+    border: 1px solid #9f9e9e;
+    background-color: #fff;
+    outline: none;
+}
+
+::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.input-form {
+    width: 250px;
+    padding: 30px;
+}
+
+.register-form {
+    width: 100%;
+    height: 25px;
+    position: relative;
+}
+
+.register-form input {
+    width: 100%;
+    height: 100%;
+    outline: none;
+    font-size: 22px;
+    border: none;
+    border-bottom: 1px silver solid;
+}
+
+.register-form label {
+    position: absolute;
+    left: 5px;
+    bottom: 0px;
+    font-size: 22px;
+    color: silver;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.register-form :focus~label,
+.register-form input:valid~label,
+.register-form input:not(:placeholder-shown)~label {
+    transform: translateY(-25px);
+    font-size: 18px;
+}
+
+.register-form input:focus,
+.inpregister-formut input:hover,
+.register-form input:valid {
+    border-color: black;
+}
+
+.contenedor-botones {
+    display: grid;
+    gap: 10px;
+}
+
+.contenedor-botones a {
+    display: inline-block;
+    color: #000;
+    font-family: BazFont;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.contenedor-botones a:hover {
+    display: inline-block;
+    font-weight: bold;
+}
+
+section h2 {
+    font-weight: bold;
+    text-align: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 18px;
+    margin: 10px;
+}
+/* REGISTER FIN */
