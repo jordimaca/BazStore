@@ -175,7 +175,7 @@ body {
 }
 
 .card-img img {
-    width: 18.5rem;
+    width: 18vw;
     height: 12.5rem;
     /* height: 200px;
     width: 300px; */
@@ -250,15 +250,40 @@ body {
             gap: 15px;
         }
         .card-img img {
-            width: 15rem;
-            height: 9.5rem;
+            width: 80vw;
+            height: 40vw;
+        }
+
+        .card-title a {
+            font-size: 14px;
+           
         }
 }
 
 @media screen and (max-width:768px) {
+    .card-img img {
+        width: 42vw;
+        height: 38vw;
+    }
 
 }
 
-@media screen and (max-width:468px) {
+@media screen and (max-width: 468px) {
+    .card-title a {
+        font-size: 12px;
+    }
 
+}
+
+@media screen and (max-width: 990px) {
+ .card-img img {
+        width: 30vw;
+        height: 20vw;
+    }
+}
+@media screen and (max-width: 1020px) {
+ .card-img img {
+        width: 30vw;
+        height: 20vw;
+    }
 }
