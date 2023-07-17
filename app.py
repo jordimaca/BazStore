@@ -55,7 +55,7 @@ def login():
         cursor.execute('SELECT * FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
         account = cursor.fetchone()
         if account:
-            session['loggedin'] = True
+            session['login'] = True
             session['usuario']= username
             session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
@@ -64,7 +64,7 @@ def login():
    
     return render_template('sitio/login.html', msg=msg)
 
-
+#hacer la confirmacion de la contraseña
 @app.route('/registro' ,methods =['GET', 'POST'])
 def registro():
     msg = ''
@@ -95,7 +95,7 @@ def registro():
 #log out
 @app.route('/logout')
 def logout():
-    session.pop('loggedin',None)
+    session.pop('login',None)
     session.pop('usuario',None)
     return redirect('/login')
 #rutas principales
@@ -113,17 +113,6 @@ def mujer():
 def nuevo():
     return render_template('sitio/categoria_nuevo.html')
 
-@app.route('/perfil')
-def perfil():
-    return render_template('usuario/perfil.html')
-@app.route('/vendedor')
-def vendedor():
-    return render_template('usuario/vendedor.html')
-
-#nesecita un arreglo para especificar el producto
-@app.route('/articulo')
-def articulo():
-    return render_template('usuario/articulo.html')
 
 #Subcategorias
 @app.route('/accesorios/anillos')
@@ -185,6 +174,25 @@ def zapatos():
 @app.route('/hombre/zapatos')
 def zapatosh():
     return render_template('sitio/subcategorias/hombre_zapatos.html')
+
+#usuario
+
+@app.route('/perfil')
+def perfil():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('usuario/perfil.html')
+@app.route('/vendedor')
+def vendedor():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('usuario/vendedor.html')
+#nesecita un arreglo para especificar el producto
+@app.route('/articulo')
+def articulo():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('usuario/articulo.html')
 
 #Crear una ruta para mostrar la imagen 
 @app.route('/images/<imagen>')
