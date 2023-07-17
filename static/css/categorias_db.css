@@ -154,4 +154,11 @@ footer {
         grid-template-columns: 55% 35%;
     }
 }
-
+@media screen and (max-width:640px) {
+    .contenedor-filtro {
+        grid-template-rows: repeat(2, auto);
+        grid-template-columns: repeat(2, 10rem);
+        justify-content: space-evenly;
+        padding-bottom: 15px;
+    }
+}
