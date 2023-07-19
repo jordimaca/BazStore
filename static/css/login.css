@@ -150,6 +150,10 @@ h2{
 /* Input Login FIN */
 /* LOGIN FIN */
 
+.msg {
+    color: rgb(206, 38, 38);
+}
+
 /* REGISTER */
 .contenedor-register {
     width: 316px;

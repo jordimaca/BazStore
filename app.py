@@ -60,7 +60,7 @@ def login():
             session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
         else:
-            msg = 'contraseña/usuario incorrectos !'
+            msg = 'Contraseña o usuario incorrectos'
    
     return render_template('sitio/login.html', msg=msg)
 
