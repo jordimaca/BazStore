@@ -68,7 +68,8 @@ def login():
 @app.route('/registro' ,methods =['GET', 'POST'])
 def registro():
     msg = ''
-    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'telefono' in request.form :
+    if request.method == 'POST' and 'username' in request.form and 'password' in request.form and 'email' in request.form and 'telefono' in request.form and (request.form['password2'] == request.form['password']):
+        #almacenar en formulario en variables
         username = request.form['username']
         email = request.form['email']
         celular = request.form['telefono']
@@ -89,7 +90,7 @@ def registro():
             conexion.commit()
             return redirect('/login')
     elif request.method == 'POST':
-        msg = 'Por favor, llene el formulario de forma correcta.'
+        msg = 'Vuelva a confirmar la contraseña.'
     return render_template('sitio/registro.html', msg = msg)
 
 #log out
@@ -198,7 +199,7 @@ def articulo():
 @app.route('/images/<imagen>')
 def imagenes(imagen):
     print(imagen)
-    return send_from_directory(os.path.join('templates/sitio/images'),imagen) #solucion rapida dejalo encima y veras la opcion
+    return send_from_directory(os.path.join('templates/sitio/images'),imagen)
 
 
 #Crear una instancia para poder ejecutar nuestra aplicacion
