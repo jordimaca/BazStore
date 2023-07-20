@@ -15,7 +15,7 @@
             <div class="user">
                 <img src="../../static/images/user-icon.svg" alt="">
                     <div class="dropdown">
-                      {% if session.loggedin %}
+                      {% if session.login %}
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-contenido">
                             <a class="btn-left" href="/perfil">Ver Perfil</a>
