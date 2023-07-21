@@ -36,23 +36,27 @@ aside h2{
  /* Botones superiores */
 .btn-superiores {
     grid-area: 1 / 3 / 2 / 4;
-    text-align: end;
-    margin-right: 10px;
-}
 
-.btn-superiores a {
-    color: black;
+}
+.btn-superiores .whatsapp {
+    display: flex;
+    justify-content: end;
+    height: 1.7rem;
     text-decoration: none;
-    font-size: 18px;
-    padding: 10px;
+    margin: 4px;
 }
 
-.btn-superiores i {
-    padding: 10px;
+.btn-superiores .whatsapp-btn {
+    color: #fff;
+    background-color: #25d336;
+    border: 1px solid #25d336;
+    border-radius: 2px;
+    cursor: pointer;
 }
 
-.btn-superiores a:hover {
-    text-decoration: underline;
+.btn-superiores .whatsapp-btn:hover {
+    color: #25d336;
+    background-color: #fff;
 }
  /* Botones superiores FIN */
 
@@ -90,7 +94,7 @@ aside h2{
 
 .searchButton-perfil {
     width: 40px;
-    height: 36px;
+    /* height: 36px; */
     border: 3px solid #000;
     border-bottom: none;
     border-left: none;
@@ -110,90 +114,84 @@ aside h2{
 
 /* ASIDE */
 
-.container-related-products2 {
-    grid-area: 2/2;
-}
-
-.container-related-products3 {
-    grid-area: 3/2;
-}
-
-.card-list-products {
+.contenedor-articulos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
-    margin: 40px;
-    justify-content: center;
+    grid-template-columns: repeat(4, 20rem);
+    margin-top: 30px;
+    row-gap: 20px;
+    justify-content: space-evenly;
 }
 
+/* Card */
 .card {
-    display: flex;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: auto auto;
     cursor: pointer;
-    flex-wrap: wrap;
     margin: 0 10px;
+    box-shadow: #ddd 2px 2px 5px;
+    padding-bottom: 5px;
 }
 
 .card:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.3s;
 }
 
 .card-img {
+    grid-area: 1 / 1 / 2 / 3;
     background: transparent;
-    margin-bottom: 15px;
 }
 
 .card-img img {
-    height: 200px;
     width: 300px;
+    height: 200px;
     object-fit: cover;
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
 }
 
-.info-card {
-    /* display: flex; */
-    justify-content: space-between;
+.card-title {
+    grid-area: 2 / 1 / 3 / 3;
 }
 
-.text-product {
+.card-title a {
     color: #252525;
     font-weight: 300;
     line-height: 1.4;
-    float: left;
-    width: 80%;
-    height: 80px;
+    text-decoration: none;
+    color: #000;
 }
 
-.price {
-    float: right;
-    width: 19%;
-    text-align: center;
+.card-tags {
+    grid-area: 3 / 1 / 4 / 2;
 }
 
-.text-product h3 {
-    color: inherit;
-    font-weight: inherit;
-    font-size: 15px;
-}
-
-.text-product h3:hover {
-    color: #1bbeb4;
-}
-
-.text-product p {
+.card-tags a {
     color: #666;
     font-size: 13px;
 }
 
-.text-product p:hover {
+.card-tags a:hover {
     color: #1bbeb4;
 }
 
+.card-price {
+    grid-area: 3 / 2 / 4 / 3;
+}
+/* Card FIN */
 
 
 
-@media screen and (min-width:1024px){
-    
+@media screen and (max-width:1300px){
+    .contenedor-articulos {
+        grid-template-columns: repeat(3, 20rem);
+    }
+}
+
+@media screen and (max-width:990px) {
+    .contenedor-articulos {
+        grid-template-columns: repeat(2, 20rem);
+    }
 }
 
 @media screen and (max-width:768px){
@@ -219,8 +217,6 @@ aside h2{
    .usuario img {
     width: 18%;
    }
-
-
     
 }
 

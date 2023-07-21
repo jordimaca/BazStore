@@ -79,7 +79,8 @@ h4 {
     grid-template-rows: auto auto;
     cursor: pointer;
     margin: 0 10px;
-    
+    box-shadow: #ddd 2px 2px 5px;
+    padding-bottom: 5px;
 }
 .card:hover{
     transform: scale(1.05);
@@ -160,7 +161,7 @@ footer {
         grid-template-columns: repeat(3, 17rem);
     }
     .card-img img{
-        width: 270px;
+        width: 271px;
         height: 190px;
     }
 }
@@ -170,7 +171,7 @@ footer {
         grid-template-columns: repeat(2, 19rem);
     }
     .card-img img{
-        width: 300px;
+        width: 303px;
         height: 200px;
     }
 }
@@ -182,7 +183,7 @@ footer {
         column-gap: 0px;
     }
     .card-img img {
-    width: 280px;
+    width: 287px;
     height: 190px;
     }
 }
@@ -194,7 +195,7 @@ footer {
         padding-bottom: 15px;
     }
     .contenedor-articulos {
-        grid-template-columns: repeat(2, 15rem);
+        grid-template-columns: repeat(2, 14.7rem);
         row-gap: 12px;
         column-gap: 0;
     }
