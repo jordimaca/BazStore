@@ -16,7 +16,7 @@
                 <img src="../../static/images/user-icon.svg" alt="">
                 <div class="dropdown">
                     <div class="dropdown">
-                      {% if session.loggedin %}
+                      {% if session.login %}
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-contenido">
                             <a class="btn-left" href="/perfil">Ver Perfil</a>
@@ -88,146 +88,23 @@
 
     <div class="contenedor-articulos">
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo"><h3>Hermes, Blanco-Rosa piel de serpiente</h3></a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                <p class="category">Mujer, Accesorios, Bolsos</p></a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
-            
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
-    
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
+        
+        {% include 'sitio/card.html' %}
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
-    
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
 
-        <div class="card">
-            <div class="card-img">
-                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-            </div>
-            <div class="card-title">
-                <a href="/articulo">
-                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-                </a>
-            </div>
-            <div class="card-tags"><a href="/articulo">
-                    <p class="category">Mujer, Accesorios, Bolsos</p>
-                </a>
-            </div>
-            <div class="card-price">$85.00</div>
-        </div>
+        {% include 'sitio/card.html' %}
+
+        {% include 'sitio/card.html' %}
+
+        {% include 'sitio/card.html' %}
         
     </div>
     </main>
