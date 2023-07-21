@@ -177,6 +177,7 @@ aside h2{
 
 .card-price {
     grid-area: 3 / 2 / 4 / 3;
+    margin-left: 1px;
 }
 /* Card FIN */
 
@@ -190,11 +191,21 @@ aside h2{
 
 @media screen and (max-width:990px) {
     .contenedor-articulos {
+        grid-template-columns: repeat(3, 16.6rem);
+    }
+    .card-img img {
+        width: 245px;
+        height: 180px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .contenedor-articulos {
         grid-template-columns: repeat(2, 20rem);
     }
 }
 
-@media screen and (max-width:768px){
+/* @media screen and (max-width:768px){
     .btn-superiores {
     grid-area: 1 / 1/ 2/ 4;
     text-align: center;
@@ -218,7 +229,7 @@ aside h2{
     width: 18%;
    }
     
-}
+} */
 
 @media screen and (max-width:468px){
    .btn-superiores {
