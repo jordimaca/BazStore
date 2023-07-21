@@ -260,6 +260,14 @@ body {
         }
 }
 
+@media screen and (max-width:1024px) {
+    .card-img img {
+        width: 42vw;
+        height: 38vw;
+    }
+
+}
+
 @media screen and (max-width:768px) {
     .card-img img {
         width: 42vw;
