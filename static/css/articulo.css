@@ -211,6 +211,7 @@ body {
 
 .card-price {
     grid-area: 3 / 2 / 4 / 3;
+    margin-left: 1px;
 }
 /* Card FIN */
 
