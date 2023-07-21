@@ -203,6 +203,20 @@ aside h2{
     .contenedor-articulos {
         grid-template-columns: repeat(2, 20rem);
     }
+    .card-img img {
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .contenedor-articulos {
+        grid-template-columns: repeat(2, 15.3rem);
+    }
+    .card-img img {
+        width: 225px;
+        height: 180px;
+    }
 }
 
 /* @media screen and (max-width:768px){
@@ -231,7 +245,7 @@ aside h2{
     
 } */
 
-@media screen and (max-width:468px){
+/* @media screen and (max-width:468px){
    .btn-superiores {
     grid-area: 1 / 1/ 2/ 4;
     text-align: center;
@@ -254,4 +268,4 @@ aside h2{
    .usuario img {
     width: 18%;
    }
-}
+} */
