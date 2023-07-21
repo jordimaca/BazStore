@@ -117,62 +117,92 @@ def nuevo():
 #Subcategorias
 @app.route('/accesorios/anillos')
 def anillos():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/accesorios_anillos.html')
 
 @app.route('/mujer/blusas')
 def blusas():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/mujer_blusas.html')
 
 @app.route('/accesorios/brazaletes')
 def brazaletes():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/accesorios_brazaletes.html')
 
 @app.route('/accesorios/cadenas')
 def cadenas():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/accesorios_cadenas.html')
 
 @app.route('/hombre/camisa')
 def camisa():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/hombre_camisa.html')
 
 @app.route('/mujer/deportivo')
 def deportivo():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/mujer_deportivo.html')
 
 @app.route('/hombre/deportivo')
 def deportivoh():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/hombre_deportivo.html')
 
 @app.route('/mujer/jeans')
 def jeans():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/mujer_jeans.html')
 
 @app.route('/hombre/jeans')
 def jeansh():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/hombre_jeans.html')
 
 @app.route('/accesorios/otros')
 def otros():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/accesorios_otros.html')
 
 @app.route('/accesorios/reloj')
 def reloj():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/accesorios_reloj.html')
 
 @app.route('/hombre/tshirts')
 def tshirts():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/hombre_tshirts.html')
 
 @app.route('/mujer/vestidos')
 def vestidos():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/mujer_vestidos.html')
 
 @app.route('/mujer/zapatos')
 def zapatos():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/mujer_zapatos.html')
 
 @app.route('/hombre/zapatos')
 def zapatosh():
+    if not 'login' in session:
+        return redirect('/login')
     return render_template('sitio/subcategorias/hombre_zapatos.html')
 
 #usuario
