@@ -75,9 +75,101 @@
             <img src="../static/images/user.svg"><h2>{{session.usuario}} </h2>
         </div>
         <div class="btn-superiores">
-            <a href="#"><i class="fa-solid fa-arrow-up-from-bracket"></i>Publicar articulo</a>
-            <a href="#"><i class="fa-solid fa-trash"></i>Borrar articulo</a>
+            <button class="btn" type="submit" id="lanzar-modal">Publicar articulo</button>
         </div>
+            <div class="contenedor-modal">
+            <div class="modal">
+                <h2>Publica tu proximo articulo</h2>
+
+                <form action="">
+
+                    <section>
+                        <label for="nom2">Nombre:</label>
+                        <input type="text" id="nom2" placeholder="" autocomplete="off" autofocus required>
+                    </section>
+                    <br>
+                    <section>
+                        <label for="num">Precio:</label>
+                        <input type="num" id="num" name="precio"  placeholder=" " required minlength="10" maxlength="10">
+                    </section>
+                    <br>
+                    <section> 
+                    <label for="adjunto">Seleccione imagen:</label>
+                    <input type="file" id="adjunto" multiple>
+                    </section>
+                    <div class="modal-tallas">
+                        <h4>seleccione una talla</h4>
+                        <select name="talla" id="talla">
+                            <option value="todas_tallas" selected>Todas las tallas</option>
+                            <option value="xxl">XXL</option>
+                            <option value="xl">XL</option>
+                            <option value="l">L</option>
+                            <option value="m">M</option>
+                            <option value="s">S</option>
+                            <option value="xs">XS</option>
+                            <option value="6">6-9M (74CM)</option>
+                            <option value="9">9-12M (80CM)</option>
+                            <option value="12">12-18M (86CM)</option>
+                            <option value="18">18-24M (92CM)</option>
+                            <option value="2">2-3Y (98CM)</option>
+                        </select>
+                    </div>
+                    <div class="modal-ubicacion">
+                        <h4>Ubicacion</h4>
+                        <select name="ubicacion" id="ubicacion">
+                            <option value="rd" selected>Todo el pais</option>
+                            <option value="sd">Santo Domingo</option>
+                            <option value="stgo">Santiago</option>
+                            <option value="ppta">Puerto Plata</option>
+                            <option value="sfco">San Francisco</option>
+                            <option value="bna">Barahona</option>
+                        </select>
+                    </div>
+                    <div class="modal-condiciones">
+                        <h4>Seleccione su condicion</h4>
+                        <select name="condicion" id="condicion">
+                            <option value="todas_condicion" selected>Nuevo y Usado</option>
+                            <option value="">Nuevo</option>
+                            <option value="">Usado</option>
+                        </select>
+                    </div>
+
+                    <div class="modal-tipo">
+                        <h4>Tipo de articulo</h4>
+                        <select name="condicion" id="condicion">
+                            <option value="todas_condicion" selected>Tipo</option>
+                            <option value="">Hombre</option>
+                            <option value="">Mujer</option>
+                            <option value="">Accesorio</option>
+                        </select>
+                    </div>
+                    <div class="modal-subtipo">
+                        <h4>Tipo de articulo</h4>
+                        <select name="condicion" id="condicion">
+                            <option value="todas_condicion" selected>Sub-tipo</option>
+                            <option value="">T-shirt</option>
+                            <option value="">Camisas</option>
+                            <option value="">Jeans</option>
+                            <option value="">Zapatos</option>
+                            <option value="">Deportivo</option>
+                        </select>
+                    </div>
+                    <br>
+                    <section> 
+                        <label for="com">Descripcion:</label>
+                        <textarea name="" id="com" cols="30" rows="10"></textarea>
+                    </section>
+                    <div class="modal-footer">
+                        <button class="btn" type="submit" id="ocultar-modal">Publicar</button>
+                        <button class="btn" type="submit" id="ocultar-modal">Cerrar</button>
+                    </div>
+                            
+                </form>
+            </div>    
+            
+    
+        
+           <script src="/static/javaScript/app.js"></script>
         <div class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos en este perfil...">
             <button type="submit" class="searchButton-perfil"><label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label></button>
