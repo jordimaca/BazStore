@@ -59,6 +59,11 @@ form {
     align-items: center;
 }
 
+textarea {
+    resize: none;
+
+}
+
 /*FIN*/
 
 
