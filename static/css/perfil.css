@@ -2,8 +2,29 @@
 @import "menu.css";
 
 /*modal*/
-
+/* Boton */
 .btn {
+    letter-spacing: 1px;
+    background-color: #000;
+    border: 2px solid #000;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.3rem 1rem;
+    color: #fff;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn:hover,
+.btn:focus {
+    border-color: #000;
+    color: #000;
+    box-shadow: inset 0 -3.25em 0 0 #fff;
+}
+/* Boton FIN */
+
+/* .btn {
     text-align: center;
     padding: 15px;
     border-radius: 50px;
@@ -15,7 +36,7 @@
 
 .btn:hover {
     background-color: rgb(31, 31, 145);
-}
+} */
 
 
 .contenedor-modal {
@@ -58,7 +79,15 @@ form {
     justify-content: center;
     align-items: center;
 }
+<<<<<<< HEAD
+=======
 
+textarea {
+    resize: none;
+
+}
+
+>>>>>>> main
 /*FIN*/
 
 
@@ -96,6 +125,8 @@ aside h2{
  /* Botones superiores */
 .btn-superiores {
     grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: end;
 
 }
 .btn-superiores .whatsapp {
