@@ -75,35 +75,29 @@
             <img src="../static/images/user.svg"><h2>{{session.usuario}} </h2>
         </div>
         <div class="btn-superiores">
-<<<<<<< HEAD
-            <button class="btn" type="submit" id="lanzar-modal">Publicar articulo</button>
-            <button class="btn">Borrar Articulo</button>
-=======
-            <button class="btn" type="button" id="lanzar-modal">Publicar articulo</button>
->>>>>>> main
+            <button class="btn" type="submit" id="lanzar-modal"><i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i> Publicar articulo</button>
+            <button class="btn"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Articulo</button>
         </div>
             <div class="contenedor-modal">
             <div class="modal">
-                <h2>Publica tu proximo articulo</h2>
-
-                <form action="">
-
-                    <section>
+                
+                <form class="form-modal" action="">
+                    <h2>Publica tu proximo articulo</h2>
+                    <section class="modal-nombre">
                         <label for="nom2">Nombre:</label>
-                        <input type="text" id="nom2" placeholder="" autocomplete="off" autofocus required>
+                        <input type="text" id="nombre" placeholder="" autocomplete="off" autofocus required>
                     </section>
-                    <br>
-                    <section>
+                    <section class="modal-precio">
                         <label for="num">Precio:</label>
-                        <input type="num" id="num" name="precio"  placeholder=" " required minlength="10" maxlength="10">
+                        <input type="num" id="precio" name="precio"  placeholder=" " required minlength="10" maxlength="10">
+                        <label>DOP</label>
                     </section>
-                    <br>
-                    <section> 
-                    <label for="adjunto">Seleccione imagen:</label>
+                    <section class="modal-img">
+                    <!-- <label for="adjunto">Seleccione imagen:</label> -->
                     <input type="file" id="adjunto" multiple autofocus required>
                     </section>
                     <div class="modal-tallas">
-                        <h4>seleccione una talla</h4>
+                        <h4>Talla</h4>
                         <select name="talla" id="talla" required>
                             <option></option>
                             <option value="xxl">XXL</option>
@@ -132,10 +126,9 @@
                         </select>
                     </div>
                     <div class="modal-condiciones">
-                        <h4>Seleccione su condicion</h4>
+                        <h4>Condicion</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
-                            <option value="">Nuevo y Usado</option>
                             <option value="">Nuevo</option>
                             <option value="">Usado</option>
                         </select>
@@ -143,7 +136,7 @@
 
                     <div class="modal-tipo">
                         <h4>Tipo de articulo</h4>
-                        <select name="condicion" id="condicion" required>
+                        <select name="tipo" id="tipo" required>
                             <option></option>
                             <option value="">Hombre</option>
                             <option value="">Mujer</option>
@@ -151,8 +144,8 @@
                         </select>
                     </div>
                     <div class="modal-subtipo">
-                        <h4>Sub-tipo articulo</h4>
-                        <select name="condicion" id="condicion" required>
+                        <h3>Sub-tipo de articulo</h3>
+                        <select name="subtipo" id="subtipo" required>
                             <option></option>
                             <option value="">T-shirt</option>
                             <option value="">Camisas</option>
@@ -161,21 +154,19 @@
                             <option value="">Deportivo</option>
                         </select>
                     </div>
-                    <br>
-                    <section> 
+                    <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
                         <textarea name="" id="com" cols="30" rows="10" required></textarea>
                     </section>
-                    <div class="modal-footer">
+                    <div class="modal-btn">
                         <button class="btn" type="submit" id="lanzar-modal">Publicar</button>
                         <button class="btn" type="button" id="ocultar-modal">Cerrar</button>
                     </div>
                             
                 </form>
             </div>    
-            
-    
-        
+            </div>
+
            <script src="/static/javaScript/app.js"></script>
         <div class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos en este perfil...">
