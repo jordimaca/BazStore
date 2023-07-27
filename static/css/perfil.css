@@ -1,22 +1,29 @@
 @import "reset.css";
 @import "menu.css";
 
-/*modal*/
-
+/* MODAL */
+/* Boton */
 .btn {
-    text-align: center;
-    padding: 15px;
-    border-radius: 50px;
-    background-color: blue;
-    border: none;
+    letter-spacing: 1px;
+    background-color: #000;
+    border: 2px solid #000;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 0.3rem 1.2rem;
     color: #fff;
-    transition: all 0.5s;
+    transition: 0.3s;
+    font-size: 14px;
+    cursor: pointer;
 }
 
-.btn:hover {
-    background-color: rgb(31, 31, 145);
+.btn:hover,
+.btn:focus {
+    border-color: #000;
+    color: #000;
+    background-color: #fff;
 }
-
+/* Boton FIN */
 
 .contenedor-modal {
     position: fixed;
@@ -34,9 +41,9 @@
 }
 
 .contenedor-modal.mostrar {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 1;
-    opacity: 0.9;
+    opacity: 1;
 }
 
 .contenedor-modal .modal {
@@ -49,22 +56,86 @@
     padding: 50px;
     background-color: #fff;
     opacity: 1;
+    border: solid 5px #000;
 }
 
-form {
+.form-modal {
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
 }
 
+.form-modal h2{
+    grid-area: 1/1/2/3;
+}
+.modal-nombre{
+    grid-area: 2/1/3/3;
+}
+.modal-precio{
+    grid-area: 3/1/4/3;
+}
+.modal-img{
+    grid-area: 5/1/6/2;
+}
+.modal-tallas{
+    grid-area: 5/2/6/3;
+}
+.modal-ubicacion{
+    grid-area: 6/2/7/3;
+}
+.modal-condiciones{
+    grid-area: 6/1/7/2;
+}
+.modal-tipo{
+    grid-area: 4/1/5/2;
+}
+.modal-subtipo{
+    grid-area: 4/2/5/3;
+}
+.modal-descripcion{
+    grid-area: 8/1/9/3;
+}
 textarea {
     resize: none;
-
+}
+.modal-btn{
+    grid-area: 9/1/10/3;
+    display: flex;
+    justify-content: space-evenly;
 }
 
-/*FIN*/
+.form-modal input{
+    width: 120px;
+}
+
+#nombre{
+    width: 172px;
+}
+#precio{
+
+}
+.form-modal h4{
+    font-size: 14px;
+    text-align: center;
+}
+.form-modal h3{
+    font-size: 12.5px;
+    text-align: center;
+}
+
+#talla,
+#ubicacion,
+#condicion,
+#tipo,
+#subtipo{
+    font-family: BazFont;
+    text-align: center;
+    color: #000;
+    border: solid 1.5px #000;
+    width: 120px;
+}
+/* MODAL FIN */
 
 
 body{
@@ -101,6 +172,8 @@ aside h2{
  /* Botones superiores */
 .btn-superiores {
     grid-area: 1 / 3 / 2 / 4;
+    display: flex;
+    justify-content: end;
 
 }
 .btn-superiores .whatsapp {
