@@ -15,7 +15,7 @@ btnOcultarModal.addEventListener('click', (e) => {
     e.preventDefault();
     contModal.classList.remove('mostrar');
 
-    const empleado = document.querySelector('.btn-superiores');
+    const usuario = document.querySelector('.btn-superiores');
 
     const pNombre = document.createElement('p');
     pNombre.textContent = nombreInput.value;
@@ -23,6 +23,6 @@ btnOcultarModal.addEventListener('click', (e) => {
     const pPuesto = document.createElement('p');
     pPuesto.textContent = puestoInput.value;
 
-    empleado.appendChild(pNombre);
-    empleado.appendChild(pPuesto);
+    usuario.appendChild(pNombre);
+    usuario.appendChild(pPuesto);
 });
