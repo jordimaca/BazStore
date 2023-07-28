@@ -112,6 +112,7 @@ textarea {
 #nombre{
     width: 172px;
 }
+
 #precio{
 
 }
@@ -135,6 +136,11 @@ textarea {
     border: solid 1.5px #000;
     width: 120px;
 }
+
+input[type="file"] {
+    color: transparent;
+}
+
 /* MODAL FIN */
 
 
