@@ -208,10 +208,30 @@ def zapatosh():
 
 #usuario
 
-@app.route('/perfil')
+@app.route('/perfil',methods =['GET', 'POST'])
 def perfil():
     if not 'login' in session:
         return redirect('/login')
+    if request.method == 'POST' and 'nombre' in request.form and 'precio' in request.form and 'adjunto' in request.files and 'talla' in request.form and 'ubicacion' in request.form and 'condicion' in request.form and 'tipo' in request.form and 'subtipo' in request.form and 'com' in request.form:
+        #almacenar en formulario en variables
+        nombre = request.form['nombre']
+        precio = request.form['precio']
+        adjunto = request.files['adjunto']
+        talla = request.form['talla']
+        ubicacion=request.form['ubicacion']
+        condicion=request.form['condicion']
+        tipo=request.form['tipo']
+        subtipo=request.form['subtipo']
+        descripcion=request.form['com']
+        #Abrir la conexion a la base de datos
+        conexion=mysql.connect()
+        #Se crea un cursor
+        cursor = conexion.cursor()
+        sql ='INSERT INTO articulo VALUES (NULL, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
+        datos=(nombre, precio, adjunto, talla, ubicacion,condicion,subtipo,descripcion,tipo)
+        cursor.execute(sql, datos)
+        conexion.commit()
+
     return render_template('usuario/perfil.html')
 @app.route('/vendedor')
 def vendedor():
