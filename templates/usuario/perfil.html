@@ -81,11 +81,11 @@
             <div class="contenedor-modal">
             <div class="modal">
                 
-                <form class="form-modal" action="">
+                <form class="form-modal" action="" method="post">
                     <h2>Publica tu proximo articulo</h2>
                     <section class="modal-nombre">
                         <label for="nom2">Nombre:</label>
-                        <input type="text" id="nombre" placeholder="" autocomplete="off" autofocus required>
+                        <input type="text" id="nombre" name="nombre" placeholder="" autocomplete="off" autofocus required>
                     </section>
                     <section class="modal-precio">
                         <label for="num">Precio:</label>
@@ -94,7 +94,7 @@
                     </section>
                     <section class="modal-img">
                     <!-- <label for="adjunto">Seleccione imagen:</label> -->
-                    <input type="file" id="adjunto" multiple autofocus required>
+                    <input type="file" id="adjunto" name="adjunto" multiple autofocus required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>
@@ -156,7 +156,7 @@
                     </div>
                     <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
-                        <textarea name="" id="com" cols="30" rows="10" required></textarea>
+                        <textarea name="com" id="com" cols="30" rows="10" required></textarea>
                     </section>
                     <div class="modal-btn">
                         <button class="btn" type="submit" id="lanzar-modal">Publicar</button>

@@ -57,6 +57,7 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
+            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
         else:
@@ -98,6 +99,8 @@ def registro():
 def logout():
     session.pop('login',None)
     session.pop('usuario',None)
+    session.pop('id',None)
+    session.pop('img',None)
     return redirect('/login')
 #rutas principales
 
@@ -227,8 +230,8 @@ def perfil():
         conexion=mysql.connect()
         #Se crea un cursor
         cursor = conexion.cursor()
-        sql ='INSERT INTO articulo VALUES (NULL, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
-        datos=(nombre, precio, adjunto, talla, ubicacion,condicion,subtipo,descripcion,tipo)
+        sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
+        datos=(session['id'],nombre,adjunto , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
         cursor.execute(sql, datos)
         conexion.commit()
 
