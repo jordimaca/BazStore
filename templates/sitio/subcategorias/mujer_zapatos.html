@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias_db.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -78,209 +78,157 @@
             </div>
         </div>
     </header>
-
-    <!-- <div class="espacio"></div> -->
+<main>
     <div class="contenedor-filtro">
-        {% include 'sitio/filtro.html' %}
-    <section class="container-related-products1">
-    
-        <div class="card-list-products">
-            <div class="card">
-                <div class="card-img">
-                   <a href="/articulo"><img src="../images/tacones1.webp"
-                        alt="producto-1" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                        <a href="/articulo">
-                            <h3>Nike - Roshe Run</h3>
-                        </a>
-                       <a href="/articulo">
-                           <p class="category">Footwear, Sneakers</p>
-                       </a>
-                    </div>
-                    <div class="price">$85.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tacones2.jpg"
-                        alt="producto-3" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                       <a href="/articulo">
-                           <h3>Adidas - Boston Super OG</h3>
-                       </a>
-                       <a href="/articulo">
-                           <p class="category">Footwear, Sneakers</p>
-                       </a>
-                    </div>
-                    <div class="price">$105.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                   <a href="/articulo"><img src="../images/tenis1.webp"
-                        alt="producto-4" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                        <a href="/articulo">
-                            <h3>Common Projects Achilles</h3>
-                        </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$250.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container-related-products2">
-
-        <div class="card-list-products">
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tenis3.jpg"
-                        alt="producto-1" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                       <a href="/articulo">
-                           <h3>Nike - Roshe Run</h3>
-                       </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$85.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tenis1.webp"
-                        alt="producto-2" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                      <a href="/articulo">
-                          <h3>Common Projects Achilles</h3>
-                      </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$255.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tacones4.jpg"
-                        alt="producto-4" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                        <a href="/articulo">
-                            <h3>Common Projects Achilles</h3>
-                        </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$250.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="container-related-products3">
-
-        <div class="card-list-products">
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tenis4.jpg"
-                        alt="producto-1" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                      <a href="/articulo">
-                          <h3>Nike - Roshe Run</h3>
-                      </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$85.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                   <a href="/articulo"><img src="../images/tacones3.jpg"
-                        alt="producto-2" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                        <a href="/articulo">
-                            <h3>Common Projects Achilles</h3>
-                        </a>
-                       <a href="/articulo">
-                           <p class="category">Footwear, Sneakers</p>
-                       </a>
-                    </div>
-                    <div class="price">$255.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-img">
-                    <a href="/articulo"><img src="../images/tenis5.jpg"
-                        alt="producto-3" /></a>
-                </div>
-                <div class="info-card">
-                    <div class="text-product">
-                        <a href="/articulo">
-                            <h3>Adidas - Boston Super OG</h3>
-                        </a>
-                        <a href="/articulo">
-                            <p class="category">Footwear, Sneakers</p>
-                        </a>
-                    </div>
-                    <div class="price">$105.00</div>
-                    <div class="icono">
-                        <a href="/vendedor"></a>
-                    </div>
-                </div>
-            </div>
-           
-        </div>
-    </section>
+        {% include 'sitio/filtrodb.html' %}
     </div>
-    
 
+    <div class="contenedor-articulos">
 
+        <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tenis1.webp" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tacones2.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tacones1.webp" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tenis4.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tacones3.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tenis5.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tacones4.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tenis2.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+
+    <div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="..\images\tacones2.jpg" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category">Mujer, Accesorios, Bolsos</p>
+        </a>
+    </div>
+    <div class="card-price">$85.00</div>
+    </div>
+        
+    </div>
+    </main>
    {% include 'sitio/footer.html' %}
