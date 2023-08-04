@@ -1,3 +1,4 @@
+// Boton modal
 const btnLanzarModal = document.querySelector('#lanzar-modal');
 const btnOcultarModal = document.querySelector('#ocultar-modal');
 
@@ -26,3 +27,12 @@ btnOcultarModal.addEventListener('click', (e) => {
     usuario.appendChild(pNombre);
     usuario.appendChild(pPuesto);
 });
+// FIN
+
+// BOTON FILE SUBIR IMAGEN DE PERFIL
+function abrir() {
+  var file = document.getElementById("subir").click();
+  
+}
+
+// FIN
