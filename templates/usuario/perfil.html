@@ -85,20 +85,20 @@
             <div class="contenedor-modal">
             <div class="modal">
                 
-                <form class="form-modal" action="">
+                <form class="form-modal" action="/perfil/publicar" method="post">
                     <h2>Publica tu proximo articulo</h2>
                     <section class="modal-nombre">
                         <label for="nom2">Nombre:</label>
-                        <input type="text" id="nombre" placeholder="" autocomplete="off" autofocus required>
+                        <input type="text" id="nombre" name="nombre" placeholder="" autocomplete="off" autofocus required>
                     </section>
                     <section class="modal-precio">
                         <label for="num">Precio:</label>
-                        <input type="num" id="precio" name="precio"  placeholder=" " required minlength="10" maxlength="10">
+                        <input type="num" id="precio" name="precio"  placeholder=" " required >
                         <label>DOP</label>
                     </section>
                     <section class="modal-img">
                     <!-- <label for="adjunto">Seleccione imagen:</label> -->
-                    <input type="file" id="adjunto" multiple autofocus required>
+                    <input type="file" id="adjunto" name="adjunto" multiple autofocus required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>
@@ -133,8 +133,9 @@
                         <h4>Condicion</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
-                            <option value="">Nuevo</option>
-                            <option value="">Usado</option>
+                            <option value="nuevo-usado">Nuevo y usado</option>
+                            <option value="nuevo">Nuevo</option>
+                            <option value="usado">Usado</option>
                         </select>
                     </div>
 
@@ -142,25 +143,25 @@
                         <h4>Tipo de articulo</h4>
                         <select name="tipo" id="tipo" required>
                             <option></option>
-                            <option value="">Hombre</option>
-                            <option value="">Mujer</option>
-                            <option value="">Accesorio</option>
+                            <option value="hombre">Hombre</option>
+                            <option value="mujer">Mujer</option>
+                            <option value="accesorio">Accesorio</option>
                         </select>
                     </div>
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de articulo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
-                            <option value="">T-shirt</option>
-                            <option value="">Camisas</option>
-                            <option value="">Jeans</option>
-                            <option value="">Zapatos</option>
-                            <option value="">Deportivo</option>
+                            <option value="tshirt">T-shirt</option>
+                            <option value="camisa">Camisas</option>
+                            <option value="jeans">Jeans</option>
+                            <option value="zapatos">Zapatos</option>
+                            <option value="deportivo">Deportivo</option>
                         </select>
                     </div>
                     <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
-                        <textarea name="" id="com" cols="30" rows="10" required></textarea>
+                        <textarea name="com" id="com" cols="30" rows="10" required></textarea>
                     </section>
                     <div class="modal-btn">
                         <button class="btn" type="submit" id="lanzar-modal">Publicar</button>

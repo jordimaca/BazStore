@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-07-2023 a las 23:28:37
+-- Tiempo de generación: 04-08-2023 a las 22:46:08
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.13
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `bastore`
+-- Base de datos: `bazstore`
 --
 
 -- --------------------------------------------------------
@@ -41,6 +41,13 @@ CREATE TABLE `articulo` (
   `descripcion` varchar(65) COLLATE utf8_spanish_ci NOT NULL,
   `genero` char(7) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
+
+--
+-- Volcado de datos para la tabla `articulo`
+--
+
+INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`, `precio`, `tipo`, `talla`, `ubicacion`, `condicion`, `descripcion`, `genero`) VALUES
+(2, 1, 'articulo2', 'a4.jpg', 564216, 'tshirt', 'xxl', 'stgo', 'nuevo-usado', 'dfkfjBDPIRTSRTHSTHSFHgesg', 'hombre');
 
 -- --------------------------------------------------------
 
@@ -84,6 +91,12 @@ ALTER TABLE `usuario`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `articulo`
+--
+ALTER TABLE `articulo`
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

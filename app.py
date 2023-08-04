@@ -57,6 +57,7 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
+            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
         else:
@@ -98,6 +99,8 @@ def registro():
 def logout():
     session.pop('login',None)
     session.pop('usuario',None)
+    session.pop('id',None)
+    session.pop('img',None)
     return redirect('/login')
 #rutas principales
 
@@ -208,11 +211,40 @@ def zapatosh():
 
 #usuario
 
-@app.route('/perfil')
+@app.route('/perfil',methods =['GET', 'POST'])
 def perfil():
     if not 'login' in session:
         return redirect('/login')
+    
+
     return render_template('usuario/perfil.html')
+
+
+@app.route('/perfil/publicar',methods =['GET', 'POST'])
+def publicar():
+    #almacenar en formulario en variables
+    nombre = request.form['nombre']
+    precio = request.form['precio']
+    adjunto = request.form['adjunto']
+    talla = request.form['talla']
+    ubicacion=request.form['ubicacion']
+    condicion=request.form['condicion']
+    tipo=request.form['tipo']
+    subtipo=request.form['subtipo']
+    descripcion=request.form['com']
+    #Abrir la conexion a la base de datos
+    conexion=mysql.connect()
+    #Se crea un cursor
+    cursor = conexion.cursor()
+    sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
+    datos=(session['id'],nombre,adjunto , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
+    cursor.execute(sql, datos)
+    conexion.commit()
+
+    return redirect('/perfil')
+
+    
+
 @app.route('/vendedor')
 def vendedor():
     if not 'login' in session:
