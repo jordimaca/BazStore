@@ -215,27 +215,36 @@ def zapatosh():
 def perfil():
     if not 'login' in session:
         return redirect('/login')
-    if request.method == 'POST' and 'nombre' in request.form and 'precio' in request.form and 'adjunto' in request.files and 'talla' in request.form and 'ubicacion' in request.form and 'condicion' in request.form and 'tipo' in request.form and 'subtipo' in request.form and 'com' in request.form:
-        #almacenar en formulario en variables
-        nombre = request.form['nombre']
-        precio = request.form['precio']
-        adjunto = request.files['adjunto']
-        talla = request.form['talla']
-        ubicacion=request.form['ubicacion']
-        condicion=request.form['condicion']
-        tipo=request.form['tipo']
-        subtipo=request.form['subtipo']
-        descripcion=request.form['com']
-        #Abrir la conexion a la base de datos
-        conexion=mysql.connect()
-        #Se crea un cursor
-        cursor = conexion.cursor()
-        sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
-        datos=(session['id'],nombre,adjunto , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
-        cursor.execute(sql, datos)
-        conexion.commit()
+    
 
     return render_template('usuario/perfil.html')
+
+
+@app.route('/perfil/publicar',methods =['GET', 'POST'])
+def publicar():
+    #almacenar en formulario en variables
+    nombre = request.form['nombre']
+    precio = request.form['precio']
+    adjunto = request.form['adjunto']
+    talla = request.form['talla']
+    ubicacion=request.form['ubicacion']
+    condicion=request.form['condicion']
+    tipo=request.form['tipo']
+    subtipo=request.form['subtipo']
+    descripcion=request.form['com']
+    #Abrir la conexion a la base de datos
+    conexion=mysql.connect()
+    #Se crea un cursor
+    cursor = conexion.cursor()
+    sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
+    datos=(session['id'],nombre,adjunto , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
+    cursor.execute(sql, datos)
+    conexion.commit()
+
+    return redirect('/perfil')
+
+    
+
 @app.route('/vendedor')
 def vendedor():
     if not 'login' in session:
