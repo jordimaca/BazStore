@@ -143,27 +143,19 @@ textarea {
     width: 120px;
 }
 
-/* MODAL FIN */
-
-
-/* input file */
 input[type="file"] {
     color: transparent;
-    display: none;
 }
-/* FIN */
+
+/* MODAL FIN */
 
 
 body{
     font-family: BazFont;
-
 }
 
 main {
-    background-image: url(/static/images/banner.jpg);
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #eee;
     display: grid;
     grid-template-rows: auto auto auto;
     grid-template-columns: 100px auto auto;
@@ -180,27 +172,16 @@ aside h2{
 .perfil-img{
     grid-area: 1 / 1 / 4 / 2;
     width: 100px;
-    color: #fff;
-}
-
-.fa-pen-to-square{
-    color: #fff;
-    text-decoration: none;
 }
 .perfil-nombre{
     grid-area: 2 / 2 / 3 / 4;
+    font-size: 20px;
+    display: inline-block;
     margin-left: 5px;
     position: relative;
-    display: inline-block;
-    font-size: 20px;
-    color: #fff;
 }
 
-
-
-
-
-/* Botones superiores */
+ /* Botones superiores */
 .btn-superiores {
     grid-area: 1 / 3 / 2 / 4;
     display: flex;
