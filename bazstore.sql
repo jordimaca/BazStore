@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-08-2023 a las 22:46:08
+-- Tiempo de generación: 07-08-2023 a las 23:37:36
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.13
 
@@ -47,7 +47,7 @@ CREATE TABLE `articulo` (
 --
 
 INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`, `precio`, `tipo`, `talla`, `ubicacion`, `condicion`, `descripcion`, `genero`) VALUES
-(2, 1, 'articulo2', 'a4.jpg', 564216, 'tshirt', 'xxl', 'stgo', 'nuevo-usado', 'dfkfjBDPIRTSRTHSTHSFHgesg', 'hombre');
+(1, 1, 'articulo1', 'a4.jpg', 3213456, 'camisa', 'xxl', 'bna', 'nuevo-usado', 'wqiyugheygoi', 'hombre');
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`

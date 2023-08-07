@@ -93,7 +93,7 @@
                     </section>
                     <section class="modal-img">
                     <!-- <label for="adjunto">Seleccione imagen:</label> -->
-                    <input type="file" id="adjunto" name="adjunto" multiple autofocus required>
+                    <input type="file" id="adjunto" name="adjunto" required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>
@@ -128,7 +128,7 @@
                         <h4>Condicion</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
-                            <option value="nuevo-usado">Nuevo y usado</option>
+                            <option value="nuevo y usado">Nuevo y usado</option>
                             <option value="nuevo">Nuevo</option>
                             <option value="usado">Usado</option>
                         </select>
@@ -179,29 +179,7 @@
 
         <div class="contenedor-articulos">
         
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
+            {% include 'sitio/cardej.html' %}
         
         </div>
         
