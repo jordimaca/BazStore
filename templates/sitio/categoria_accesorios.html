@@ -83,28 +83,16 @@
 
     <main>
     <div class="contenedor-filtro">
-        {% include 'sitio/filtrodb.html' %}
+        {% include 'sitio/filtro.html' %}
     </div>
 
     <div class="contenedor-articulos">
 
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
+        {% for card in [1,2,3,4,5,6,7,8,9,10,11,12] %}
         
         {% include 'sitio/card.html' %}
 
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
-
-        {% include 'sitio/card.html' %}
+        {% endfor %}
         
     </div>
     </main>
