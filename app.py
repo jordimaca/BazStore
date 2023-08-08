@@ -227,7 +227,7 @@ def perfil():
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
-@app.route('/perfil/publicar',methods =['GET', 'POST'])
+@app.route('/perfil/publicar',methods =['POST'])
 def publicar():
     #almacenar en formulario en variables
     nombre = request.form['nombre']
