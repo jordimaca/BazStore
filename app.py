@@ -4,7 +4,7 @@ from flask import Flask
 
 #Importar la plantilla HTML. Para guardar datos desde el formulario importamos request y redirect
 
-from flask import render_template, request,redirect, url_for,session
+from flask import render_template, request,redirect,session
 
 # Importar el enlace a base de datos con MySQL
 from flaskext.mysql import MySQL
@@ -15,7 +15,6 @@ from datetime import datetime
 #Importar para obtener informacion de la imagen 
 from flask import send_from_directory
 
-import re
 #Crear la aplicacion templates
 app=Flask(__name__)
 
@@ -57,6 +56,7 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
+            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
             return redirect('/')
         else:
@@ -98,6 +98,8 @@ def registro():
 def logout():
     session.pop('login',None)
     session.pop('usuario',None)
+    session.pop('id',None)
+    session.pop('img',None)
     return redirect('/login')
 #rutas principales
 
@@ -208,11 +210,57 @@ def zapatosh():
 
 #usuario
 
-@app.route('/perfil')
+@app.route('/perfil',methods =['GET', 'POST'])
 def perfil():
     if not 'login' in session:
         return redirect('/login')
-    return render_template('usuario/perfil.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo`")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('usuario/perfil.html',articulos=articulos)
+
+
+@app.route('/perfil/publicar',methods =['POST'])
+def publicar():
+    #almacenar en formulario en variables
+    nombre = request.form['nombre']
+    precio = request.form['precio']
+    adjunto = request.files['adjunto']
+    talla = request.form['talla']
+    ubicacion=request.form['ubicacion']
+    condicion=request.form['condicion']
+    tipo=request.form['tipo']
+    subtipo=request.form['subtipo']
+    descripcion=request.form['com']
+
+    tiempo = datetime.now()
+    horaActual=tiempo.strftime('%Y%H%M%S')
+    
+    #Adjuntar Archivo 
+    if adjunto.filename!='':
+        nuevoNombre=horaActual+"_"+adjunto.filename
+        adjunto.save("templates/sitio/images/"+nuevoNombre)
+
+    #Abrir la conexion a la base de datos
+    conexion=mysql.connect()
+    #Se crea un cursor
+    cursor = conexion.cursor()
+    sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
+    datos=(session['id'],nombre,nuevoNombre , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
+    cursor.execute(sql, datos)
+    conexion.commit()
+
+    return redirect('/perfil')
+
+    
+
 @app.route('/vendedor')
 def vendedor():
     if not 'login' in session:
@@ -230,6 +278,8 @@ def articulo():
 def imagenes(imagen):
     print(imagen)
     return send_from_directory(os.path.join('templates/sitio/images'),imagen)
+
+
 
 
 #Crear una instancia para poder ejecutar nuestra aplicacion

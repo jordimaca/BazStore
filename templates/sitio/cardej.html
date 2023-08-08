@@ -1,0 +1,18 @@
+{% for articulo in articulos %}
+
+<div class="card">
+    <div class="card-img">
+        <a href="/articulo"><img src="images\{{articulo[3]}}" alt="imagen-articulo" /></a>
+    </div>
+    <div class="card-title">
+        <a href="/articulo">
+            <h3>{{articulo[2]}}</h3>
+        </a>
+    </div>
+    <div class="card-tags"><a href="/articulo">
+            <p class="category"> {{articulo[10]}}, {{articulo[5]}}, {{articulo[6]}}</p>
+        </a>
+    </div>
+    <div class="card-price">${{articulo[4]}}.00</div>
+</div>
+{% endfor %}
