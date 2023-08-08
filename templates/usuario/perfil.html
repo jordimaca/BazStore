@@ -72,10 +72,8 @@
     </header>
     <main>
         <img class="perfil-img" src="../static/images/user.svg">
-        <i class="fa fa-pen-to-square" onclick="abrir()"></i>
+        <i class="fa fa-pen-to-square" onclick="usuarioImg()"></i>
         <input type="file" id="subir">
-         
-
         
         <h2 class="perfil-nombre">{{session.usuario}} </h2>
         <div class="btn-superiores">
@@ -97,8 +95,8 @@
                         <label>DOP</label>
                     </section>
                     <section class="modal-img">
-                    <!-- <label for="adjunto">Seleccione imagen:</label> -->
-                    <input type="file" id="adjunto" name="adjunto" multiple autofocus required>
+                    <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
+                    <input type="file" id="articulo" name="adjunto" multiple autofocus required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>

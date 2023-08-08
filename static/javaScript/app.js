@@ -30,8 +30,13 @@ btnOcultarModal.addEventListener('click', (e) => {
 // FIN
 
 // BOTON FILE SUBIR IMAGEN DE PERFIL
-function abrir() {
+function usuarioImg() {
   var file = document.getElementById("subir").click();
+  
+}
+
+function bannerImg() {
+  var file = document.getElementById("articulo").click();
   
 }
 
