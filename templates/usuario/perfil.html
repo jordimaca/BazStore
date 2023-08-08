@@ -83,11 +83,11 @@
             <div class="contenedor-modal">
             <div class="modal">
                 
-                <form class="form-modal" action="/perfil/publicar" method="post">
+                <form class="form-modal" action="/perfil/publicar" method="post" enctype="multipart/form-data">
                     <h2>Publica tu proximo articulo</h2>
                     <section class="modal-nombre">
                         <label for="nom2">Nombre:</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="" autocomplete="off" autofocus required>
+                        <input type="text" id="nombre" name="nombre" placeholder=" " autocomplete="off" autofocus required>
                     </section>
                     <section class="modal-precio">
                         <label for="num">Precio:</label>
@@ -96,7 +96,7 @@
                     </section>
                     <section class="modal-img">
                     <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
-                    <input type="file" id="articulo" name="adjunto" multiple autofocus required>
+                    <input type="file" id="articulo" name="adjunto"  required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>
@@ -131,7 +131,6 @@
                         <h4>Condicion</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
-                            <option value="nuevo-usado">Nuevo y usado</option>
                             <option value="nuevo">Nuevo</option>
                             <option value="usado">Usado</option>
                         </select>
@@ -159,7 +158,7 @@
                     </div>
                     <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
-                        <textarea name="com" id="com" cols="30" rows="10" required></textarea>
+                        <textarea name="com" id="com" cols="30" rows="10" ></textarea>
                     </section>
                     <div class="modal-btn">
                         <button class="btn" type="submit" id="lanzar-modal">Publicar</button>
@@ -183,29 +182,7 @@
 
         <div class="contenedor-articulos">
         
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
+            {% include 'sitio/cardej.html' %}
         
         </div>
         
