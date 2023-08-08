@@ -246,7 +246,7 @@ def publicar():
     #Adjuntar Archivo 
     if adjunto.filename!='':
         nuevoNombre=horaActual+"_"+adjunto.filename
-        adjunto.save("templates/sitio/image/"+nuevoNombre)
+        adjunto.save("templates/sitio/images/"+nuevoNombre)
 
     #Abrir la conexion a la base de datos
     conexion=mysql.connect()
