@@ -342,6 +342,19 @@ aside h2{
     grid-area: 3 / 2 / 4 / 3;
     margin-left: 1px;
 }
+
+/* Boton Eliminar */
+.btn-eliminar {
+    position: absolute;
+    border: 0px;
+    background-color: transparent;
+    font-size: 70px;
+    margin: -255px 0px 0px 237px;
+}
+.btn-eliminar:hover {
+    color: #9f0000;
+}
+/* Boton Eliminar FIN */
 /* Card FIN */
 
 
