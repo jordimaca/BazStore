@@ -56,8 +56,10 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
-            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
-            session['img']=cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            session['id']=cursor.fetchone()
+            cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            session['img']=cursor.fetchone()
             return redirect('/')
         else:
             msg = 'Contraseña o usuario incorrectos'
@@ -224,6 +226,8 @@ def perfil():
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
+    usuario=session['id']
+    print(usuario)
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
@@ -239,7 +243,7 @@ def publicar():
     tipo=request.form['tipo']
     subtipo=request.form['subtipo']
     descripcion=request.form['com']
-
+    usuario=session['id']
     tiempo = datetime.now()
     horaActual=tiempo.strftime('%Y%H%M%S')
     
@@ -253,7 +257,7 @@ def publicar():
     #Se crea un cursor
     cursor = conexion.cursor()
     sql ='INSERT INTO articulo VALUES (NULL,%s, % s, % s, % s, % s, % s,% s,% s,% s,% s);'
-    datos=(session['id'],nombre,nuevoNombre , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
+    datos=(usuario,nombre,nuevoNombre , precio,subtipo, talla, ubicacion,condicion,descripcion,tipo)
     cursor.execute(sql, datos)
     conexion.commit()
 

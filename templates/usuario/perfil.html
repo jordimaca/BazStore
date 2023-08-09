@@ -13,9 +13,9 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="../../static/images/user-icon.svg" alt="">
+                <img src="../../{{session.img}}" alt="">
                 <div class="dropdown">
-                    <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
+                    <button class="btn-cuenta">{{session.usuario}} {{session.id}} <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
                             <a class="btn-left" href="#">Ver Perfil</a>
                             <a class="btn-left-cerrar" href="/logout">Cerrar Sesion</a>
@@ -181,8 +181,12 @@
         <h2>Articulos publicados</h1>
 
         <div class="contenedor-articulos">
-        
-            {% include 'sitio/cardej.html' %}
+            {% for articulo in articulos %}
+                {% if articulo[1] == session.id %}
+                    {% include 'sitio/cardej.html' %}
+                {% endif %}
+
+            {% endfor %}
         
         </div>
         
