@@ -32,12 +32,12 @@ btnOcultarModal.addEventListener('click', (e) => {
 // BOTON FILE SUBIR IMAGEN DE PERFIL
 function usuarioImg() {
   var file = document.getElementById("subir").click();
-  
 }
-
 function bannerImg() {
   var file = document.getElementById("articulo").click();
-  
 }
+// FIN
+
+// Boton eliminar en perfil.html
 
 // FIN
