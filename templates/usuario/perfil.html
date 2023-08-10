@@ -15,7 +15,7 @@
             <div class="user">
                 <img src="../../{{session.img}}" alt="">
                 <div class="dropdown">
-                    <button class="btn-cuenta">{{session.usuario}} {{session.id}} <i class="fa fa-caret-down"></i></button>
+                    <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
                             <a class="btn-left" href="#">Ver Perfil</a>
                             <a class="btn-left-cerrar" href="/logout">Cerrar Sesion</a>
@@ -145,6 +145,7 @@
                             <option value="accesorio">Accesorio</option>
                         </select>
                     </div>
+                    {% if request.form['tipo']=="hombre" %}
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de articulo</h3>
                         <select name="subtipo" id="subtipo" required>
@@ -156,6 +157,31 @@
                             <option value="deportivo">Deportivo</option>
                         </select>
                     </div>
+                    {% elif request.form['tipo']=="mujer" %}
+                    <div class="modal-subtipo">
+                        <h3>Sub-tipo de articulo</h3>
+                        <select name="subtipo" id="subtipo" required>
+                            <option></option>
+                            <option value="vestido">Vestido</option>
+                            <option value="blusa">Blusa</option>
+                            <option value="jeans">Jeans</option>
+                            <option value="zapatos">Zapatos</option>
+                            <option value="deportivo">Deportivo</option>
+                        </select>
+                    </div>
+                    {% else%}
+                    <div class="modal-subtipo">
+                        <h3>Sub-tipo de articulo</h3>
+                        <select name="subtipo" id="subtipo" required>
+                            <option></option>
+                            <option value="reloj">Reloj</option>
+                            <option value="cadenas">Cadenas</option>
+                            <option value="brazaletes">Brazaletes</option>
+                            <option value="anillos">Anillos</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    {% endif %}
                     <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
                         <textarea name="com" id="com" cols="30" rows="10" ></textarea>
