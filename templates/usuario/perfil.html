@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css')}}">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
 </head>
 <body>
     <header>
@@ -79,7 +81,7 @@
         <h2 class="perfil-nombre">{{session.usuario}} </h2>
         <div class="btn-superiores">
             <button class="btn" type="submit" id="lanzar-modal"><i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i> Publicar articulo</button>
-            <button class="btn"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Articulo</button>
+            <button class="btn boton1" onclick="Toggle()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Articulo</button>
         </div>
             <div class="contenedor-modal">
             <div class="modal">
