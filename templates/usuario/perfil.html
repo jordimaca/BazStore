@@ -16,7 +16,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="../../static/images/user-icon.svg" alt="">
+                <img src="../../{{session.img}}" alt="">
                 <div class="dropdown">
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
@@ -99,7 +99,7 @@
                     </section>
                     <section class="modal-img">
                     <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
-                    <input type="file" id="articulo" name="adjunto"  required>
+                    <input type="file" id="articulo" name="adjunto" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
                     </section>
                     <div class="modal-tallas">
                         <h4>Talla</h4>
@@ -148,6 +148,7 @@
                             <option value="accesorio">Accesorio</option>
                         </select>
                     </div>
+                    {% if request.form['tipo']=="hombre" %}
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de articulo</h3>
                         <select name="subtipo" id="subtipo" required>
@@ -159,6 +160,31 @@
                             <option value="deportivo">Deportivo</option>
                         </select>
                     </div>
+                    {% elif request.form['tipo']=="mujer" %}
+                    <div class="modal-subtipo">
+                        <h3>Sub-tipo de articulo</h3>
+                        <select name="subtipo" id="subtipo" required>
+                            <option></option>
+                            <option value="vestido">Vestido</option>
+                            <option value="blusa">Blusa</option>
+                            <option value="jeans">Jeans</option>
+                            <option value="zapatos">Zapatos</option>
+                            <option value="deportivo">Deportivo</option>
+                        </select>
+                    </div>
+                    {% else%}
+                    <div class="modal-subtipo">
+                        <h3>Sub-tipo de articulo</h3>
+                        <select name="subtipo" id="subtipo" required>
+                            <option></option>
+                            <option value="reloj">Reloj</option>
+                            <option value="cadenas">Cadenas</option>
+                            <option value="brazaletes">Brazaletes</option>
+                            <option value="anillos">Anillos</option>
+                            <option value="otros">Otros</option>
+                        </select>
+                    </div>
+                    {% endif %}
                     <section class="modal-descripcion"> 
                         <label for="com">Descripcion:</label>
                         <textarea name="com" id="com" cols="30" rows="10" ></textarea>
@@ -184,14 +210,12 @@
         <h2>Articulos publicados</h1>
 
         <div class="contenedor-articulos">
-        
             {% for articulo in articulos %}
-            
-            {% include 'sitio/cardej.html' %}
-            
-            {% endfor %}
+                {% if articulo[1] == session.id %}
+                    {% include 'sitio/cardej.html' %}
+                {% endif %}
 
-            {% include 'sitio/cardej.html' %}
+            {% endfor %}
         
         </div>
         
