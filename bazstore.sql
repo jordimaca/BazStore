@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-08-2023 a las 23:37:36
+-- Tiempo de generación: 15-08-2023 a las 21:25:10
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.13
 
@@ -47,7 +47,14 @@ CREATE TABLE `articulo` (
 --
 
 INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`, `precio`, `tipo`, `talla`, `ubicacion`, `condicion`, `descripcion`, `genero`) VALUES
-(1, 1, 'articulo1', 'a4.jpg', 3213456, 'camisa', 'xxl', 'bna', 'nuevo-usado', 'wqiyugheygoi', 'hombre');
+(1, 1, 'articulo1', 'a4.jpg', 3213456, 'camisa', 'xxl', 'bna', 'nuevo-usado', 'wqiyugheygoi', 'hombre'),
+(2, 1, 'reloj', '2023151441_reloj7.png', 3000, 'zapatos', 'm', 'rd', 'nuevo', 'gdgjhjkhjkshjkfnjgjfngjnbkbhgjknbgg', 'accesor'),
+(3, 1, 'Correa-cinturon ', '2023151604_cinturon.jpg', 2000, 'jeans', 'xl', 'rd', 'usado', 'hewhkjksjfjkfjskjsm,ajshkajk', 'hombre'),
+(4, 1, 'Reloj-Rolex-hombre', '2023151724_relojh1.jpg', 30000, 'tshirt', 'm', 'rd', 'nuevo', '32y48995850jhfnhkjgnvjkxfngklxgklxfmgbkflnbfklcnhkhjgfhkl', 'hombre'),
+(5, 1, 'Zapatos-Dior-Hombre', '2023151851_zapatoh5.jpg', 10000, 'zapatos', '12', 'sd', 'nuevo', 'asdjkdjksfkdnklfsgmkldgklnhfgklhnklfghklhklgjklllllllllllllllllll', 'hombre'),
+(6, 1, 'Camisa-Tommy hilfiger', '2023152057_camisa5.jpg', 5000, 'camisa', 'l', 'stgo', 'nuevo', 'fdgfhzdhvbjkhkjgklxjkglmkflhmlg', 'hombre'),
+(7, 1, 'Brazalete-Pulsera-Hombre', '2023152242_b6.jpg', 1000, 'tshirt', 'xl', 'sd', 'nuevo', '34284293723095830946809487', 'hombre'),
+(8, 1, 'Cadena-Collar-Hombre', '2023152344_collarm1.jpg', 500, 'tshirt', 'l', 'sd', 'nuevo', 'fsjkhskfjsklgjdlkhl;h;kjjfjhdhfth', 'hombre');
 
 -- --------------------------------------------------------
 
@@ -96,7 +103,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
