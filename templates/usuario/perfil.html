@@ -16,7 +16,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="../../{{session.img}}" alt="">
+                <img src="../../static/images/{{session.img}}" alt="{{session.img}}">
                 <div class="dropdown">
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
@@ -209,9 +209,10 @@
     <aside>
         <h2>Articulos publicados</h1>
 
+
         <div class="contenedor-articulos">
             {% for articulo in articulos %}
-                {% if articulo[1] == session.id %}
+                {% if articulo[1] == usuario %}
                     {% include 'sitio/cardej.html' %}
                 {% endif %}
 
