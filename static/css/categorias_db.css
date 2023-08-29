@@ -126,13 +126,6 @@ h4 {
 }
 /* Card FIN */
 
-footer {
-    padding: 30px;
-    background-color: #eee;
-    margin-top: 50px;
-    color: #222;
-}
-
 @media screen and (max-width:1190px) {
     main {
         grid-template-columns: 100%;
