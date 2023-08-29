@@ -263,19 +263,71 @@ def publicar():
 
     return redirect('/perfil')
 
-    
+#Borrar articulo
+@app.route('/perfil/borrar', methods=['POST'])
+def borrar_articulo():
+ 
+    _id=request.form['txtID']
+    print(_id)
+
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("SELECT * FROM `articulo` WHERE id_articulo=%s",(_id))
+    articulo=cursor.fetchall()
+    conexion.commit()
+    print(articulo)
+
+    # Verifica si la imagen existe antes de borrar
+    if os.path.exists("templates/sitio/img"+str(articulo[0][0])):
+        #si la imagen exite le indicamos que elimine el registro
+        os.unlink("templates/sitio/img"+str(articulo[0][0]))
+
+    # Borrar registro
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("DELETE FROM `articulo` WHERE id_articulo=%s",(_id))
+    conexion.commit()
+
+    # Redireccionar a /admin/libros
+    return redirect('/perfil')
+
+
+
+
+
+
 
 @app.route('/vendedor')
 def vendedor():
     if not 'login' in session:
         return redirect('/login')
     return render_template('usuario/vendedor.html')
-#nesecita un arreglo para especificar el producto
+#Nesecita un arreglo para especificar el producto
 @app.route('/articulo')
 def articulo():
     if not 'login' in session:
         return redirect('/login')
-    return render_template('usuario/articulo.html')
+    
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo`")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `usuario`")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    usuario=cursor.fetchall()
+    conexion.commit()
+    print(usuario)
+    return render_template('usuario/articulo.html', articulos=articulos, usuario=usuario)
 
 #Crear una ruta para mostrar la imagen 
 @app.route('/images/<imagen>')
@@ -283,10 +335,8 @@ def imagenes(imagen):
     print(imagen)
     return send_from_directory(os.path.join('templates/sitio/images'),imagen)
 
-
-
-
 #Crear una instancia para poder ejecutar nuestra aplicacion
 if __name__ == '__main__':
     #Se utiliza el modo debug para que se vean los cambios
     app.run(debug=True)
+
