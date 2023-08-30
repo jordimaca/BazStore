@@ -142,7 +142,6 @@ body {
 
 /* Responsive */
 @media screen and (max-width:1024px) {
-    /* Articulo */
     .contenedor-articulo {
         display: grid;
         grid-template-rows: auto auto auto auto auto;
