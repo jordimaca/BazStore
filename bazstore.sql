@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 15-08-2023 a las 21:25:10
+-- Tiempo de generación: 30-08-2023 a las 22:14:40
 -- Versión del servidor: 10.1.37-MariaDB
 -- Versión de PHP: 7.2.13
 
@@ -50,8 +50,6 @@ INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`
 (1, 1, 'articulo1', 'a4.jpg', 3213456, 'camisa', 'xxl', 'bna', 'nuevo-usado', 'wqiyugheygoi', 'hombre'),
 (2, 1, 'reloj', '2023151441_reloj7.png', 3000, 'zapatos', 'm', 'rd', 'nuevo', 'gdgjhjkhjkshjkfnjgjfngjnbkbhgjknbgg', 'accesor'),
 (3, 1, 'Correa-cinturon ', '2023151604_cinturon.jpg', 2000, 'jeans', 'xl', 'rd', 'usado', 'hewhkjksjfjkfjskjsm,ajshkajk', 'hombre'),
-(4, 1, 'Reloj-Rolex-hombre', '2023151724_relojh1.jpg', 30000, 'tshirt', 'm', 'rd', 'nuevo', '32y48995850jhfnhkjgnvjkxfngklxgklxfmgbkflnbfklcnhkhjgfhkl', 'hombre'),
-(5, 1, 'Zapatos-Dior-Hombre', '2023151851_zapatoh5.jpg', 10000, 'zapatos', '12', 'sd', 'nuevo', 'asdjkdjksfkdnklfsgmkldgklnhfgklhnklfghklhklgjklllllllllllllllllll', 'hombre'),
 (6, 1, 'Camisa-Tommy hilfiger', '2023152057_camisa5.jpg', 5000, 'camisa', 'l', 'stgo', 'nuevo', 'fdgfhzdhvbjkhkjgklxjkglmkflhmlg', 'hombre'),
 (7, 1, 'Brazalete-Pulsera-Hombre', '2023152242_b6.jpg', 1000, 'tshirt', 'xl', 'sd', 'nuevo', '34284293723095830946809487', 'hombre'),
 (8, 1, 'Cadena-Collar-Hombre', '2023152344_collarm1.jpg', 500, 'tshirt', 'l', 'sd', 'nuevo', 'fsjkhskfjsklgjdlkhl;h;kjjfjhdhfth', 'hombre');
@@ -76,7 +74,7 @@ CREATE TABLE `usuario` (
 --
 
 INSERT INTO `usuario` (`id_usuario`, `nombre`, `email`, `celular`, `contraseña`, `imagen`) VALUES
-(1, 'admin', 'admin@admin.com', '8098000000', 'admin', '<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M12 2C6.579 2 2 6.579 2 12s4.579 10 10 10 10-4.579 10-10S17.421 2 12 2zm0 5c1.727 0 3 1.272 3 3s-1.273 3-3 3c-1.726 0-3-1.272-3-3s1.274-3 3-3zm-5.106 9.772c.897-1.');
+(1, 'admin', 'admin@admin.com', '8098000000', 'admin', 'user-icon.svg');
 
 --
 -- Índices para tablas volcadas
