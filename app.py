@@ -301,8 +301,8 @@ def vendedor():
         return redirect('/login')
     return render_template('usuario/vendedor.html')
 #Nesecita un arreglo para especificar el producto
-@app.route('/articulo')
-def articulo():
+@app.route('/<name>')
+def articulo(name):
     if not 'login' in session:
         return redirect('/login')
     
@@ -310,22 +310,13 @@ def articulo():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo`")
+    cursor.execute("Select * FROM `articulo` WHERE nombre_articulo = %s",name)
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
 
-    conexion=mysql.connect()
-    #Reaizar una consulta
-    cursor=conexion.cursor()
-    #Ejecutar una consulta
-    cursor.execute("Select * FROM `usuario`")
-    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
-    usuario=cursor.fetchall()
-    conexion.commit()
-    print(usuario)
-    return render_template('usuario/articulo.html', articulos=articulos, usuario=usuario)
+    return render_template('usuario/articulo.html', articulos=articulos)
 
 #Crear una ruta para mostrar la imagen 
 @app.route('/images/<imagen>')
