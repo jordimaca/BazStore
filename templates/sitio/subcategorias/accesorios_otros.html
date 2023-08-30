@@ -13,24 +13,30 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <a href="..//perfil"><img src="../../../static/images/user-icon.svg" alt=""></a>
+                      {% if session.login %}
+                      <img src="../../static/images/{{session.img[0]}}" alt="">
                 <div class="dropdown">
                     <div class="dropdown">
-                      {% if session.login %}
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                     <div class="dropdown-contenido">
                             <a class="btn-left" href="/perfil">Ver Perfil</a>
                             <a class="btn-left-cerrar" href="/logout">Cerrar Sesion</a>
                         </div>
-                    {% else %}
+                    </div>
+                </div>
+                {% else %}
+                    <img src="../../static/images/user-icon.svg" alt="">
+                <div class="dropdown">
+                    <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
                             <a class="btn-left" href="/login">Iniciar Sesion</a>
                             <a class="btn-left" href="/registro">Registrarse</a>
                         </div>
-                        {% endif %}
+                    </div>
                 </div>
-                </div>
+                {% endif %}
+
             <h1>BazStore</h1>
             <div class="buscador">
                 <form>
