@@ -38,7 +38,7 @@ CREATE TABLE `articulo` (
   `talla` varchar(5) COLLATE utf8_spanish_ci NOT NULL,
   `ubicacion` char(80) COLLATE utf8_spanish_ci NOT NULL,
   `condicion` char(15) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` varchar(65) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
   `genero` char(7) COLLATE utf8_spanish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
