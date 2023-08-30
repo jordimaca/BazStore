@@ -102,18 +102,21 @@
                 <h3><span class="talla">Talla</span> {{articulo[6]}}</h3>
                 <h3><span class="ubicacion">Ubicacion</span> {{articulo[7]}}</h3>
             </div>
+            {% for usuario in usuario %}
             <div class="contenedor-vendedor">
                 <div class="vendedor">
                     <img src="../../static/images/user-circle-icon.svg" alt="imagen-vendedor">
-                    <a href="/vendedor">@Nombre_Vendedor</a>
+                    <a href="/vendedor">{{usuario[1]}}</a>
                 </div>
-                <h3 class="telefono">809-555-0077</h3>
-                <a  class="whatsapp" href="https://wa.me/+1" target="_blank"><button  class="whatsapp-btn"><i class="fa fa-whatsapp"></i> Contactar WhatsApp</button></a>
+                <h3 class="telefono">{{usuario[3]}}</h3>
+                <a  class="whatsapp" href="https://wa.me/+1 {{usuario[3]}}" target="_blank"><button  class="whatsapp-btn"><i class="fa fa-whatsapp"></i> Contactar WhatsApp</button></a>
             </div>
+            
             <div class="contenedor-descripcion">
                 <div class="cuadro"><h3>Descripcion</h3><p>{{articulo[9]}}</p></div>
             </div>
         </div>
+        {% endfor %}
         {% endfor %}
 
     </main>

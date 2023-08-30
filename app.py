@@ -315,8 +315,14 @@ def articulo(name):
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
+    for articulo in articulos:
+        cursor.execute("Select * FROM `usuario` WHERE id_usuario = %s",articulo[1])
+        #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+        usuario=cursor.fetchall()
+        conexion.commit()
+        print(usuario)
 
-    return render_template('usuario/articulo.html', articulos=articulos)
+    return render_template('usuario/articulo.html', articulos=articulos, usuario=usuario)
 
 #Crear una ruta para mostrar la imagen 
 @app.route('/images/<imagen>')
