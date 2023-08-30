@@ -56,9 +56,9 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
-            cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
-            session['id']=cursor.fetchone()
-            cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            #cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s ', (username))
             session['img']=cursor.fetchone()
             return redirect('/')
         else:
@@ -76,7 +76,7 @@ def registro():
         email = request.form['email']
         celular = request.form['telefono']
         password = request.form['password']
-        imagen=os.path.join(app.config['UPLOAD_FOLDER'],'user-circle-icon.svg')
+        imagen=os.path.join(app.config['UPLOAD_FOLDER'],'user-icon.svg')
         #Abrir la conexion a la base de datos
         conexion=mysql.connect()
         #Se crea un cursor
@@ -226,8 +226,6 @@ def perfil():
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
-    usuario=session['id']
-    print(usuario)
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
