@@ -226,9 +226,7 @@ def perfil():
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
-    usuario=session['id']
-    print(usuario)
-    return render_template('usuario/perfil.html',articulos=articulos,usuario=usuario)
+    return render_template('usuario/perfil.html',articulos=articulos)
 
 
 @app.route('/perfil/publicar',methods =['POST'])

@@ -16,7 +16,7 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                <img src="../../static/images/{{session.img}}" alt="{{session.img}}">
+                <img src="../../static/images/{{session.img[0]}}" alt="{{session.img[0]}}">
                 <div class="dropdown">
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
                         <div class="dropdown-contenido">
@@ -78,7 +78,7 @@
         <i class="fa fa-pen-to-square" onclick="usuarioImg()"></i>
         <input type="file" id="subir">
         
-        <h2 class="perfil-nombre">{{session.usuario}} </h2>
+        <h2 class="perfil-nombre"> {{session.usuario}} </h2>
         <div class="btn-superiores">
             <button class="btn" type="submit" id="lanzar-modal"><i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i> Publicar articulo</button>
             <button class="btn boton1" onclick="Toggle()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Artículo</button>
@@ -211,7 +211,7 @@
 
         <div class="contenedor-articulos">
             {% for articulo in articulos %}
-                {% if articulo[1] == usuario %}
+                {% if session.id == articulo[1] %}
                     {% include 'sitio/cardej.html' %}
                 {% endif %}
 
