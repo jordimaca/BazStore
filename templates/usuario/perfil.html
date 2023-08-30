@@ -81,21 +81,21 @@
         <h2 class="perfil-nombre">{{session.usuario}} </h2>
         <div class="btn-superiores">
             <button class="btn" type="submit" id="lanzar-modal"><i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i> Publicar articulo</button>
-            <button class="btn boton1" onclick="Toggle()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Articulo</button>
+            <button class="btn boton1" onclick="Toggle()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Artículo</button>
         </div>
             <div class="contenedor-modal">
             <div class="modal">
                 
                 <form class="form-modal" action="/perfil/publicar" method="post" enctype="multipart/form-data">
-                    <h2>Publica tu proximo articulo</h2>
+                    <h2>Publica tu próximo artículo</h2>
                     <section class="modal-nombre">
                         <label for="nom2">Nombre:</label>
                         <input type="text" id="nombre" name="nombre" placeholder=" " autocomplete="off" autofocus required>
                     </section>
                     <section class="modal-precio">
                         <label for="num">Precio:</label>
-                        <input type="number" id="precio" name="precio"  placeholder=" " maxlength="7" required >
-                        <label>DOP</label>
+                        <input type="number" id="precio" name="precio"  placeholder=" " minlength="1" maxlength="7" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" required>
+                        <label class="dop">DOP</label>
                     </section>
                     <section class="modal-img">
                     <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
@@ -119,7 +119,7 @@
                         </select>
                     </div>
                     <div class="modal-ubicacion">
-                        <h4>Ubicacion</h4>
+                        <h4>Ubicación</h4>
                         <select name="ubicacion" id="ubicacion" required>
                             <option></option>
                             <option value="rd">Todo el pais</option>
@@ -131,7 +131,7 @@
                         </select>
                     </div>
                     <div class="modal-condiciones">
-                        <h4>Condicion</h4>
+                        <h4>Condición</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
                             <option value="nuevo">Nuevo</option>
@@ -140,7 +140,7 @@
                     </div>
 
                     <div class="modal-tipo">
-                        <h4>Tipo de articulo</h4>
+                        <h4>Tipo de artículo</h4>
                         <select name="tipo" id="tipo" required>
                             <option></option>
                             <option value="hombre">Hombre</option>
@@ -150,7 +150,7 @@
                     </div>
                     {% if request.form['tipo']=="hombre" %}
                     <div class="modal-subtipo">
-                        <h3>Sub-tipo de articulo</h3>
+                        <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
                             <option value="tshirt">T-shirt</option>
@@ -162,7 +162,7 @@
                     </div>
                     {% elif request.form['tipo']=="mujer" %}
                     <div class="modal-subtipo">
-                        <h3>Sub-tipo de articulo</h3>
+                        <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
                             <option value="vestido">Vestido</option>
@@ -174,7 +174,7 @@
                     </div>
                     {% else%}
                     <div class="modal-subtipo">
-                        <h3>Sub-tipo de articulo</h3>
+                        <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
                             <option value="reloj">Reloj</option>
@@ -186,19 +186,18 @@
                     </div>
                     {% endif %}
                     <section class="modal-descripcion"> 
-                        <label for="com">Descripcion:</label>
-                        <textarea name="com" id="com" cols="30" rows="10" ></textarea>
+                        <label for="com">Descripción:</label>
+                        <textarea name="com" id="com" cols="30" rows="10" maxlength="500" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"></textarea>
                     </section>
                     <div class="modal-btn">
-                        <button class="btn" type="submit" id="lanzar-modal">Publicar</button>
-                        <button class="btn" type="button" id="ocultar-modal">Cerrar</button>
+                        <button class="btn btn-publicar" type="submit" id="lanzar-modal">Publicar</button>
+                        <button class="btn btn-cerrar" type="button" id="ocultar-modal">Cerrar</button>
                     </div>
                             
                 </form>
             </div>    
             </div>
 
-           <script src="/static/javaScript/app.js"></script>
         <div class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos en este perfil...">
             <button type="submit" class="searchButton-perfil"><label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label></button>
@@ -207,7 +206,7 @@
     <script src="/static/javaScript/app.js"></script>
     
     <aside>
-        <h2>Articulos publicados</h1>
+        <h2>Artículo publicados</h1>
 
 
         <div class="contenedor-articulos">
