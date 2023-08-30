@@ -90,17 +90,18 @@
         </div>
     </header>
     <main>
+        {% for articulo in articulos %}
         <div class="contenedor-articulo">
             <div class="contenedor-imagen">
-                <img src="images/reloj4.webp" alt="imagen-articulo">
+                <img src="images/{{articulo[3]}}" alt="imagen-articulo">
             </div>
             <div class="contenedor-titulo">
-                <h2>Cartier Santos de Cartier Modelo Grande Automático Acero, Plateado, Moderno</h2>
+                <h2>{{articulo[2]}}</h2>
             </div>
             <div class="contenedor-informacion">
-                <h3><span class="precio">Precio</span> $585<!-- <span>DOP</span> --></h3>
-                <h3><span class="talla">Tallas</span> M - L</h3>
-                <h3><span class="ubicacion">Ubicacion</span> Santo Domingo</h3>
+                <h3><span class="precio">Precio</span> ${{articulo[4]}}</h3>
+                <h3><span class="talla">Talla</span> {{articulo[6]}}</h3>
+                <h3><span class="ubicacion">Ubicacion</span> {{articulo[7]}}</h3>
             </div>
             <div class="contenedor-vendedor">
                 <div class="vendedor">
@@ -111,9 +112,10 @@
                 <a  class="whatsapp" href="https://wa.me/+1" target="_blank"><button  class="whatsapp-btn"><i class="fa fa-whatsapp"></i> Contactar WhatsApp</button></a>
             </div>
             <div class="contenedor-descripcion">
-                <div class="cuadro"><h3>Descripcion</h3><p>Descripcion de maximo 530 caracteres</p></div>
+                <div class="cuadro"><h3>Descripcion</h3><p>{{articulo[9]}}</p></div>
             </div>
         </div>
+        {% endfor %}
 
     </main>
     <div class="titulo-relacionados">
