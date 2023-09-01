@@ -121,12 +121,12 @@
                         <h4>Talla</h4>
                         <select name="talla" id="talla" required>
                             <option></option>
-                            <option value="xxl">XXL</option>
-                            <option value="xl">XL</option>
-                            <option value="l">L</option>
-                            <option value="m">M</option>
-                            <option value="s">S</option>
-                            <option value="xs">XS</option>
+                            <option value="XXL">XXL</option>
+                            <option value="XL">XL</option>
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="S">S</option>
+                            <option value="XS">XS</option>
                             <option value="6">6-9M (74CM)</option>
                             <option value="9">9-12M (80CM)</option>
                             <option value="12">12-18M (86CM)</option>
@@ -138,20 +138,20 @@
                         <h4>Ubicación</h4>
                         <select name="ubicacion" id="ubicacion" required>
                             <option></option>
-                            <option value="rd">Todo el pais</option>
-                            <option value="sd">Santo Domingo</option>
-                            <option value="stgo">Santiago</option>
-                            <option value="ppta">Puerto Plata</option>
-                            <option value="sfco">San Francisco</option>
-                            <option value="bna">Barahona</option>
+                            <option value="Todo el pais">Todo el pais</option>
+                            <option value="Santo Domingo">Santo Domingo</option>
+                            <option value="Santiago">Santiago</option>
+                            <option value="Puerto Plata">Puerto Plata</option>
+                            <option value="San Francisco">San Francisco</option>
+                            <option value="Barahona">Barahona</option>
                         </select>
                     </div>
                     <div class="modal-condiciones">
                         <h4>Condición</h4>
                         <select name="condicion" id="condicion" required>
                             <option></option>
-                            <option value="nuevo">Nuevo</option>
-                            <option value="usado">Usado</option>
+                            <option value="Nuevo">Nuevo</option>
+                            <option value="Usado">Usado</option>
                         </select>
                     </div>
 
@@ -159,9 +159,9 @@
                         <h4>Tipo de artículo</h4>
                         <select name="tipo" id="tipo" required>
                             <option></option>
-                            <option value="hombre">Hombre</option>
-                            <option value="mujer">Mujer</option>
-                            <option value="accesorio">Accesorio</option>
+                            <option value="Hombre">Hombre</option>
+                            <option value="Mujer">Mujer</option>
+                            <option value="Accesorio">Accesorio</option>
                         </select>
                     </div>
                     {% if request.form['tipo']=="hombre" %}
@@ -169,11 +169,11 @@
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
-                            <option value="tshirt">T-shirt</option>
-                            <option value="camisa">Camisas</option>
-                            <option value="jeans">Jeans</option>
-                            <option value="zapatos">Zapatos</option>
-                            <option value="deportivo">Deportivo</option>
+                            <option value="T-shirt">T-shirt</option>
+                            <option value="Camisas">Camisas</option>
+                            <option value="Jeans">Jeans</option>
+                            <option value="Zapatos">Zapatos</option>
+                            <option value="Deportivo">Deportivo</option>
                         </select>
                     </div>
                     {% elif request.form['tipo']=="mujer" %}
@@ -181,11 +181,11 @@
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
-                            <option value="vestido">Vestido</option>
-                            <option value="blusa">Blusa</option>
-                            <option value="jeans">Jeans</option>
-                            <option value="zapatos">Zapatos</option>
-                            <option value="deportivo">Deportivo</option>
+                            <option value="Vestido">Vestido</option>
+                            <option value="Blusa">Blusa</option>
+                            <option value="Jeans">Jeans</option>
+                            <option value="Zapatos">Zapatos</option>
+                            <option value="Deportivo">Deportivo</option>
                         </select>
                     </div>
                     {% else%}
@@ -193,11 +193,11 @@
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
                             <option></option>
-                            <option value="reloj">Reloj</option>
-                            <option value="cadenas">Cadenas</option>
-                            <option value="brazaletes">Brazaletes</option>
-                            <option value="anillos">Anillos</option>
-                            <option value="otros">Otros</option>
+                            <option value="Reloj">Reloj</option>
+                            <option value="Cadenas">Cadenas</option>
+                            <option value="Brazaletes">Brazaletes</option>
+                            <option value="Anillos">Anillos</option>
+                            <option value="Otros">Otros</option>
                         </select>
                     </div>
                     {% endif %}
