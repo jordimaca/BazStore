@@ -112,7 +112,7 @@ def accesorios():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -125,7 +125,7 @@ def hombre():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='hombre'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -138,7 +138,7 @@ def mujer():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='mujer'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -151,7 +151,7 @@ def nuevo():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo`")
+    cursor.execute("Select * FROM `articulo` WHERE condicion='Nuevo")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -170,7 +170,7 @@ def anillos():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio' AND tipo='anillos'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Anillos'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -186,7 +186,7 @@ def brazaletes():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio' AND tipo='brazaletes'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Brazaletes'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -202,7 +202,7 @@ def cadenas():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio' AND tipo='cadenas'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Cadenas'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -217,7 +217,7 @@ def otros():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio' AND tipo='otros'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Otros'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -233,7 +233,7 @@ def reloj():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='accesorio' AND tipo='reloj'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Reloj'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()

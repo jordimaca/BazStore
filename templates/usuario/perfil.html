@@ -164,7 +164,7 @@
                             <option value="Accesorio">Accesorio</option>
                         </select>
                     </div>
-                    {% if request.form['tipo']=="hombre" %}
+                    {% if request.form['tipo']=="Hombre" %}
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
@@ -176,7 +176,7 @@
                             <option value="Deportivo">Deportivo</option>
                         </select>
                     </div>
-                    {% elif request.form['tipo']=="mujer" %}
+                    {% elif request.form['tipo']=="Mujer" %}
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
