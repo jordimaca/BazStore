@@ -12,7 +12,7 @@ from flaskext.mysql import MySQL
 # Importar controlador del tiempo
 from datetime import datetime
 
-#Importar para obtener informacion de la imagen 
+#Importar para obtener informacion de la imagen
 from flask import send_from_directory
 
 #Crear la aplicacion templates
