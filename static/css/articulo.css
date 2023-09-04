@@ -1,10 +1,6 @@
 @import "reset.css";
 @import "menu.css";
 
-body {
-    font-family: BazFont;
-}
-
 .contenedor-articulo{
     display: grid;
     grid-template-rows: auto auto auto auto;

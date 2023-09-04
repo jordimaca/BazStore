@@ -15,8 +15,8 @@ html {
 
 body {
     margin-bottom: 40px;
-    /* box-sizing: border-box;
-    font-family: BazFont; */
+    box-sizing: border-box;
+    font-family: BazFont;
 }
 
 header{
