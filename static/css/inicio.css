@@ -1,11 +1,6 @@
 @import "reset.css";
 @import "menu.css";
 
-body{
-    /* box-sizing: border-box; */
-    font-family: BazFont;
-}
-
 /* PARALAX */
 header{
    position: fixed;
