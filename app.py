@@ -107,90 +107,157 @@ def logout():
 
 @app.route('/accesorios')
 def accesorios():
-    return render_template('sitio/categoria_accesorios.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/categoria_accesorios.html',articulos=articulos)
 @app.route('/hombre')
 def hombre():
-    return render_template('sitio/categoria_hombre.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/categoria_hombre.html',articulos=articulos)
 @app.route('/mujer')
 def mujer():
-    return render_template('sitio/categoria_mujer.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/categoria_mujer.html',articulos=articulos)
 @app.route('/nuevo')
 def nuevo():
-    return render_template('sitio/categoria_nuevo.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE condicion='Nuevo'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/categoria_nuevo.html',articulos=articulos)
 
 
 #Subcategorias
+# accesorios inicio
 @app.route('/accesorios/anillos')
 def anillos():
     if not 'login' in session:
         return redirect('/login')
-    return render_template('sitio/subcategorias/accesorios_anillos.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Anillos'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/accesorios_anillos.html',articulos=articulos)
+
+@app.route('/accesorios/brazaletes')
+def brazaletes():
+    if not 'login' in session:
+        return redirect('/login')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Brazaletes'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/accesorios_brazaletes.html',articulos=articulos)
+
+@app.route('/accesorios/cadenas')
+def cadenas():
+    if not 'login' in session:
+        return redirect('/login')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Cadenas'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/accesorios_cadenas.html',articulos=articulos)
+@app.route('/accesorios/otros')
+def otros():
+    if not 'login' in session:
+        return redirect('/login')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Otros'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/accesorios_otros.html',articulos=articulos)
+
+@app.route('/accesorios/reloj')
+def reloj():
+    if not 'login' in session:
+        return redirect('/login')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Accesorio' AND tipo='Reloj'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/accesorios_reloj.html',articulos=articulos)
+# accesorios fin
+# mujer inicio
 
 @app.route('/mujer/blusas')
 def blusas():
     if not 'login' in session:
         return redirect('/login')
     return render_template('sitio/subcategorias/mujer_blusas.html')
-
-@app.route('/accesorios/brazaletes')
-def brazaletes():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/accesorios_brazaletes.html')
-
-@app.route('/accesorios/cadenas')
-def cadenas():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/accesorios_cadenas.html')
-
-@app.route('/hombre/camisa')
-def camisa():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_camisa.html')
-
 @app.route('/mujer/deportivo')
 def deportivo():
     if not 'login' in session:
         return redirect('/login')
     return render_template('sitio/subcategorias/mujer_deportivo.html')
 
-@app.route('/hombre/deportivo')
-def deportivoh():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_deportivo.html')
-
 @app.route('/mujer/jeans')
 def jeans():
     if not 'login' in session:
         return redirect('/login')
     return render_template('sitio/subcategorias/mujer_jeans.html')
-
-@app.route('/hombre/jeans')
-def jeansh():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_jeans.html')
-
-@app.route('/accesorios/otros')
-def otros():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/accesorios_otros.html')
-
-@app.route('/accesorios/reloj')
-def reloj():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/accesorios_reloj.html')
-
-@app.route('/hombre/tshirts')
-def tshirts():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_tshirts.html')
 
 @app.route('/mujer/vestidos')
 def vestidos():
@@ -203,13 +270,43 @@ def zapatos():
     if not 'login' in session:
         return redirect('/login')
     return render_template('sitio/subcategorias/mujer_zapatos.html')
+#mujer fin
+#hombre inicio
+
+@app.route('/hombre/camisa')
+def camisa():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('sitio/subcategorias/hombre_camisa.html')
+
+
+
+@app.route('/hombre/deportivo')
+def deportivoh():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('sitio/subcategorias/hombre_deportivo.html')
+
+
+@app.route('/hombre/jeans')
+def jeansh():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('sitio/subcategorias/hombre_jeans.html')
+
+@app.route('/hombre/tshirts')
+def tshirts():
+    if not 'login' in session:
+        return redirect('/login')
+    return render_template('sitio/subcategorias/hombre_tshirts.html')
+
 
 @app.route('/hombre/zapatos')
 def zapatosh():
     if not 'login' in session:
         return redirect('/login')
     return render_template('sitio/subcategorias/hombre_zapatos.html')
-
+# hombre fin
 #usuario
 
 @app.route('/perfil',methods =['GET', 'POST'])
