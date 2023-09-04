@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias_db.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -91,152 +91,153 @@
         {% include 'sitio/filtro.html' %}
     </div>
 
-    <div class="contenedor-articulos">
+    <div class="contenedor-articulos" id="elementos">
+
+        <div class="card" data-ubicacion="Santiago" data-talla="XL" data-condicion="Nuevo">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\vestido4.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Santiago, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
+
+        <div class="card" data-ubicacion="Santiago">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
+
+        <div class="card" data-ubicacion="Santiago">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\vestidos8.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
+
+        <div class="card" data-ubicacion="Santiago">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\tacones4.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
+
+        <div class="card" data-ubicacion="Santiago">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\d1.webp" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente (este es el de pruebaa)</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
 
         <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\vestido4.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
+            <div class="card-img">
+                <a href="/articulo"><img src="images\collarm2.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
 
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
+        <div class="card" data-ubicacion="Puerto Plata"> 
+            <div class="card-img">
+                <a href="/articulo"><img src="images\blusa7.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
 
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\vestidos8.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
+        <div class="card">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\blusa8.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
 
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\tacones4.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
-
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\d1.webp" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
-
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\collarm2.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
-
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\blusa7.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
-
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\blusa8.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
-
-    <div class="card">
-    <div class="card-img">
-        <a href="/articulo"><img src="images\jean4.jpg" alt="imagen-articulo" /></a>
-    </div>
-    <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
-        </a>
-    </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Mujer, Accesorios, Bolsos</p>
-        </a>
-    </div>
-    <div class="card-price">$85.00</div>
-    </div>
+        <div class="card">
+            <div class="card-img">
+                <a href="/articulo"><img src="images\jean4.jpg" alt="imagen-articulo" /></a>
+            </div>
+            <div class="card-title">
+                <a href="/articulo">
+                    <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+                </a>
+            </div>
+            <div class="card-tags"><a href="/articulo">
+                    <p class="category">Mujer, Accesorios, Bolsos</p>
+                </a>
+            </div>
+            <div class="card-price">$85.00</div>
+        </div>
         
     </div>
+    <script src="/static/javaScript/filtro.js"></script>
     </main>
    {% include 'sitio/footer.html' %}

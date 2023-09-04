@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>productos</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias_db.css')}}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -91,11 +91,12 @@
         {% include 'sitio/filtro.html' %}
     </div>
 
-    <div class="contenedor-articulos">
-            {% for articulo in articulos %}
-                    {% include 'sitio/cardej.html' %}
-            {% endfor %}
-        
-        </div>
+    <div class="contenedor-articulos" id="elementos">
+        {% for articulo in articulos %}
+                {% include 'sitio/card.html' %}
+        {% endfor %}
+    </div>
+
+    <script src="/static/javaScript/filtro.js"></script>    
     </main>
    {% include 'sitio/footer.html' %}

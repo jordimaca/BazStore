@@ -31,16 +31,16 @@
 <div class="contenedor-precio">
     <h4>Precio</h4>
     <div class="boton">
-        <input type="number" placeholder="Min" value="" min="" class="boton"/>
+        <input type="number" placeholder="Min" value="" min="" id="min" class="boton price" maxlength="7" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
         -
-        <input type="number" placeholder="Max" value="" min="" class="boton"/>
+        <input type="number" placeholder="Max" value="" max="" id="max" class="boton price" maxlength="7" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"/>
     </div>
 </div>
 
 <div class="contenedor-condiciones">
     <h4>Condiciones</h4>
     <select name="condicion" id="condicion">
-        <option value="Nuevo y Usado" selected>Nuevo y Usado</option>
+        <option value="Nuevo y usado" selected>Nuevo y Usado</option>
         <option value="Nuevo">Nuevo</option>
         <option value="Usado">Usado</option>
     </select>
