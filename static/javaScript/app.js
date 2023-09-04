@@ -29,6 +29,7 @@ btnOcultarModal.addEventListener('click', (e) => {
 });
 // FIN
 
+
 // BOTON FILE SUBIR IMAGEN DE PERFIL
 function usuarioImg() {
   var file = document.getElementById("subir").click();
@@ -38,8 +39,8 @@ function bannerImg() {
 }
 // FIN
 
-// Boton eliminar en perfil.html
 
+// Boton eliminar en perfil.html
 function Toggle() {
   var x = document.getElementsByClassName("btn-eliminar");
   for( let i = 0; i < x.length; i++){

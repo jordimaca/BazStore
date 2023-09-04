@@ -1,16 +1,17 @@
-<div class="card">
-    <form action=""><button class="btn-eliminar" id="boton2" style="display: none;" ><i class='bx bx-x'></i></button></form>
+
+<div class="card" data-ubicacion="{{articulo[7]}}" data-talla="{{articulo[6]}}" data-condicion="{{articulo[8]}}">
+     <form action="/perfil/borrar" method="POST"><input type="hidden" value="{{ articulo[0] }}" name="txtID"><button class="btn-eliminar" id="boton2" style="display: none;"><i class='bx bx-x'></i></button></form>
     <div class="card-img">
-        <a href="/articulo"><img src="images\cartera1.jpg" alt="imagen-articulo"></a>
+        <a href="/{{articulo[2]}}"><img src="images\{{articulo[3]}}" alt="imagen-articulo" /></a>
     </div>
     <div class="card-title">
-        <a href="/articulo">
-            <h3>Hermes, Blanco-Rosa piel de serpiente</h3>
+        <a href="/{{articulo[2]}}">
+            <h3>{{articulo[2]}}</h3>
         </a>
     </div>
-    <div class="card-tags"><a href="/articulo">
-            <p class="category">Accesorios, Bolso, Nuevo</p>
+    <div class="card-tags"><a href="{{articulo[2]}}">
+            <p class="category"> {{articulo[7]}}, {{articulo[6]}}, {{articulo[8]}}</p>
         </a>
     </div>
-    <div class="card-price">$85.00</div>
+    <div class="card-price">${{articulo[4]}}</div>
 </div>
