@@ -228,7 +228,7 @@
         <div class="contenedor-articulos">
             {% for articulo in articulos %}
                 {% if session.id == articulo[1] %}
-                    {% include 'sitio/cardej.html' %}
+                    {% include 'sitio/card.html' %}
                 {% endif %}
 
             {% endfor %}
