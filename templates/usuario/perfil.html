@@ -91,7 +91,13 @@
     </header>
     <main>
         <img class="perfil-img" src="../static/images/user.svg">
-        <i class="fa fa-pen-to-square" onclick="usuarioImg()"></i>
+        <div class="dropdown-click" onclick="Toggle1()">
+            <i class="fa-solid fa-gear" style="color: #fff;"></i>
+            <div class="dropdown-contenido">
+                <a class="btn-left" onclick="usuarioImg()"><!-- <i class="fa fa-pen-to-square"></i> -->Imagen de perfil</a>
+                <a class="btn-left-cerrar" href="">Eliminar cuenta</a>
+            </div>
+        </div>
         <input type="file" id="subir">
         
         <h2 class="perfil-nombre"> {{session.usuario}} </h2>
