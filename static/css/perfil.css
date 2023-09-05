@@ -224,17 +224,6 @@ aside h2{
 }
 
 
-/* Dropdown Click */
-.dropdown-click{
-    overflow: hidden;
-    display: inline-block;
-}
-/* .dropdown-click .dropdown-contenido {
-    display: block;
-} */
-/* Dropdown Click FIN */
-
-
 /* Botones superiores */
 .btn-superiores {
     grid-area: 1 / 3 / 2 / 4;
