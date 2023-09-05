@@ -92,14 +92,12 @@
         {% include 'sitio/filtro.html' %}
     </div>
 
-    <div class="contenedor-articulos">
-
-        {% for card in [1,2,3,4,5,6,7,8,9,10,11,12] %}
-        
-        {% include 'sitio/card.html' %}
-
+    <div class="contenedor-articulos" id="elementos">
+        {% for articulo in articulos %}
+            {% include 'sitio/card.html' %}
         {% endfor %}
-        
     </div>
+    
+    <script src="/static/javaScript/filtro.js"></script>
     </main>
-   {% include 'sitio/footer.html' %}
+    {% include 'sitio/footer.html' %}
