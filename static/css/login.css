@@ -1,10 +1,6 @@
 @import "reset.css";
 @import "menu.css";
 
-body{
-    font-family: BazFont;
-}
-
 .contenedor{
     text-align: center;
     margin: 0 auto;

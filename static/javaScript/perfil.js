@@ -50,6 +50,14 @@ function Toggle() {
       x[i].style.display = "none";
     }
   }
-    
 }
 // FIN
+
+function Toggle1() {
+  var x = document.getElementsByClassName("dropdown-contenido");
+  if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+}
