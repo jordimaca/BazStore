@@ -163,8 +163,6 @@ def nuevo():
 # accesorios inicio
 @app.route('/accesorios/anillos')
 def anillos():
-    if not 'login' in session:
-        return redirect('/login')
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -179,8 +177,6 @@ def anillos():
 
 @app.route('/accesorios/brazaletes')
 def brazaletes():
-    if not 'login' in session:
-        return redirect('/login')
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -195,8 +191,6 @@ def brazaletes():
 
 @app.route('/accesorios/cadenas')
 def cadenas():
-    if not 'login' in session:
-        return redirect('/login')
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -210,8 +204,6 @@ def cadenas():
     return render_template('sitio/subcategorias/accesorios_cadenas.html',articulos=articulos)
 @app.route('/accesorios/otros')
 def otros():
-    if not 'login' in session:
-        return redirect('/login')
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -226,8 +218,6 @@ def otros():
 
 @app.route('/accesorios/reloj')
 def reloj():
-    if not 'login' in session:
-        return redirect('/login')
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -244,68 +234,148 @@ def reloj():
 
 @app.route('/mujer/blusas')
 def blusas():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/mujer_blusas.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Blusas'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/mujer_blusas.html',articulos=articulos)
 @app.route('/mujer/deportivo')
 def deportivo():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/mujer_deportivo.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Deportivo'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/mujer_deportivo.html',articulos=articulos)
 
 @app.route('/mujer/jeans')
 def jeans():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/mujer_jeans.html')
+     #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Jeans'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/mujer_jeans.html',articulos=articulos)
 
 @app.route('/mujer/vestidos')
 def vestidos():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/mujer_vestidos.html')
+     #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Vestidos'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/mujer_vestidos.html',articulos=articulos)
 
 @app.route('/mujer/zapatos')
 def zapatos():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/mujer_zapatos.html')
+     #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Zapatos'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/mujer_zapatos.html',articulos=articulos)
 #mujer fin
 #hombre inicio
 
 @app.route('/hombre/camisa')
 def camisa():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_camisa.html')
+     #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Camisa'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/hombre_camisa.html',articulos=articulos)
 
 
 
 @app.route('/hombre/deportivo')
 def deportivoh():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_deportivo.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Depotivo'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/hombre_deportivo.html',articulos=articulos)
 
 
 @app.route('/hombre/jeans')
 def jeansh():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_jeans.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Jeans'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/hombre_jeans.html',articulos=articulos)
 
 @app.route('/hombre/tshirts')
 def tshirts():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_tshirts.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='T-shirt'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/hombre_tshirts.html',articulos=articulos)
 
 
 @app.route('/hombre/zapatos')
 def zapatosh():
-    if not 'login' in session:
-        return redirect('/login')
-    return render_template('sitio/subcategorias/hombre_zapatos.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Zapatos'")
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    return render_template('sitio/subcategorias/hombre_zapatos.html',articulos=articulos)
 # hombre fin
 #usuario
 
