@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/categorias.css')}}">
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
     <header>
         <div class="topline"></div>
@@ -37,26 +39,27 @@
                 </div>
                 {% endif %}
 
-            <h1>BazStore</h1>
-            <div class="buscador">
-                <form>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
-                    </div>
-                </form>
-            </div>
+                <h1>BazStore</h1>
+                <div class="buscador">
+                    <form>
+                        <div class="search">
+                            <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                            <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i
+                                        class="fa-solid fa-magnifying-glass"></i></label></button>
+                        </div>
+                    </form>
+                </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='/'">INICIO</button>
                     <div class="dropdown">
-                        <button class="btn-menu" onclick="document.location='/hombre'">HOMBRE</button>
+                        <button class="btn-menu active" onclick="document.location='/hombre'">HOMBRE</button>
                         <div class="dropdown-contenido">
                             <a class="btn-content" href="/hombre/tshirts">T-Shirt</a>
                             <a class="btn-content" href="/hombre/camisa">Camisas</a>
                             <a class="btn-content" href="/hombre/jeans">Jeans</a>
                             <a class="btn-content" href="/hombre/zapatos">Zapatos</a>
                             <a class="btn-content" href="/hombre/deportivo">Deportivo</a>
-                
+
                         </div>
                     </div>
                     <div class="dropdown">
@@ -67,7 +70,7 @@
                             <a class="btn-content" href="/mujer/jeans">Jeans</a>
                             <a class="btn-content" href="/mujer/zapatos">Zapatos</a>
                             <a class="btn-content" href="/mujer/deportivo">Deportivo</a>
-                
+
                         </div>
                     </div>
                     <div class="dropdown">
@@ -78,25 +81,25 @@
                             <a class="btn-content" href="/accesorios/brazaletes">Brazaletes</a>
                             <a class="btn-content" href="/accesorios/anillos">Anillos</a>
                             <a class="btn-content" href="/accesorios/otros">Otros</a>
-                
+
                         </div>
                     </div>
-                    <button class="btn-menu active" onclick="document.location='#'">NUEVO</button>
+                    <button class="btn-menu" onclick="document.location='/nuevo'">NUEVO</button>
                 </nav>
             </div>
         </div>
     </header>
     <main>
-    <div class="contenedor-filtro">
-        {% include 'sitio/filtro.html' %}
-    </div>
+        <div class="contenedor-filtro">
+            {% include 'sitio/filtro.html' %}
+        </div>
 
-    <div class="contenedor-articulos" id="elementos">
-        {% for articulo in articulos %}
-            {% include 'sitio/card.html' %}
-        {% endfor %}
-    </div>
-    
-    <script src="/static/javaScript/filtro.js"></script>
+        <div class="contenedor-articulos" id="elementos">
+            {% for articulo in articulos %}
+                {% include 'sitio/card.html' %}
+            {% endfor %}
+        </div>
+
+        <script src="/static/javaScript/filtro.js"></script>
     </main>
     {% include 'sitio/footer.html' %}
