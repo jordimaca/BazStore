@@ -102,35 +102,10 @@
         <h2>Articulos publicados</h2>
         
         <div class="contenedor-articulos">
-        
-            {% include 'sitio/card.html' %}
-        
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-
-            {% include 'sitio/card.html' %}
-        
+            {% for articulo in articulos %}
+                {% include 'sitio/card.html' %}
+            {% endfor %}
         </div>
 
     </aside>
-
-    
-    
   {% include 'sitio/footer.html' %}
