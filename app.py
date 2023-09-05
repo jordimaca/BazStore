@@ -151,7 +151,7 @@ def nuevo():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE condicion='Nuevo'")
+    cursor.execute("Select * FROM `articulo` ORDER BY imagen")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -396,6 +396,22 @@ def perfil():
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
+#buscador del perfil
+""" @app.route('/perfil/borrar', methods=['POST'])
+def borrar_articulo():
+ 
+    buscar=request.form['']
+    print(buscar)
+
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("",())
+    conexion.commit()
+
+    # Redireccionar a /perfil
+    return redirect('/perfil')
+ """
+
 @app.route('/perfil/publicar',methods =['POST'])
 def publicar():
     #almacenar en formulario en variables
@@ -453,7 +469,7 @@ def borrar_articulo():
     cursor.execute("DELETE FROM `articulo` WHERE id_articulo=%s",(_id))
     conexion.commit()
 
-    # Redireccionar a /admin/libros
+    # Redireccionar a /perfil
     return redirect('/perfil')
 
 
