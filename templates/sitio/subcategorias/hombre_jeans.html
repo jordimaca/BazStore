@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 {% else %}
-                <img src="../../static/images/user-icon.svg" alt="">
+                <i class="fa-solid fa-user"></i>
                 <div class="dropdown">
                     <div class="dropdown">
                         <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
@@ -91,7 +91,7 @@
 
     <div class="contenedor-articulos" id="elementos">
         {% for articulo in articulos %}
-            {% include 'sitio/card.html' %}
+            {% include 'sitio/subcard.html' %}
         {% endfor %}
     </div>
     
