@@ -1,7 +1,7 @@
 // MODO OSCURO ACTIVO
 document.addEventListener("DOMContentLoaded", function() {
     var darkActivado = localStorage.getItem("darkMode") === "activado";
-    
+
     var itemBody = document.body;
     itemBody.classList.toggle("dark-body", darkActivado);
 
@@ -89,6 +89,17 @@ document.addEventListener("DOMContentLoaded", function() {
         itemFooter[i].classList.toggle("dark-footer", darkActivado);
         }
     /* Footer FIN */
+
+    /* Boton dark */
+    var itemSun = document.getElementsByClassName("sun");
+    for (var i = 0; i < itemSun.length; i++) {
+        itemSun[i].classList.toggle("sun-oculto", darkActivado);
+        }
+    var itemMoon = document.getElementsByClassName("moon-oculto");
+    for (var i = 0; i < itemMoon.length; i++) {
+        itemMoon[i].classList.toggle("fa-moon", darkActivado);
+        }
+    /* Boton dark FIN */
 
 });
 
@@ -185,6 +196,17 @@ function dark() {
         itemFooter[i].classList.toggle("dark-footer", !darkActivado);
         }
     /* Footer FIN */
+    
+    /* Boton dark */
+    var itemSun = document.getElementsByClassName("sun");
+    for (var i = 0; i < itemSun.length; i++) {
+        itemSun[i].classList.toggle("sun-oculto", !darkActivado);
+        }
+    var itemMoon = document.getElementsByClassName("moon-oculto");
+    for (var i = 0; i < itemMoon.length; i++) {
+        itemMoon[i].classList.toggle("fa-moon", !darkActivado);
+        }
+    /* Boton dark FIN */
 
     localStorage.setItem("darkMode", darkActivado ? "desactivado" : "activado");
 }
