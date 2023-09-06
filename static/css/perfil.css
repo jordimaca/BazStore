@@ -180,13 +180,7 @@ input[type="file"] {
 
 /* FIN */
 
-
-body{
-    font-family: BazFont;
-
-}
-
-main {
+.perfil-contenedor {
     background-image: url(/static/images/banner.jpg);
     background-position: center center;
     background-repeat: no-repeat;
@@ -195,7 +189,6 @@ main {
     grid-template-rows: auto auto auto;
     grid-template-columns: 100px auto auto;
     border-bottom: #000 3px solid;
-    
 }
 
 aside h2{
@@ -222,17 +215,6 @@ aside h2{
     font-size: 20px;
     color: #fff;
 }
-
-
-/* Dropdown Click */
-.dropdown-click{
-    overflow: hidden;
-    display: inline-block;
-}
-/* .dropdown-click .dropdown-contenido {
-    display: block;
-} */
-/* Dropdown Click FIN */
 
 
 /* Botones superiores */
@@ -389,6 +371,39 @@ aside h2{
 /* Boton Eliminar FIN */
 /* Card FIN */
 
+/* Modo Oscuro */
+.dark-perfil-contenedor{
+    border-bottom: #fff 3px solid;
+}
+.dark-searchTerm-perfil {
+    border: 2px solid #fff;
+    color: #fff;
+    background: #333;
+    border-right: none;
+    border-bottom: none;
+}
+.dark-searchTerm-perfil:focus {
+    color: #fff;
+}
+.dark-searchButton-perfil {
+    border: 2px solid #fff;
+    background: #333;
+    color: #fff;
+    border-left: none;
+    border-bottom: none;
+}
+.dark-searchButton-perfil i {
+    color: #fff;
+}
+.dark-card {
+    background-color: #eee;
+    color: #000;
+    box-shadow: #555 2px 2px 5px;
+}
+.dark-card-title a {
+    color: #000;
+}
+/* Modo Oscuro FIN */
 
 /* Responsive */
 @media screen and (min-width:1700px) {
