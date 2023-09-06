@@ -56,8 +56,8 @@ def login():
         if account:
             session['login'] = True
             session['usuario']= username
-            #cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
-            session['id']=cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s AND contraseña = %s', (username, password,))
+            cursor.execute('SELECT id_usuario FROM usuario WHERE nombre = %s', (username))
+            session['id']=cursor.fetchone()
             cursor.execute('SELECT imagen FROM usuario WHERE nombre = %s ', (username))
             session['img']=cursor.fetchone()
             return redirect('/')
