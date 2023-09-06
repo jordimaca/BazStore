@@ -16,7 +16,6 @@
                 <div class="topline"></div>
                 <div class="menu-contenedor">
                     <div class="user">
-                        {% if session.login %}
                         <img src="../../static/images/{{session.img[0]}}" alt="">
                         <div class="dropdown">
                             <div class="dropdown">
@@ -27,18 +26,6 @@
                                 </div>
                             </div>
                         </div>
-                        {% else %}
-                        <img src="../../static/images/user-icon.svg" alt="">
-                        <div class="dropdown">
-                            <div class="dropdown">
-                                <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-contenido">
-                                    <a class="btn-left" href="/login">Iniciar Sesion</a>
-                                    <a class="btn-left" href="/registro">Registrarse</a>
-                                </div>
-                            </div>
-                        </div>
-                        {% endif %}
 
             <h1>BazStore</h1>
             <div class="buscador">
@@ -89,8 +76,7 @@
             </div>
         </div>
     </header>
-    <main>
-        <!-- <i class="fa fa-pen-to-square"></i> -->
+    <main class="perfil-contenedor">
         <img class="perfil-img" src="../static/images/user.svg">
         <div class="dropdown">
             <button class="btn-cuenta"><i class="fa-sharp fa-solid fa-gear" style="color: #ffffff;"></i> Ajustes</button>
@@ -226,10 +212,9 @@
             <button type="submit" class="searchButton-perfil"><label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label></button>
         </div>
     </main>
-    <script src="/static/javaScript/perfil.js"></script>
     
     <aside>
-        <h2>Artículo publicados</h1>
+        <h2>Artículos publicados</h1>
 
 
         <div class="contenedor-articulos">
@@ -240,6 +225,7 @@
 
             {% endfor %}
         </div>
-        
+
+    <script src="/static/javaScript/perfil.js"></script>
     </aside>
   {% include 'sitio/footer.html' %}
