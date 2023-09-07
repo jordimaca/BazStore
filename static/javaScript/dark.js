@@ -71,6 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     /* Filtro Fin */
 
+    /* Perfil */
+    var itemBtn = document.getElementsByClassName("btn");
+    for (var i = 0; i < itemBtn.length; i++) {
+        itemBtn[i].classList.toggle("dark-btn", darkActivado);
+        }
+    /* Perfil FIN */
+
+    /* Modal */
+    var itemConModal = document.getElementsByClassName("contenedor-modal");
+    for (var i = 0; i < itemConModal.length; i++) {
+        itemConModal[i].classList.toggle("dark-contenedor-modal", darkActivado);
+        }
+    /* Modal FIN */
+
     /* Card */
     var itemCard = document.getElementsByClassName("card");
     for (var i = 0; i < itemCard.length; i++) {
@@ -215,6 +229,20 @@ function dark() {
         itemFiltro[i].classList.toggle("dark-contenedor-filtro", !darkActivado);
         }
     /* Filtro Fin */
+
+    /* Perfil */
+    var itemBtn = document.getElementsByClassName("btn");
+    for (var i = 0; i < itemBtn.length; i++) {
+        itemBtn[i].classList.toggle("dark-btn", !darkActivado);
+        }
+    /* Perfil FIN */
+    
+    /* Modal */
+    var itemConModal = document.getElementsByClassName("contenedor-modal");
+    for (var i = 0; i < itemConModal.length; i++) {
+        itemConModal[i].classList.toggle("dark-contenedor-modal", !darkActivado);
+        }
+    /* Modal FIN */
 
     /* Card */
     var itemCard = document.getElementsByClassName("card");
