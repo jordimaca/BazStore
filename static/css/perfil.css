@@ -403,6 +403,20 @@ aside h2{
 .dark-card-title a {
     color: #000;
 }
+.dark-btn{
+    background-color: #fff;
+    color: #000;
+}
+.dark-btn:hover,
+.dark-btn:focus {
+    border-color: #000;
+    color: #fff;
+    background-color: #000;
+}
+.dark-contenedor-modal .modal{
+    background-color: #222;
+    border: solid 3px #fff;
+}
 /* Modo Oscuro FIN */
 
 /* Responsive */

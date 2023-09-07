@@ -68,7 +68,8 @@
     font-size: 13px;
 }
 .contenedor-informacion .talla{
-    padding: 5px 18px;
+    /* padding: 5px 18px; */
+    padding: 5px 22px;
 }
 .contenedor-informacion .ubicacion {
     padding: 5px 3px;
@@ -162,6 +163,37 @@
     background-color: #fff;
 }
 /* Vendedor FIN */
+
+
+/* Modo oscuro */
+.dark-contenedor-titulo h2{
+    background-color: #222;
+}
+.dark-contenedor-informacion{
+    border-top: 3.5px solid #222;
+}
+.dark-contenedor-informacion h3 {
+    border: 2.5px solid #222;
+}
+.dark-contenedor-informacion span{
+    background-color: #222;
+    color: #fff;
+}
+.dark-contenedor-descripcion{
+    border-top: 3.5px solid #222;
+}
+.dark-contenedor-descripcion .cuadro h3{
+    padding: 3px 0;
+    color: #fff;
+}
+.dark-contenedor-vendedor{
+    background-color: #222;
+}
+.dark-contenedor-vendedor .vendedor a{
+    color: #fff;
+}
+/* Modo oscuro Fin */
+
 
 /* Responsive */
 @media screen and (max-width:1024px) {
