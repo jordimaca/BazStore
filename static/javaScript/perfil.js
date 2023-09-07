@@ -58,3 +58,36 @@ function Toggle1() {
       x.style.display = "none";
     }
 }
+
+//Buscador de perfil
+document.addEventListener("DOMContentLoaded", function () {
+  const searchForm = document.querySelector(".search-perfil");
+  const searchInput = document.querySelector(".searchTerm-perfil");
+  const cards = document.querySelectorAll(".card");
+
+  searchForm.addEventListener("submit", function (event) {
+      event.preventDefault(); // Evita el envío predeterminado del formulario
+
+      const searchTerm = searchInput.value.toLowerCase();
+
+      // Itera a través de las cartas y muestra u oculta según el término de búsqueda
+      cards.forEach(function (card) {
+          const nombre = card.getAttribute("data-nombre").toLowerCase();
+          const ubicacion = card.getAttribute("data-ubicacion").toLowerCase();
+          const talla = card.getAttribute("data-talla").toLowerCase();
+          const condicion = card.getAttribute("data-condicion").toLowerCase();
+
+          if (
+              nombre.includes(searchTerm) ||
+              ubicacion.includes(searchTerm) ||
+              talla.includes(searchTerm) ||
+              condicion.includes(searchTerm)
+          ) {
+              card.style.display = "block";
+          } else {
+              card.style.display = "none";
+          }
+      });
+  });
+});
+// FIN
