@@ -129,6 +129,7 @@ header{
     float: right;
 }
 .btn-dark{
+    float: left;
     background-color: #000;
     color: #fff;
     font-family: BazFont;
@@ -138,6 +139,18 @@ header{
 .sun{
     float: right;
     height: 22px;
+}
+.sun-oculto{
+    display: none;
+}
+.dark-contenedor .fa-moon{
+    float: right;
+    color: #fff;
+    font-size: 18px;
+    padding: 2px 5px 0px 5px;
+}
+.moon-oculto{
+    display: none;
 }
 /* btn-dark FIN */
 
@@ -232,6 +245,7 @@ header{
 }
 .dark-topline{
     background-color: #fff;
+    height: 6px;
 }
 .dark-menu-contenedor{
     background-color: #111;
