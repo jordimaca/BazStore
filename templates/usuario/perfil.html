@@ -89,8 +89,12 @@
         <div class="dropdown">
             <button class="btn-cuenta"><i class="fa-sharp fa-solid fa-gear"></i> Ajustes</button>
             <div class="dropdown-contenido">
-                <a class="btn-left" onclick="usuarioImg()">Editar foto</a>
-                <a class="btn-left-cerrar" href="">Eliminar cuenta</a>
+                <form action="/perfil/publicarimg" method="post" enctype="multipart/form-data">
+                    <button class="btn-left" onclick="usuarioImg()">Editar foto</a>
+                    <input type="file" id="imagen" name="imagen" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
+                    <button type="submit">Publicar</button>
+                </form>
+                <a class="btn-left-cerrar" href="/perfil/borrarperfil">Eliminar cuenta</a>
             </div>
         </div>
         <input type="file" id="subir">
@@ -115,7 +119,7 @@
                         <label class="dop">DOP</label>
                     </section>
                     <section class="modal-img">
-                    <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
+                    <button onclick="usuarioImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
                     <input type="file" id="articulo" name="adjunto" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
                     </section>
                     
