@@ -419,20 +419,6 @@ def buscador():
     return render_template('sitio/buscador.html',articulos=articulos)
 
 
-""" @app.route('/perfil/borrar', methods=['POST'])
-def borrar_articulo():
- 
-    buscar=request.form['']
-    print(buscar)
-
-    conexion=mysql.connect()
-    cursor=conexion.cursor()
-    cursor.execute("",())
-    conexion.commit()
-
-    # Redireccionar a /perfil
-    return redirect('/perfil')
- """
 
 @app.route('/perfil/publicar',methods =['POST'])
 def publicar():
@@ -494,8 +480,36 @@ def borrar_articulo():
     # Redireccionar a /perfil
     return redirect('/perfil')
 
+""" 
+#Borrar perfil
+@app.route('/perfil/borrarperfil', methods=['POST'])
+def borrar_perfil():
+ 
+    _id=request.form['txtID']
+    print(_id)
 
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("SELECT * FROM `articulo` WHERE id_articulo=%s",(_id))
+    articulo=cursor.fetchall()
+    conexion.commit()
+    print(articulo)
 
+    # Verifica si la imagen existe antes de borrar
+    if os.path.exists("templates/sitio/img"+str(articulo[0][0])):
+        #si la imagen exite le indicamos que elimine el registro
+        os.unlink("templates/sitio/img"+str(articulo[0][0]))
+
+    # Borrar registro
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("DELETE FROM `articulo` WHERE id_articulo=%s",(_id))
+    conexion.commit()
+
+    # Redireccionar a /perfil
+    return redirect('/perfil')
+
+ """
 
 
 

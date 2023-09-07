@@ -34,13 +34,14 @@
                 
             <h1>BazStore</h1>
             <div class="buscador">
-                <form>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
-                    </div>
-                </form>
-            </div>
+              <form method='POST' action="/buscador">
+                  <div class="search">
+                      <input type="text" id="buscador" name="buscador" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                      <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i
+                                  class="fa-solid fa-magnifying-glass"></i></label></button>
+                  </div>
+              </form>
+          </div>
                <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='/'">INICIO</button>
                     <div class="dropdown">
