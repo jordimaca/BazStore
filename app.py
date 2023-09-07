@@ -396,7 +396,29 @@ def perfil():
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
-#buscador del perfil
+#buscador 
+
+@app.route('/buscador', methods=['GET', 'POST'])
+def buscador():
+    
+    
+    info = request.form['buscador']
+    info=str(info)
+    info='%'+info+'%'
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE nombre_articulo LIKE %s",(info))
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    
+    return render_template('sitio/buscador.html',articulos=articulos)
+
+
 """ @app.route('/perfil/borrar', methods=['POST'])
 def borrar_articulo():
  
