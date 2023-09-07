@@ -38,7 +38,7 @@ function usuarioImg() {
 
 
 // Boton eliminar en perfil.html
-function Toggle() {
+function eliminar() {
   var x = document.getElementsByClassName("btn-eliminar");
   for( let i = 0; i < x.length; i++){
     if (x[i].style.display === "none") {
@@ -50,14 +50,14 @@ function Toggle() {
 }
 // FIN
 
-function Toggle1() {
+/* function Toggle1() {
   var x = document.getElementsByClassName("dropdown-contenido");
   if (x.style.display === "none") {
       x.style.display = "block";
     } else {
       x.style.display = "none";
     }
-}
+} */
 
 //Buscador de perfil
 document.addEventListener("DOMContentLoaded", function () {

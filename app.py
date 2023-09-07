@@ -516,10 +516,6 @@ def borrar_perfil():
     return redirect('/perfil')
 
 
-
-
-
-
 @app.route('/vendedor')
 def vendedor():
     if not 'login' in session:
