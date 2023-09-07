@@ -1,6 +1,6 @@
 
-<div class="card" data-ubicacion="{{articulo[7]}}" data-talla="{{articulo[6]}}" data-condicion="{{articulo[8]}}">
-     <form action="/perfil/borrar" method="POST"><input type="hidden" value="{{ articulo[0] }}" name="txtID"><button class="btn-eliminar" id="boton2" style="display: none;"><i class='bx bx-x'></i></button></form>
+<div class="card" data-nombre="{{articulo[2]}}" data-ubicacion="{{articulo[7]}}" data-talla="{{articulo[6]}}" data-condicion="{{articulo[8]}}">
+     <form action="/perfil/borrar" method="POST"><input type="hidden" value="{{ articulo[0] }}" name="txtID"><button class="btn-eliminar" style="display: none;"><i class="fa-sharp fa-solid fa-xmark"></i></button></form>
     <div class="card-img">
         <a href="/{{articulo[2]}}"><img src="images\{{articulo[3]}}" alt="imagen-articulo" /></a>
     </div>

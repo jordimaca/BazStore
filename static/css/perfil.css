@@ -358,12 +358,12 @@ aside h2{
 }
 
 /* Boton Eliminar */
-.btn-eliminar {
+.btn-eliminar{
     position: absolute;
     border: 0px;
     background-color: transparent;
     font-size: 70px;
-    margin: -255px 0px 0px 237px;
+    margin: -250px 0px 0px 240px;
 }
 .btn-eliminar:hover {
     color: #9f0000;
