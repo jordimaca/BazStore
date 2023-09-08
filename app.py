@@ -419,7 +419,7 @@ def buscador():
     return render_template('sitio/buscador.html',articulos=articulos)
 
 
-@app.route('/perfil/publicarimg',methods =['POST'])
+""" @app.route('/perfil/publicarimg',methods =['POST'])
 def publicarimg():
     adjunto = request.files['imagen']
     usuario=session['id']
@@ -438,7 +438,7 @@ def publicarimg():
     cursor.execute(sql, datos)
     conexion.commit()
 
-    return redirect('/perfil')
+    return redirect('/perfil') """
 
 @app.route('/perfil/publicar',methods =['POST'])
 def publicar():
@@ -455,6 +455,8 @@ def publicar():
     usuario=session['id']
     tiempo = datetime.now()
     horaActual=tiempo.strftime('%Y%H%M%S')
+    nuevoNombre = ""
+    
     
     #Adjuntar Archivo 
     if adjunto.filename!='':
