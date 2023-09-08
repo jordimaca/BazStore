@@ -239,7 +239,7 @@ def blusas():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Blusas'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Blusa'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -259,14 +259,14 @@ def deportivo():
     print(articulos)
     return render_template('sitio/subcategorias/mujer_deportivo.html',articulos=articulos)
 
-@app.route('/mujer/jeans')
+@app.route('/mujer/pantalones')
 def jeans():
      #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Jeans'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Pantalon'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -294,7 +294,7 @@ def zapatos():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Zapatos'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Zapato'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -334,14 +334,14 @@ def deportivoh():
     return render_template('sitio/subcategorias/hombre_deportivo.html',articulos=articulos)
 
 
-@app.route('/hombre/jeans')
+@app.route('/hombre/pantalones')
 def jeansh():
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Jeans'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Pantalon'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
