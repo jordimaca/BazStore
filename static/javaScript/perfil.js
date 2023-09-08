@@ -50,15 +50,6 @@ function eliminar() {
 }
 // FIN
 
-/* function Toggle1() {
-  var x = document.getElementsByClassName("dropdown-contenido");
-  if (x.style.display === "none") {
-      x.style.display = "block";
-    } else {
-      x.style.display = "none";
-    }
-} */
-
 //Buscador de perfil
 document.addEventListener("DOMContentLoaded", function () {
   const searchForm = document.querySelector(".search-perfil");
