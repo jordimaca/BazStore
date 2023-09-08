@@ -151,7 +151,7 @@ def nuevo():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE condicion='Nuevo'")
+    cursor.execute("Select * FROM `articulo` ORDER BY imagen")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
@@ -396,6 +396,50 @@ def perfil():
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
+#buscador 
+
+@app.route('/buscador', methods=['GET', 'POST'])
+def buscador():
+    
+    
+    info = request.form['buscador']
+    info=str(info)
+    info='%'+info+'%'
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE nombre_articulo LIKE %s",(info))
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    
+    return render_template('sitio/buscador.html',articulos=articulos)
+
+
+@app.route('/perfil/publicarimg',methods =['POST'])
+def publicarimg():
+    adjunto = request.files['imagen']
+    usuario=session['id']
+    tiempo = datetime.now()
+    horaActual=tiempo.strftime('%Y%H%M%S')
+    if adjunto.filename!='':
+        nuevoNombre=horaActual+"_"+adjunto.filename
+        adjunto.save("templates/sitio/images/"+nuevoNombre)
+
+    #Abrir la conexion a la base de datos
+    conexion=mysql.connect()
+    #Se crea un cursor
+    cursor = conexion.cursor()
+    sql ='UPDATE usuario SET imagen=%s WHERE id_usuario=%s;'
+    datos=(adjunto,usuario)
+    cursor.execute(sql, datos)
+    conexion.commit()
+
+    return redirect('/perfil')
+
 @app.route('/perfil/publicar',methods =['POST'])
 def publicar():
     #almacenar en formulario en variables
@@ -453,13 +497,23 @@ def borrar_articulo():
     cursor.execute("DELETE FROM `articulo` WHERE id_articulo=%s",(_id))
     conexion.commit()
 
-    # Redireccionar a /admin/libros
+    # Redireccionar a /perfil
     return redirect('/perfil')
 
 
+#Borrar perfil
+@app.route('/perfil/borrarperfil')
+def borrar_perfil():
+ 
+    id= session['id']
+    # Borrar registro
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("DELETE FROM `articulo`,usuario WHERE id_usuario=%s",(id))
+    conexion.commit()
 
-
-
+    # Redireccionar a /perfil
+    return redirect('/perfil')
 
 
 @app.route('/vendedor')

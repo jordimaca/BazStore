@@ -358,12 +358,12 @@ aside h2{
 }
 
 /* Boton Eliminar */
-.btn-eliminar {
+.btn-eliminar{
     position: absolute;
     border: 0px;
     background-color: transparent;
     font-size: 70px;
-    margin: -255px 0px 0px 237px;
+    margin: -250px 0px 0px 240px;
 }
 .btn-eliminar:hover {
     color: #9f0000;
@@ -402,6 +402,20 @@ aside h2{
 }
 .dark-card-title a {
     color: #000;
+}
+.dark-btn{
+    background-color: #fff;
+    color: #000;
+}
+.dark-btn:hover,
+.dark-btn:focus {
+    border-color: #000;
+    color: #fff;
+    background-color: #000;
+}
+.dark-contenedor-modal .modal{
+    background-color: #222;
+    border: solid 3px #fff;
 }
 /* Modo Oscuro FIN */
 

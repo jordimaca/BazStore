@@ -1,7 +1,7 @@
 // MODO OSCURO ACTIVO
 document.addEventListener("DOMContentLoaded", function() {
     var darkActivado = localStorage.getItem("darkMode") === "activado";
-    
+
     var itemBody = document.body;
     itemBody.classList.toggle("dark-body", darkActivado);
 
@@ -71,6 +71,20 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     /* Filtro Fin */
 
+    /* Perfil */
+    var itemBtn = document.getElementsByClassName("btn");
+    for (var i = 0; i < itemBtn.length; i++) {
+        itemBtn[i].classList.toggle("dark-btn", darkActivado);
+        }
+    /* Perfil FIN */
+
+    /* Modal */
+    var itemConModal = document.getElementsByClassName("contenedor-modal");
+    for (var i = 0; i < itemConModal.length; i++) {
+        itemConModal[i].classList.toggle("dark-contenedor-modal", darkActivado);
+        }
+    /* Modal FIN */
+
     /* Card */
     var itemCard = document.getElementsByClassName("card");
     for (var i = 0; i < itemCard.length; i++) {
@@ -82,6 +96,44 @@ document.addEventListener("DOMContentLoaded", function() {
         itemCardTitle[i].classList.toggle("dark-card-title", darkActivado);
         }
     /* Card FIN */
+    
+    /* Articulo */
+    var itemConTitle = document.getElementsByClassName("contenedor-titulo");
+    for (var i = 0; i < itemConTitle.length; i++) {
+        itemConTitle[i].classList.toggle("dark-contenedor-titulo", darkActivado);
+        }
+    var itemConInfo = document.getElementsByClassName("contenedor-informacion");
+    for (var i = 0; i < itemConInfo.length; i++) {
+        itemConInfo[i].classList.toggle("dark-contenedor-informacion", darkActivado);
+        }
+    var itemConDes = document.getElementsByClassName("contenedor-descripcion");
+    for (var i = 0; i < itemConDes.length; i++) {
+        itemConDes[i].classList.toggle("dark-contenedor-descripcion", darkActivado);
+        }
+    var itemConVend = document.getElementsByClassName("contenedor-vendedor");
+    for (var i = 0; i < itemConVend.length; i++) {
+        itemConVend[i].classList.toggle("dark-contenedor-vendedor", darkActivado);
+        }
+    /* Articulo FIN */
+
+    /* Login */
+    var itemContenedor = document.getElementsByClassName("contenedor-cuadrado");
+    for (var i = 0; i < itemContenedor.length; i++) {
+        itemContenedor[i].classList.toggle("dark-contenedor-cuadrado", darkActivado);
+        }
+    var itemBtnUp = document.getElementsByClassName("btn-up");
+    for (var i = 0; i < itemBtnUp.length; i++) {
+        itemBtnUp[i].classList.toggle("dark-btn-up", darkActivado);
+        }
+    var itemContenedorBtn = document.getElementsByClassName("contenedor-botones");
+    for (var i = 0; i < itemContenedorBtn.length; i++) {
+        itemContenedorBtn[i].classList.toggle("dark-contenedor-botones", darkActivado);
+        }
+    var itemRegisterForm = document.getElementsByClassName("register-form");
+    for (var i = 0; i < itemRegisterForm.length; i++) {
+        itemRegisterForm[i].classList.toggle("dark-register-form", darkActivado);
+        }
+    /* Login FIN */
 
     /* Footer */
     var itemFooter = document.getElementsByClassName("footer");
@@ -89,6 +141,17 @@ document.addEventListener("DOMContentLoaded", function() {
         itemFooter[i].classList.toggle("dark-footer", darkActivado);
         }
     /* Footer FIN */
+
+    /* Boton dark */
+    var itemSun = document.getElementsByClassName("sun");
+    for (var i = 0; i < itemSun.length; i++) {
+        itemSun[i].classList.toggle("sun-oculto", darkActivado);
+        }
+    var itemMoon = document.getElementsByClassName("moon-oculto");
+    for (var i = 0; i < itemMoon.length; i++) {
+        itemMoon[i].classList.toggle("fa-moon", darkActivado);
+        }
+    /* Boton dark FIN */
 
 });
 
@@ -167,6 +230,20 @@ function dark() {
         }
     /* Filtro Fin */
 
+    /* Perfil */
+    var itemBtn = document.getElementsByClassName("btn");
+    for (var i = 0; i < itemBtn.length; i++) {
+        itemBtn[i].classList.toggle("dark-btn", !darkActivado);
+        }
+    /* Perfil FIN */
+    
+    /* Modal */
+    var itemConModal = document.getElementsByClassName("contenedor-modal");
+    for (var i = 0; i < itemConModal.length; i++) {
+        itemConModal[i].classList.toggle("dark-contenedor-modal", !darkActivado);
+        }
+    /* Modal FIN */
+
     /* Card */
     var itemCard = document.getElementsByClassName("card");
     for (var i = 0; i < itemCard.length; i++) {
@@ -179,12 +256,61 @@ function dark() {
         }
     /* Card FIN */
 
+    /* Articulo */ 
+    var itemConTitle = document.getElementsByClassName("contenedor-titulo");
+    for (var i = 0; i < itemConTitle.length; i++) {
+        itemConTitle[i].classList.toggle("dark-contenedor-titulo", !darkActivado);
+        }
+    var itemConInfo = document.getElementsByClassName("contenedor-informacion");
+    for (var i = 0; i < itemConInfo.length; i++) {
+        itemConInfo[i].classList.toggle("dark-contenedor-informacion", !darkActivado);
+        }
+    var itemConDes = document.getElementsByClassName("contenedor-descripcion");
+    for (var i = 0; i < itemConDes.length; i++) {
+        itemConDes[i].classList.toggle("dark-contenedor-descripcion", !darkActivado);
+        }
+    var itemConVend = document.getElementsByClassName("contenedor-vendedor");
+    for (var i = 0; i < itemConVend.length; i++) {
+        itemConVend[i].classList.toggle("dark-contenedor-vendedor", !darkActivado);
+        }
+    /* Articulo FIN */
+
+    /* Login */
+    var itemContenedor = document.getElementsByClassName("contenedor-cuadrado");
+    for (var i = 0; i < itemContenedor.length; i++) {
+        itemContenedor[i].classList.toggle("dark-contenedor-cuadrado", !darkActivado);
+        }
+    var itemBtnUp = document.getElementsByClassName("btn-up");
+    for (var i = 0; i < itemBtnUp.length; i++) {
+        itemBtnUp[i].classList.toggle("dark-btn-up", !darkActivado);
+        }
+    var itemContenedorBtn = document.getElementsByClassName("contenedor-botones");
+    for (var i = 0; i < itemContenedorBtn.length; i++) {
+        itemContenedorBtn[i].classList.toggle("dark-contenedor-botones", !darkActivado);
+        }
+    var itemRegisterForm = document.getElementsByClassName("register-form");
+    for (var i = 0; i < itemRegisterForm.length; i++) {
+        itemRegisterForm[i].classList.toggle("dark-register-form", !darkActivado);
+        }
+    /* Login FIN */
+
     /* Footer */
     var itemFooter = document.getElementsByClassName("footer");
     for (var i = 0; i < itemFooter.length; i++) {
         itemFooter[i].classList.toggle("dark-footer", !darkActivado);
         }
     /* Footer FIN */
+    
+    /* Boton dark */
+    var itemSun = document.getElementsByClassName("sun");
+    for (var i = 0; i < itemSun.length; i++) {
+        itemSun[i].classList.toggle("sun-oculto", !darkActivado);
+        }
+    var itemMoon = document.getElementsByClassName("moon-oculto");
+    for (var i = 0; i < itemMoon.length; i++) {
+        itemMoon[i].classList.toggle("fa-moon", !darkActivado);
+        }
+    /* Boton dark FIN */
 
     localStorage.setItem("darkMode", darkActivado ? "desactivado" : "activado");
 }

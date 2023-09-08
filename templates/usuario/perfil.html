@@ -6,37 +6,45 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>BazStore | Perfil</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/perfil.css')}}">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/1ef70ba703.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 </head>
 <body>
     <header>
-                <div class="topline"></div>
-                <div class="menu-contenedor">
-                    <div class="user">
-                        {% if session.login %}
-                        <img src="../../{{session.img[0]}}" alt="">
-                        <div class="dropdown">
-                            <div class="dropdown">
-                                <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
-                                <div class="dropdown-contenido">
-                                    <a class="btn-left" href="/perfil">Ver Perfil</a>
-                                    <a class="btn-left-cerrar" href="/logout">Cerrar Sesion</a>
-                                </div>
-                            </div>
+        <div class="topline"></div>
+        <div class="menu-contenedor">
+            <div class="user">
+                {% if session.login %}
+                <img src="../../{{session.img[0]}}" alt="">
+                <div class="dropdown">
+                    <div class="dropdown">
+                        <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
+                        <div class="dropdown-contenido">
+                            <a class="btn-left" href="/perfil">Ver Perfil</a>
+                            <a class="btn-left-cerrar" href="/logout">Cerrar Sesion</a>
                         </div>
+                    </div>
+                </div>
+                {% endif %}
+
+                <div class="dark-contenedor">
+                    <button class="btn-dark" onclick="dark()">Modo oscuro</button>
+                    <box-icon type='solid' name='sun' class="sun"></box-icon>
+                    <i class="fa-solid fa-moon moon-oculto"></i>
+                </div>
 
             <h1>BazStore</h1>
             <div class="buscador">
-                <form>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
-                    </div>
-                </form>
-            </div>
+              <form method='POST' action="/buscador">
+                  <div class="search">
+                      <input type="text" id="buscador" name="buscador" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                      <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i
+                                  class="fa-solid fa-magnifying-glass"></i></label></button>
+                  </div>
+              </form>
+          </div>
                 <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='/'">INICIO</button>
                     <div class="dropdown">
@@ -47,7 +55,6 @@
                             <a class="btn-content" href="/hombre/jeans">Jeans</a>
                             <a class="btn-content" href="/hombre/zapatos">Zapatos</a>
                             <a class="btn-content" href="/hombre/deportivo">Deportivo</a>
-                
                         </div>
                     </div>
                     <div class="dropdown">
@@ -80,10 +87,14 @@
     <main class="perfil-contenedor">
         <img class="perfil-img" src="../static/images/user.svg">
         <div class="dropdown">
-            <button class="btn-cuenta"><i class="fa-sharp fa-solid fa-gear" style="color: #ffffff;"></i> Ajustes</button>
+            <button class="btn-cuenta"><i class="fa-sharp fa-solid fa-gear"></i> Ajustes</button>
             <div class="dropdown-contenido">
-                <a class="btn-left" onclick="usuarioImg()">Editar foto</a>
-                <a class="btn-left-cerrar" href="">Eliminar cuenta</a>
+                <form action="/perfil/publicarimg" method="post" enctype="multipart/form-data">
+                    <button class="btn-left" onclick="usuarioImg()">Editar foto</a>
+                    <input type="file" id="imagen" name="imagen" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
+                    <button type="submit">Publicar</button>
+                </form>
+                <a class="btn-left-cerrar" href="/perfil/borrarperfil">Eliminar cuenta</a>
             </div>
         </div>
         <input type="file" id="subir">
@@ -91,7 +102,7 @@
         <h2 class="perfil-nombre"> {{session.usuario}}</h2>
         <div class="btn-superiores">
             <button class="btn" type="submit" id="lanzar-modal"><i class="fa-sharp fa-solid fa-arrow-up-from-bracket"></i> Publicar articulo</button>
-            <button class="btn boton1" onclick="Toggle()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Artículo</button>
+            <button class="btn" onclick="eliminar()"><i class="fa-sharp fa-solid fa-trash"></i> Borrar Artículo</button>
         </div>
             <div class="contenedor-modal">
             <div class="modal">
@@ -108,30 +119,14 @@
                         <label class="dop">DOP</label>
                     </section>
                     <section class="modal-img">
-                    <button onclick="bannerImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
+                    <button onclick="usuarioImg()"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
                     <input type="file" id="articulo" name="adjunto" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
                     </section>
-                    <div class="modal-tallas">
-                        <h4>Talla</h4>
-                        <select name="talla" id="talla" required>
-                            <option></option>
-                            <option value="XXL">XXL</option>
-                            <option value="XL">XL</option>
-                            <option value="L">L</option>
-                            <option value="M">M</option>
-                            <option value="S">S</option>
-                            <option value="XS">XS</option>
-                            <option value="6">6-9M (74CM)</option>
-                            <option value="9">9-12M (80CM)</option>
-                            <option value="12">12-18M (86CM)</option>
-                            <option value="18">18-24M (92CM)</option>
-                            <option value="2">2-3Y (98CM)</option>
-                        </select>
-                    </div>
+                    
                     <div class="modal-ubicacion">
                         <h4>Ubicación</h4>
                         <select name="ubicacion" id="ubicacion" required>
-                            <option></option>
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
                             <option value="Todo el pais">Todo el pais</option>
                             <option value="Santo Domingo">Santo Domingo</option>
                             <option value="Santiago">Santiago</option>
@@ -140,10 +135,11 @@
                             <option value="Barahona">Barahona</option>
                         </select>
                     </div>
+
                     <div class="modal-condiciones">
                         <h4>Condición</h4>
                         <select name="condicion" id="condicion" required>
-                            <option></option>
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
                             <option value="Nuevo">Nuevo</option>
                             <option value="Usado">Usado</option>
                         </select>
@@ -152,49 +148,86 @@
                     <div class="modal-tipo">
                         <h4>Tipo de artículo</h4>
                         <select name="tipo" id="tipo" required>
-                            <option></option>
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
                             <option value="Hombre">Hombre</option>
                             <option value="Mujer">Mujer</option>
                             <option value="Accesorio">Accesorio</option>
                         </select>
                     </div>
-                    {% if request.form['tipo']=="Hombre" %}
+
                     <div class="modal-subtipo">
                         <h3>Sub-tipo de artículo</h3>
                         <select name="subtipo" id="subtipo" required>
-                            <option></option>
-                            <option value="T-shirt">T-shirt</option>
-                            <option value="Camisas">Camisas</option>
-                            <option value="Jeans">Jeans</option>
-                            <option value="Zapatos">Zapatos</option>
-                            <option value="Deportivo">Deportivo</option>
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
+                            <!-- subtipos de hombre y mujer -->
+                            <option style="display: none;" value="T-shirt">T-shirt</option>
+                            <option style="display: none;" value="Camisas">Camisas</option>
+                            <option style="display: none;" value="Blusa">Blusa</option>
+                            <option style="display: none;" value="Vestido">Vestido</option>
+                            <option style="display: none;" value="Deportivo">Deportivo</option>
+                            <option style="display: none;" value="Jeans">Jeans</option>
+                            <option style="display: none;" value="Zapatos">Zapatos</option>
+                            <!-- subtipos accesorios -->
+                            <option style="display: none;" value="Reloj">Reloj</option>
+                            <option style="display: none;" value="Cadenas">Cadenas</option>
+                            <option style="display: none;" value="Brazaletes">Brazaletes</option>
+                            <option style="display: none;" value="Anillos">Anillos</option>
+                            <option style="display: none;" value="Otros">Otros</option>
                         </select>
                     </div>
-                    {% elif request.form['tipo']=="Mujer" %}
-                    <div class="modal-subtipo">
-                        <h3>Sub-tipo de artículo</h3>
-                        <select name="subtipo" id="subtipo" required>
-                            <option></option>
-                            <option value="Vestido">Vestido</option>
-                            <option value="Blusa">Blusa</option>
-                            <option value="Jeans">Jeans</option>
-                            <option value="Zapatos">Zapatos</option>
-                            <option value="Deportivo">Deportivo</option>
+
+                    <div class="modal-talla">
+                        <h4>Talla</h4>
+                        <select name="talla" id="talla" required>
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
+                            <option value="XXL">XXL</option>
+                            <option value="XL">XL</option>
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="S">S</option>
+                            <option value="XS">XS</option>
+                            <!-- Talla de Accesorios -->
+                            <option value="">Todas las tallas</option>
+                        </select>
+                            <!-- Talla de Zapatos para hombre-->
+                        <select name="talla-zapatoH" id="talla-zapatoH">
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
+                            <option value="6 H">6 H</option>
+                            <option value="6.5 H">6.5 H</option>
+                            <option value="7 H">7 H</option>
+                            <option value="7.5 H">7.5 H</option>
+                            <option value="8 H">8 H</option>
+                            <option value="8.5 H">8.5 H</option>
+                            <option value="9 H">9 H</option>
+                            <option value="9.5 H">9.5 H</option>
+                            <option value="10 H">10 H</option>
+                            <option value="10.5 H">10.5 H</option>
+                            <option value="11 H">11 H</option>
+                            <option value="11.5 H">11.5 H</option>
+                            <option value="12 H">12 H</option>
+                            <option value="13 H">13 H</option>
+                            <option value="14 H">14 H</option>
+                            <option value="15 H">15 H</option>
+                        </select>
+                            <!-- Talla de Zapatos para mujer -->
+                        <select name="talla-zapatoM" id="talla-zapatoM">
+                            <option value="sin-seleccionar" disabled selected>Sin seleccionar</option>
+                            <option value="5 M">5 M</option>
+                            <option value="5.5 M">5.5 M</option>
+                            <option value="6 M">6 M</option>
+                            <option value="6.5 M">6.5 M</option>
+                            <option value="7 M">7 M</option>
+                            <option value="7.5 M">7.5 M</option>
+                            <option value="8 M">8 M</option>
+                            <option value="8.5 M">8.5 M</option>
+                            <option value="9 M">9 M</option>
+                            <option value="9.5 M">9.5 M</option>
+                            <option value="10 M">10 M</option>
+                            <option value="11 M">11 M</option>
+                            <option value="12 M">12 M</option>
                         </select>
                     </div>
-                    {% else%}
-                    <div class="modal-subtipo">
-                        <h3>Sub-tipo de artículo</h3>
-                        <select name="subtipo" id="subtipo" required>
-                            <option></option>
-                            <option value="Reloj">Reloj</option>
-                            <option value="Cadenas">Cadenas</option>
-                            <option value="Brazaletes">Brazaletes</option>
-                            <option value="Anillos">Anillos</option>
-                            <option value="Otros">Otros</option>
-                        </select>
-                    </div>
-                    {% endif %}
+
                     <section class="modal-descripcion"> 
                         <label for="com">Descripción:</label>
                         <textarea name="com" id="com" cols="30" rows="10" maxlength="500" oninput="if(this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);"></textarea>
@@ -208,10 +241,12 @@
             </div>    
             </div>
 
-        <div class="search-perfil">
+        <form class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos en este perfil...">
-            <button type="submit" class="searchButton-perfil"><label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label></button>
-        </div>
+            <button type="submit" class="searchButton-perfil">
+                <label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label>
+            </button>
+        </form>
     </main>
     
     <aside>
@@ -226,7 +261,8 @@
 
             {% endfor %}
         </div>
-
+    
+    <script src="/static/javaScript/form.js"></script>
     <script src="/static/javaScript/perfil.js"></script>
     </aside>
   {% include 'sitio/footer.html' %}

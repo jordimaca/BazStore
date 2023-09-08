@@ -14,8 +14,8 @@
         <div class="topline"></div>
         <div class="menu-contenedor">
             <div class="user">
-                      {% if session.login %}
-                      <img src="../../{{session.img[0]}}" alt="">
+                {% if session.login %}
+                <img src="../../{{session.img[0]}}" alt="">
                 <div class="dropdown">
                     <div class="dropdown">
                     <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
@@ -25,13 +25,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="dark-contenedor">
-                    <button class="btn-dark" onclick="dark()"><i class='bx bxs-sun'>Modo oscuro</button>
-                    <box-icon type='solid' name='sun' class="sun"></box-icon>
-                </div>
-                    {% else %}
+                {% else %}
 
-                    <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"></i>
                 <div class="dropdown">
                     <div class="dropdown">
                     <button class="btn-cuenta">Acceder a su cuenta <i class="fa fa-caret-down"></i></button>
@@ -41,21 +37,24 @@
                         </div>
                     </div>
                 </div>
+                {% endif %}
+
                 <div class="dark-contenedor">
-                    <button class="btn-dark" onclick="dark()"></box-icon>Modo oscuro</button>
+                    <button class="btn-dark" onclick="dark()">Modo oscuro</button>
                     <box-icon type='solid' name='sun' class="sun"></box-icon>
+                    <i class="fa-solid fa-moon moon-oculto"></i>
                 </div>
-                    {% endif %}
-                
+
             <h1>BazStore</h1>
             <div class="buscador">
-                <form>
-                    <div class="search">
-                        <input type="text" class="searchTerm" placeholder="Buscar productos por su nombre...">
-                        <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i class="fa-solid fa-magnifying-glass"></i></label></button>
-                    </div>
-                </form>
-            </div>
+              <form method='POST' action="/buscador">
+                  <div class="search">
+                      <input type="text" id="buscador" name="buscador" class="searchTerm" placeholder="Buscar productos por su nombre...">
+                      <button type="submit" class="searchButton"><label for="search-bar" id="search-icon"><i
+                                  class="fa-solid fa-magnifying-glass"></i></label></button>
+                  </div>
+              </form>
+          </div>
                <nav class="categorias">
                     <button class="btn-menu" onclick="document.location='/'">INICIO</button>
                     <div class="dropdown">
