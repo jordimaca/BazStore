@@ -421,6 +421,22 @@ def buscador():
 
 @app.route('/perfil/publicarimg',methods =['POST'])
 def publicarimg():
+    _id=session['id']
+    print(_id)
+
+    conexion=mysql.connect()
+    cursor=conexion.cursor()
+    cursor.execute("SELECT imagen FROM `usuario` WHERE id_usuario=%s",(_id))
+    articulo=cursor.fetchall()
+    conexion.commit()
+    print(articulo)
+
+    # Verifica si la imagen existe antes de borrar
+    if os.path.exists("templates/sitio/images/"+str(articulo[0][0])):
+        #si la imagen exite le indicamos que elimine el registro
+        os.unlink("templates/sitio/images/"+str(articulo[0][0]))
+
+    
     adjunto = request.files['imagen']
     usuario=session['id']
     tiempo = datetime.now()
@@ -487,15 +503,15 @@ def borrar_articulo():
 
     conexion=mysql.connect()
     cursor=conexion.cursor()
-    cursor.execute("SELECT * FROM `articulo` WHERE id_articulo=%s",(_id))
+    cursor.execute("SELECT imagen FROM `articulo` WHERE id_articulo=%s",(_id))
     articulo=cursor.fetchall()
     conexion.commit()
     print(articulo)
 
     # Verifica si la imagen existe antes de borrar
-    if os.path.exists("templates/sitio/img"+str(articulo[0][0])):
+    if os.path.exists("templates/sitio/images/"+str(articulo[0][0])):
         #si la imagen exite le indicamos que elimine el registro
-        os.unlink("templates/sitio/img"+str(articulo[0][0]))
+        os.unlink("templates/sitio/images/"+str(articulo[0][0]))
 
     # Borrar registro
     conexion=mysql.connect()
