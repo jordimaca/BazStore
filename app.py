@@ -515,18 +515,42 @@ def borrar_perfil():
     # Borrar registro
     conexion=mysql.connect()
     cursor=conexion.cursor()
-    cursor.execute("DELETE FROM articulo,usuario WHERE id_usuario=%s",(usuario))
+    cursor.execute("DELETE FROM articulo WHERE id_usuario=%s",(usuario))
+    cursor.execute("DELETE FROM usuario WHERE id_usuario=%s",(usuario))
     conexion.commit()
 
     # Redireccionar a /perfil
-    return redirect('/perfil')
+    return redirect('/login/')
 
 
-@app.route('/vendedor')
-def vendedor():
+@app.route('/<id_usuario>')
+def vendedor(id_usuario):
     if not 'login' in session:
         return redirect('/login')
-    return render_template('usuario/vendedor.html')
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `articulo` WHERE id_usuario=%s",(id_usuario))
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    articulos=cursor.fetchall()
+    conexion.commit()
+    print(articulos)
+    #Realizar una conexion de la bd creando la variable conexion
+    conexion=mysql.connect()
+    #Reaizar una consulta
+    cursor=conexion.cursor()
+    #Ejecutar una consulta
+    cursor.execute("Select * FROM `usuario` WHERE id_usuario=%s",(id_usuario))
+    #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
+    usuario=cursor.fetchall()
+    conexion.commit()
+    print(usuario)
+    
+    
+    
+    return render_template('usuario/vendedor.html',articulos=articulos,usuario=usuario)
 #Nesecita un arreglo para especificar el producto
 @app.route('/<name>/<id_articulo>')
 def articulo(name,id_articulo):
