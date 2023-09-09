@@ -97,7 +97,7 @@
                 <a class="btn-left-cerrar" href="/perfil/borrarperfil">Eliminar cuenta</a>
             </div>
         </div>
-        <input type="file" id="subir">
+        <input type="file" id="subirUsuario">
         
         <h2 class="perfil-nombre"> {{session.usuario}}</h2>
         <div class="btn-superiores">
@@ -119,9 +119,10 @@
                         <label class="dop">DOP</label>
                     </section>
                     <section class="modal-img">
-                    <input type="file" name="adjunto" accept=".jpg,.png,.webp,.jpeg,.gif" required>
-                    <!-- <button onclick="usuarioImg()" type="button"><i class="fa-sharp fa-solid fa-image" ></i> Subir imagen</button>
-                    <input type="file" id="articulo" name="adjunto" accept=".jpg,.png,.webp,.jpeg,.gif"> -->
+                        <button onclick="articuloImg()" type="button" id="botonSubir" class="boton-rojo">
+                            <i class="fa-sharp fa-solid fa-image"></i> Subir imagen
+                        </button>
+                          <input type="file" name="adjunto" id="subirArticulo" class="oculto" accept=".jpg,.png,.webp,.jpeg,.gif" required>
                     </section>
                     
                     <div class="modal-ubicacion">

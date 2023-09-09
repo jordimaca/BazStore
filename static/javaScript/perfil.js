@@ -32,10 +32,28 @@ btnOcultarModal.addEventListener('click', (e) => {
 
 // BOTON FILE SUBIR IMAGEN DE PERFIL
 function usuarioImg() {
-  var file = document.getElementById("subir").click();
+  var file = document.getElementById("subirUsuario").click();
 }
 // FIN
 
+// BOTON FILE SUBIR IMAGEN DE ARTICULO
+function articuloImg() {
+  var fileInput = document.getElementById("subirArticulo");
+  var boton = document.getElementById("botonSubir");
+
+  // Verifica si se ha seleccionado un archivo
+  if (fileInput.files.length > 0) {
+    boton.classList.remove("boton-rojo");
+    boton.classList.add("boton-verde");
+  } else {
+    boton.classList.remove("boton-verde");
+    boton.classList.add("boton-rojo");
+  }
+
+  // Abre el cuadro de diálogo de selección de archivo
+  fileInput.click();
+}
+// FIN
 
 // Boton eliminar en perfil.html
 function eliminar() {

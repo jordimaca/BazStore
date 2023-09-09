@@ -170,7 +170,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 .perfil-contenedor {
-    background-image: url(/static/images/banner.jpg);
+    background-color: #999;
+    /* background-image: url(/static/images/banner.jpg); */
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -359,6 +360,22 @@ aside h2{
 }
 /* Boton Eliminar FIN */
 /* Card FIN */
+
+
+/* Ocultar */
+.oculto{
+    display: none;
+}
+.boton-rojo {
+    background-color: red;
+    color: white;
+  }
+.boton-verde {
+    background-color: green;
+    color: white;
+}
+/* Ocultar FIN */
+
 
 /* Modo Oscuro */
 .dark-perfil-contenedor{
