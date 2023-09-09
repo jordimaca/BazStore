@@ -100,7 +100,9 @@ header{
 }
 
 .user img{
-    float: left
+    float: left;
+    height: 20px;
+    width: 20px;
 }
 /* Perfil Iniciado */
 .btn-left-cerrar {

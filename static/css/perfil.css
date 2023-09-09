@@ -190,6 +190,7 @@ aside h2{
 .perfil-img{
     grid-area: 1 / 1 / 4 / 2;
     width: 100px;
+    height: 100px;
     color: #fff;
 }
 
