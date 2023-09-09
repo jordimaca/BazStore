@@ -32,9 +32,9 @@ app.config['MYSQL_DATABASE_DB']='bazstore'
 # Agregar el valor para inicializar nuestra aplicación
 mysql.init_app(app)
 
-IMG_FOLDER = os.path.join('static', 'images')
+#IMG_FOLDER = os.path.join('images')
 
-app.config['UPLOAD_FOLDER'] = IMG_FOLDER
+#app.config['UPLOAD_FOLDER'] = IMG_FOLDER
 #Colocar la palabra clave slash (/) con la cual se va a acceder a la url, para indicarle que cuando se le solicite buscar en esa ruta (diagonal /) va a mostrar un inicio.
 @app.route('/')
 #Crear una funcion con la palabra reservada def
@@ -76,7 +76,7 @@ def registro():
         email = request.form['email']
         celular = request.form['telefono']
         password = request.form['password']
-        imagen=os.path.join(app.config['UPLOAD_FOLDER'],'user-icon.svg')
+        imagen=os.path.join('user-icon.svg')
         #Abrir la conexion a la base de datos
         conexion=mysql.connect()
         #Se crea un cursor
