@@ -34,6 +34,10 @@ btnOcultarModal.addEventListener('click', (e) => {
 function usuarioImg() {
   var file = document.getElementById("subirUsuario").click();
 }
+function submitForm() {
+  var formulario = document.getElementById("form");
+  formulario.submit();
+}
 // FIN
 
 // BOTON FILE SUBIR IMAGEN DE ARTICULO
