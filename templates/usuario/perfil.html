@@ -89,15 +89,14 @@
         <div class="dropdown">
             <button class="btn-cuenta"><i class="fa-sharp fa-solid fa-gear"></i> Ajustes</button>
             <div class="dropdown-contenido">
-                <form action="/perfil/publicarimg" method="post" enctype="multipart/form-data">
-                    <button class="btn-left">Editar foto</a>
-                    <input type="file" id="imagen" name="imagen" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
-                    <button type="submit">Publicar</button>
+                <form id="form" action="/perfil/publicarimg" method="post" enctype="multipart/form-data">
+                    <a class="btn-left" onclick="usuarioImg()">Editar foto</a>
+                    <input type="file" class="oculto" id="subirUsuario" name="imagen" onchange="submitForm()" accept=".jpg,.png,.webp,.jpeg,.gif"  required>
+                    <button type="submit" class="oculto">Publicar</button>
                 </form>
                 <a class="btn-left-cerrar" href="/perfil/borrarperfil">Eliminar cuenta</a>
             </div>
         </div>
-        <input type="file" id="subirUsuario">
         
         <h2 class="perfil-nombre"> {{session.usuario}}</h2>
         <div class="btn-superiores">

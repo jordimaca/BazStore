@@ -1,4 +1,3 @@
-
 //Buscador de perfil
 document.addEventListener("DOMContentLoaded", function () {
   const searchForm = document.querySelector(".search-perfil");
@@ -67,6 +66,10 @@ btnOcultarModal.addEventListener('click', (e) => {
 // BOTON FILE SUBIR IMAGEN DE PERFIL
 function usuarioImg() {
   var file = document.getElementById("subirUsuario").click();
+}
+function submitForm() {
+  var formulario = document.getElementById("form");
+  formulario.submit();
 }
 // FIN
 
