@@ -83,11 +83,13 @@
             </div>
         </div>
     </header>
+    
     <main class="perfil-contenedor">
-        <img class="perfil-img" src="../static/images/user.svg">
-        <h2 class="perfil-nombre">Nombre de vendedor</h2>
+        {% for usuario in usuario %}
+        <img class="perfil-img" src="../images/{{usuario[5]}}">
+        <h2 class="perfil-nombre">{{usuario[1]}}</h2>
         <div class="btn-superiores">
-            <a class="whatsapp" href="https://wa.me/+1" target="_blank"><button class="whatsapp-btn"><i class="fa fa-whatsapp"></i> Contactar WhatsApp</button></a>
+            <a class="whatsapp" href="https://wa.me/+1{{usuario[3]}}" target="_blank"><button class="whatsapp-btn"><i class="fa fa-whatsapp"></i> Contactar WhatsApp</button></a>
         </div>
         <form class="search-perfil">
             <input type="text" class="searchTerm-perfil" placeholder="Buscar articulos en este perfil...">
@@ -95,6 +97,7 @@
                 <label for="search-bar-perfil" id="search-icon-perfil"><i class="fa-solid fa-magnifying-glass"></i></label>
             </button>
         </form>
+        {% endfor %}
     </main>
     
     <aside>
