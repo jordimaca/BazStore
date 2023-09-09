@@ -121,6 +121,7 @@
 }
 
 .contenedor-vendedor .vendedor a {
+    margin: 20px 0px 0px 2px;
     text-decoration: none;
     color: #000;
     width: 10rem;
@@ -128,6 +129,7 @@
 }
 
 .contenedor-vendedor .vendedor img {
+    margin-top: 6px;
     width: 3rem;
     height: 3rem;
 }

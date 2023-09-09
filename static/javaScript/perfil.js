@@ -78,6 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const searchInput = document.querySelector(".searchTerm-perfil");
   const cards = document.querySelectorAll(".card");
 
+
   searchForm.addEventListener("submit", function (event) {
       event.preventDefault(); // Evita el envío predeterminado del formulario
 
