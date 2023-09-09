@@ -419,26 +419,30 @@ def buscador():
     return render_template('sitio/buscador.html',articulos=articulos)
 
 
-""" @app.route('/perfil/publicarimg',methods =['POST'])
+@app.route('/perfil/publicarimg',methods =['POST'])
 def publicarimg():
     adjunto = request.files['imagen']
     usuario=session['id']
     tiempo = datetime.now()
     horaActual=tiempo.strftime('%Y%H%M%S')
+
     if adjunto.filename!='':
-        nuevoNombre=horaActual+"_"+adjunto.filename
-        adjunto.save("templates/sitio/images/"+nuevoNombre)
+        adjuntonombre=horaActual+"_"+adjunto.filename
+        adjunto.save("templates/sitio/images/"+adjuntonombre)
 
     #Abrir la conexion a la base de datos
     conexion=mysql.connect()
     #Se crea un cursor
     cursor = conexion.cursor()
     sql ='UPDATE usuario SET imagen=%s WHERE id_usuario=%s;'
-    datos=(adjunto,usuario)
+    datos=(adjuntonombre,usuario)
     cursor.execute(sql, datos)
     conexion.commit()
+    session.pop('img',None)
+    cursor.execute('SELECT imagen FROM usuario WHERE id_usuario = %s ', (usuario))
+    session['img']=cursor.fetchone()
 
-    return redirect('/perfil') """
+    return redirect('/perfil')
 
 @app.route('/perfil/publicar',methods =['POST'])
 def publicar():
@@ -507,11 +511,11 @@ def borrar_articulo():
 @app.route('/perfil/borrarperfil')
 def borrar_perfil():
  
-    id= session['id']
+    usuario= session['id']
     # Borrar registro
     conexion=mysql.connect()
     cursor=conexion.cursor()
-    cursor.execute("DELETE FROM `articulo`,usuario WHERE id_usuario=%s",(id))
+    cursor.execute("DELETE FROM articulo,usuario WHERE id_usuario=%s",(usuario))
     conexion.commit()
 
     # Redireccionar a /perfil
@@ -524,8 +528,8 @@ def vendedor():
         return redirect('/login')
     return render_template('usuario/vendedor.html')
 #Nesecita un arreglo para especificar el producto
-@app.route('/<name>')
-def articulo(name):
+@app.route('/<name>/<id_articulo>')
+def articulo(name,id_articulo):
     if not 'login' in session:
         return redirect('/login')
     
@@ -533,11 +537,12 @@ def articulo(name):
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE nombre_articulo = %s",name)
+    cursor.execute("Select * FROM `articulo` WHERE nombre_articulo = %s AND id_articulo = %s",(name,id_articulo))
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
     print(articulos)
+    usuario=""
     for articulo in articulos:
         cursor.execute("Select * FROM `usuario` WHERE id_usuario = %s",articulo[1])
         #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
