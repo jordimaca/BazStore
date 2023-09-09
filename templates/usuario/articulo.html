@@ -16,7 +16,7 @@
         <div class="menu-contenedor">
             <div class="user">
                 {% if session.login %}
-                <img src="../../{{session.img[0]}}" alt="">
+                <img src="../images/{{session.img[0]}}" alt="">
                 <div class="dropdown">
                     <div class="dropdown">
                         <button class="btn-cuenta">{{session.usuario}} <i class="fa fa-caret-down"></i></button>
@@ -120,7 +120,7 @@
 
             <div class="contenedor-vendedor">
                 <div class="vendedor">
-                    <img src="../../static/images/user-circle-icon.svg" alt="imagen-vendedor">
+                    <img src="../images/{{usuario[5]}}" alt="imagen-vendedor">
                     <a href="/vendedor">{{usuario[1]}}</a>
                 </div>
                 <h3 class="telefono">{{usuario[3]}}</h3>
