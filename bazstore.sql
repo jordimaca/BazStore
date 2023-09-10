@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.4
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-09-2023 a las 23:40:07
--- Versión del servidor: 10.1.37-MariaDB
--- Versión de PHP: 7.2.13
+-- Tiempo de generación: 10-09-2023 a las 06:07:04
+-- Versión del servidor: 10.4.28-MariaDB
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -31,15 +30,15 @@ SET time_zone = "+00:00";
 CREATE TABLE `articulo` (
   `id_articulo` int(11) NOT NULL,
   `id_usuario` int(11) NOT NULL,
-  `nombre_articulo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
-  `imagen` varchar(255) COLLATE utf8_spanish_ci NOT NULL,
+  `nombre_articulo` varchar(100) NOT NULL,
+  `imagen` varchar(255) NOT NULL,
   `precio` int(7) NOT NULL,
-  `tipo` char(13) COLLATE utf8_spanish_ci NOT NULL,
-  `talla` varchar(5) COLLATE utf8_spanish_ci NOT NULL,
-  `ubicacion` char(80) COLLATE utf8_spanish_ci NOT NULL,
-  `condicion` char(15) COLLATE utf8_spanish_ci NOT NULL,
-  `descripcion` varchar(500) COLLATE utf8_spanish_ci NOT NULL,
-  `genero` char(7) COLLATE utf8_spanish_ci NOT NULL
+  `tipo` char(13) NOT NULL,
+  `talla` varchar(5) NOT NULL,
+  `ubicacion` char(80) NOT NULL,
+  `condicion` char(15) NOT NULL,
+  `descripcion` varchar(500) NOT NULL,
+  `genero` char(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -47,7 +46,6 @@ CREATE TABLE `articulo` (
 --
 
 INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`, `precio`, `tipo`, `talla`, `ubicacion`, `condicion`, `descripcion`, `genero`) VALUES
-(1, 1, 'articulo1', 'a4.jpg', 3213456, 'camisa', 'xxl', 'bna', 'nuevo-usado', 'wqiyugheygoi', 'hombre'),
 (2, 1, 'reloj', '2023151441_reloj7.png', 3000, 'zapatos', 'm', 'rd', 'nuevo', 'gdgjhjkhjkshjkfnjgjfngjnbkbhgjknbgg', 'accesor'),
 (3, 1, 'Correa-cinturon ', '2023151604_cinturon.jpg', 2000, 'jeans', 'xl', 'rd', 'usado', 'hewhkjksjfjkfjskjsm,ajshkajk', 'hombre'),
 (6, 1, 'Camisa-Tommy hilfiger', '2023152057_camisa5.jpg', 5000, 'camisa', 'l', 'stgo', 'nuevo', 'fdgfhzdhvbjkhkjgklxjkglmkflhmlg', 'hombre'),
@@ -74,11 +72,11 @@ INSERT INTO `articulo` (`id_articulo`, `id_usuario`, `nombre_articulo`, `imagen`
 
 CREATE TABLE `usuario` (
   `id_usuario` int(11) NOT NULL,
-  `nombre` varchar(25) COLLATE utf8_spanish_ci NOT NULL,
-  `email` varchar(320) COLLATE utf8_spanish_ci NOT NULL,
-  `celular` varchar(10) COLLATE utf8_spanish_ci NOT NULL,
-  `contraseña` varchar(60) COLLATE utf8_spanish_ci NOT NULL,
-  `imagen` varchar(255) COLLATE utf8_spanish_ci NOT NULL
+  `nombre` varchar(25) NOT NULL,
+  `email` varchar(320) NOT NULL,
+  `celular` varchar(10) NOT NULL,
+  `contraseña` varchar(60) NOT NULL,
+  `imagen` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
@@ -114,7 +112,7 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `articulo`
 --
 ALTER TABLE `articulo`
-  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id_articulo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
