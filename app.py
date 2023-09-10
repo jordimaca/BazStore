@@ -326,7 +326,7 @@ def deportivoh():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Depotivo'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Deportivo'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
