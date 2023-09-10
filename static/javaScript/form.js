@@ -96,13 +96,13 @@ subtipoSelect.addEventListener("change", function() {
     }
 
     // Si se selecciona el subtipo Zapatos y el tipo es Mujer, muestra talla-zapatoM y oculta las otras opciones.
-    if (subtipoSeleccionado === "Zapatos" && tipoSeleccionado === "Mujer") {
+    if (subtipoSeleccionado === "Zapato" && tipoSeleccionado === "Mujer") {
         tallaSelect.style.display = "none";
         tallaZapatoHSelect.style.display = "none";
         tallaZapatoMSelect.style.display = "block";
     }
     // Si se selecciona el subtipo Zapatos y el tipo es Hombre, muestra talla-zapatoH y oculta las otras opciones.
-    else if (subtipoSeleccionado === "Zapatos" && tipoSeleccionado === "Hombre") {
+    else if (subtipoSeleccionado === "Zapato" && tipoSeleccionado === "Hombre") {
         tallaSelect.style.display = "none";
         tallaZapatoMSelect.style.display = "none";
         tallaZapatoHSelect.style.display = "block";
