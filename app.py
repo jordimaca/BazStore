@@ -280,7 +280,7 @@ def vestidos():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Vestidos'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Mujer' AND tipo='Vestido'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
