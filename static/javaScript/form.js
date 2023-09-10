@@ -41,7 +41,7 @@ tipoSelect.addEventListener("change", function() {
     subtipoOptions.forEach(function(option) {
         if (option.value !== "sin-seleccionar") {
             if (
-                (tipoSeleccionado === "Hombre" && (option.value === "T-shirt" || option.value === "Camisas" || option.value === "Pantalon" || option.value === "Zapato" || option.value === "Deportivo")) ||
+                (tipoSeleccionado === "Hombre" && (option.value === "T-shirt" || option.value === "Camisa" || option.value === "Pantalon" || option.value === "Zapato" || option.value === "Deportivo")) ||
                 (tipoSeleccionado === "Mujer" && (option.value === "Vestido" || option.value === "Blusa" || option.value === "Pantalon" || option.value === "Zapato" || option.value === "Deportivo"))
             ) {
                 option.style.display = "block";
