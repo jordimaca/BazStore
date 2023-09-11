@@ -116,7 +116,7 @@ def accesorios():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/categoria_accesorios.html',articulos=articulos)
 @app.route('/hombre')
 def hombre():
@@ -129,7 +129,7 @@ def hombre():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/categoria_hombre.html',articulos=articulos)
 @app.route('/mujer')
 def mujer():
@@ -142,7 +142,7 @@ def mujer():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/categoria_mujer.html',articulos=articulos)
 @app.route('/nuevo')
 def nuevo():
@@ -155,7 +155,7 @@ def nuevo():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/categoria_nuevo.html',articulos=articulos)
 
 
@@ -172,7 +172,7 @@ def anillos():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/accesorios_anillos.html',articulos=articulos)
 
 @app.route('/accesorios/brazaletes')
@@ -186,7 +186,7 @@ def brazaletes():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/accesorios_brazaletes.html',articulos=articulos)
 
 @app.route('/accesorios/cadenas')
@@ -200,7 +200,7 @@ def cadenas():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/accesorios_cadenas.html',articulos=articulos)
 @app.route('/accesorios/otros')
 def otros():
@@ -213,7 +213,7 @@ def otros():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/accesorios_otros.html',articulos=articulos)
 
 @app.route('/accesorios/reloj')
@@ -227,7 +227,7 @@ def reloj():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/accesorios_reloj.html',articulos=articulos)
 # accesorios fin
 # mujer inicio
@@ -243,7 +243,7 @@ def blusas():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/mujer_blusas.html',articulos=articulos)
 @app.route('/mujer/deportivo')
 def deportivo():
@@ -256,7 +256,7 @@ def deportivo():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/mujer_deportivo.html',articulos=articulos)
 
 @app.route('/mujer/pantalones')
@@ -270,7 +270,7 @@ def jeans():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/mujer_jeans.html',articulos=articulos)
 
 @app.route('/mujer/vestidos')
@@ -284,7 +284,7 @@ def vestidos():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/mujer_vestidos.html',articulos=articulos)
 
 @app.route('/mujer/zapatos')
@@ -298,7 +298,7 @@ def zapatos():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/mujer_zapatos.html',articulos=articulos)
 #mujer fin
 #hombre inicio
@@ -314,7 +314,7 @@ def camisa():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/hombre_camisa.html',articulos=articulos)
 
 
@@ -330,7 +330,7 @@ def deportivoh():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/hombre_deportivo.html',articulos=articulos)
 
 
@@ -345,7 +345,7 @@ def jeansh():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/hombre_jeans.html',articulos=articulos)
 
 @app.route('/hombre/tshirts')
@@ -359,7 +359,7 @@ def tshirts():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/hombre_tshirts.html',articulos=articulos)
 
 
@@ -370,11 +370,11 @@ def zapatosh():
     #Reaizar una consulta
     cursor=conexion.cursor()
     #Ejecutar una consulta
-    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Zapatos'")
+    cursor.execute("Select * FROM `articulo` WHERE genero='Hombre' AND tipo='Zapato'")
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('sitio/subcategorias/hombre_zapatos.html',articulos=articulos)
 # hombre fin
 #usuario
@@ -392,7 +392,7 @@ def perfil():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     return render_template('usuario/perfil.html',articulos=articulos)
 
 
@@ -414,7 +414,7 @@ def buscador():
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     
     return render_template('sitio/buscador.html',articulos=articulos)
 
@@ -552,7 +552,7 @@ def vendedor(id_usuario):
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     #Realizar una conexion de la bd creando la variable conexion
     conexion=mysql.connect()
     #Reaizar una consulta
@@ -581,7 +581,7 @@ def articulo(name,id_articulo):
     #Para mostrar creamos un variable, recuperamos todos los valores de la BD con Fetchall()
     articulos=cursor.fetchall()
     conexion.commit()
-    print(articulos)
+    #print(articulos)
     usuario=""
     for articulo in articulos:
         cursor.execute("Select * FROM `usuario` WHERE id_usuario = %s",articulo[1])
@@ -601,5 +601,5 @@ def imagenes(imagen):
 #Crear una instancia para poder ejecutar nuestra aplicacion
 if __name__ == '__main__':
     #Se utiliza el modo debug para que se vean los cambios
-    app.run(debug=True)
+    app.run(debug=True, host = "localhost", port = 5000)
 
